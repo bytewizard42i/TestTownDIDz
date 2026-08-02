@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "petal-stem-florists",
+  "displayName": "Petal & Stem Florists",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "20-4000012",
+    "stateRegistration": "PA-C-0600012",
+    "founded": "1994-04-15"
+  },
+  "authority": {
+    "issuerType": "employer",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EMPLOYMENT",
+      "INCOME_RANGE"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Officer 13",
+      "role": "Registered Agent"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "791f0f87021c18725fd5fd493e24e30abcbdfdc73ddf5b212009d00eb727af09",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

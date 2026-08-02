@@ -1,0 +1,30 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "lena-hartmann",
+  "displayName": "Lena Hartmann",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1992-01-22",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "starlight-cinema",
+      "role": "Projectionist",
+      "from": "2010-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

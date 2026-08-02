@@ -1,0 +1,18 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "fairweather-pickup-truck",
+  "displayName": "Fairweather 2018 pickup truck",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "vehicle",
+  "identityAnchor": {
+    "kind": "vin",
+    "value": "1TTFW18X7JZ004821"
+  },
+  "ownerCitizenSlug": "amos-fairweather",
+  "papers": [],
+  "documents": []
+}

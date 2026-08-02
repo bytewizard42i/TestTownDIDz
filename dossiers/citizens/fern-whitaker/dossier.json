@@ -1,0 +1,30 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "fern-whitaker",
+  "displayName": "Fern Whitaker",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1999-08-27",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "petal-stem-florists",
+      "role": "Floral Designer",
+      "from": "2017-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

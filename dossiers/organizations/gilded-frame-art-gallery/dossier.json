@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "gilded-frame-art-gallery",
+  "displayName": "Gilded Frame Art Gallery",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "20-4000018",
+    "stateRegistration": "PA-C-0600018",
+    "founded": "2012-01-15"
+  },
+  "authority": {
+    "issuerType": "employer",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EMPLOYMENT",
+      "INCOME_RANGE"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Officer 19",
+      "role": "Registered Agent"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "7b0926b20dfdb7fa4db050980a93cd35c663c28e6db6969f76cb37971b27cd9d",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

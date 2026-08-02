@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "quarry-road-trucking",
+  "displayName": "Quarry Road Trucking",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "20-4000019",
+    "stateRegistration": "PA-C-0600019",
+    "founded": "2015-02-15"
+  },
+  "authority": {
+    "issuerType": "employer",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EMPLOYMENT",
+      "INCOME_RANGE"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Officer 20",
+      "role": "Registered Agent"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "be6e150caba176d0282a46baf21cca3f76230e110cbbf5317b66a360a848470c",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

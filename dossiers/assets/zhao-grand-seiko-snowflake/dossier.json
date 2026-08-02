@@ -1,0 +1,18 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "zhao-grand-seiko-snowflake",
+  "displayName": "Zhao Grand Seiko-style 'Snowflake' wristwatch (fictional)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "watch",
+  "identityAnchor": {
+    "kind": "serial-number",
+    "value": "TT-GS-2210-88031"
+  },
+  "ownerCitizenSlug": "mei-lin-zhao",
+  "papers": [],
+  "documents": []
+}

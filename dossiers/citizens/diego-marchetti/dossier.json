@@ -1,0 +1,30 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "diego-marchetti",
+  "displayName": "Diego Marchetti",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1996-07-08",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "blue-heron-bakery",
+      "role": "Head Baker",
+      "from": "2014-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

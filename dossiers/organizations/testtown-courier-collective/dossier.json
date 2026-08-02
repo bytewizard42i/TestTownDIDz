@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "testtown-courier-collective",
+  "displayName": "TestTown Courier Collective",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "20-4000013",
+    "stateRegistration": "PA-C-0600013",
+    "founded": "1997-05-15"
+  },
+  "authority": {
+    "issuerType": "employer",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EMPLOYMENT",
+      "INCOME_RANGE"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Officer 14",
+      "role": "Registered Agent"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "df84445ce3168bf6de8ed11e09f30aaecdcf012517c8328b1cf25455cea1eb5e",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

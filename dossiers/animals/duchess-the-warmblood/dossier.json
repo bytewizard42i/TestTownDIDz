@@ -1,0 +1,19 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "animal",
+  "slug": "duchess-the-warmblood",
+  "displayName": "Duchess (Hanoverian mare, b. 2017)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "species": "horse",
+  "identityBinding": {
+    "kind": "microchip",
+    "chipId": "985-141-002-333-58",
+    "implantedBy": "testtown-animal-hospital-and-equine-center"
+  },
+  "custodianCitizenSlug": "raj-patel",
+  "careHistory": [],
+  "documents": []
+}

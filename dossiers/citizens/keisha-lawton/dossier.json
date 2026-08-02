@@ -1,0 +1,30 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "keisha-lawton",
+  "displayName": "Keisha Lawton",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1990-12-01",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "testtown-transit-authority",
+      "role": "Dispatcher",
+      "from": "2008-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

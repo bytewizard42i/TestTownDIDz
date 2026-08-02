@@ -1,0 +1,43 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "testtown-social-security-field-office",
+  "displayName": "TestTown Social Security Field Office",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "52-8814406",
+    "stateRegistration": "PA-G-0000004",
+    "founded": "1954-06-30"
+  },
+  "authority": {
+    "issuerType": "ssa",
+    "requestedAssuranceLevel": "SYSTEM_CRITICAL",
+    "attestationScopes": [
+      "SSN_BINDING"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Ellis Vance",
+      "role": "Field Office Manager"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "5ab1c929b617da5b23bcf585fb89f4f86af09887fcbfd8d4cdf3b4fc42cff226",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-monica.md",
+    "preprodAddress": "mn_addr_preprod1v4mjk8pf9hkxwkc3d6nd53c2v4m2gmvesrusghpgaucma9glc4vs6fw4a9"
+  }
+}

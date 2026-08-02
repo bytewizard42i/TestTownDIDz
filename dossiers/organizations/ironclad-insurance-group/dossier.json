@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "ironclad-insurance-group",
+  "displayName": "Ironclad Insurance Group",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "20-4000001",
+    "stateRegistration": "PA-C-0600001",
+    "founded": "1961-02-15"
+  },
+  "authority": {
+    "issuerType": "employer",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EMPLOYMENT",
+      "INCOME_RANGE"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Officer 2",
+      "role": "Registered Agent"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "f668170a77a8bda4914589827fea9bbc41e344d382a885c68ad6991977fb584e",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

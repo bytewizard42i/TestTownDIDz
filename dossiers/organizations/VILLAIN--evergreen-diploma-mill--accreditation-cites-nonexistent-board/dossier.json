@@ -1,0 +1,46 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "VILLAIN--evergreen-diploma-mill--accreditation-cites-nonexistent-board",
+  "displayName": "Evergreen Institute of Advanced Studies",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "Identity papers are GENUINE (EIN active, registration in good standing) \u2014 the fraud is in the AUTHORITY layer: its claimed accreditor, the 'National Board of Continental Academics', does not exist in any registry. The gate must check authority papers, not just identity papers."
+  },
+  "identifiers": {
+    "ein": "33-8080441",
+    "stateRegistration": "PA-C-0512236",
+    "founded": "2019-06-14"
+  },
+  "authority": {
+    "issuerType": "college",
+    "requestedAssuranceLevel": "REGULATED_ENTITY",
+    "attestationScopes": [
+      "DEGREE",
+      "ENROLLMENT"
+    ],
+    "subjectTiers": [
+      "human"
+    ],
+    "accreditor": "National Board of Continental Academics"
+  },
+  "officers": [
+    {
+      "name": "Dr. R. Verdant",
+      "role": "Provost"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "e1c3fb6aef824bf41fe95c8fc28af4a136f3845178afbb06e2688444045044ef",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

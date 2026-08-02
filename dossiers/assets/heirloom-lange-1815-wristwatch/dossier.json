@@ -3,9 +3,15 @@
   "category": "asset",
   "slug": "heirloom-lange-1815-wristwatch",
   "displayName": "A. Lange-style 1815 heirloom wristwatch (fictional)",
-  "honesty": { "role": "AUTHENTIC", "fraudMechanism": null },
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
   "assetKind": "watch",
-  "identityAnchor": { "kind": "serial-number", "serial": "TT-1815-004417", "engravedCaseback": true },
+  "identityAnchor": {
+    "kind": "serial-number",
+    "value": "TT-1815-004417"
+  },
   "ownerCitizenSlug": "rosa-delgado",
   "papers": [],
   "documents": []

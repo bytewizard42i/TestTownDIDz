@@ -1,0 +1,44 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "hearthstone-realty-group",
+  "displayName": "Hearthstone Realty Group",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "74-6650391",
+    "stateRegistration": "PA-C-0244875",
+    "founded": "1995-02-01"
+  },
+  "authority": {
+    "issuerType": "real-estate",
+    "requestedAssuranceLevel": "REGULATED_ENTITY",
+    "attestationScopes": [
+      "DEED",
+      "APPRAISAL"
+    ],
+    "subjectTiers": [
+      "rwa"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Vivian Cross",
+      "role": "Managing Broker"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "6cafe663ab0c84ce1933be91c03e3df60ccf75c64100f782543e02c144ccf561",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-nadia.md",
+    "preprodAddress": "mn_addr_preprod12htexfpvc870xzz5lx50jv33vj5kfuls3efatn724hfet3uldt7sud377s"
+  }
+}

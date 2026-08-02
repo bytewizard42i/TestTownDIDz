@@ -1,0 +1,19 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "animal",
+  "slug": "biscuit-the-corgi",
+  "displayName": "Biscuit (Pembroke Welsh Corgi, b. 2022)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "species": "dog",
+  "identityBinding": {
+    "kind": "microchip",
+    "chipId": "985-141-002-119-04",
+    "implantedBy": "willow-creek-veterinary-clinic"
+  },
+  "custodianCitizenSlug": "june-okafor",
+  "careHistory": [],
+  "documents": []
+}

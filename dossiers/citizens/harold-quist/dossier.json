@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "harold-quist",
+  "displayName": "Harold Quist",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1957-05-05",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "maple-main-bookshop",
+      "role": "Owner-Clerk",
+      "from": "2005-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [
+      "smokey-the-barn-cat"
+    ],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

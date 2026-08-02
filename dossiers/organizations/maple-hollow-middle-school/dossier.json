@@ -1,0 +1,43 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "maple-hollow-middle-school",
+  "displayName": "Maple Hollow Middle School",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "31-7702159",
+    "stateRegistration": "PA-G-0000032",
+    "founded": "1962-08-01"
+  },
+  "authority": {
+    "issuerType": "school-k12",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EDUCATION_K12"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Ibrahim Diallo",
+      "role": "Principal"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "c4213ec1ba97237121232b8a5865b37d9cd2cd12e1ea6f5ca636e10376e33304",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-greta.md",
+    "preprodAddress": "mn_addr_preprod1t59xn4jmdht9k5utzk5puu9ydqsc4p4y8rzg65fjn23wq0ys9xrsm8tdyh"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "victor-osei",
+  "displayName": "Victor Osei",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1986-09-09",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "harvest-moon-grocers",
+      "role": "Store Manager",
+      "from": "2005-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

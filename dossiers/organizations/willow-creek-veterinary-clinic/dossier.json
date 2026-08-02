@@ -1,0 +1,44 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "willow-creek-veterinary-clinic",
+  "displayName": "Willow Creek Veterinary Clinic",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "88-2245910",
+    "stateRegistration": "PA-C-0290114",
+    "founded": "2003-03-01"
+  },
+  "authority": {
+    "issuerType": "veterinary",
+    "requestedAssuranceLevel": "REGULATED_ENTITY",
+    "attestationScopes": [
+      "VACCINATION",
+      "MICROCHIP_BINDING"
+    ],
+    "subjectTiers": [
+      "animal"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Dr. Sam Whittaker",
+      "role": "DVM, Owner"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "ed58f98adb0c4c32ede46714818202f730b60b073e0947466e215befb5a5896c",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-olivia.md",
+    "preprodAddress": "mn_addr_preprod1mw7e5j8r0nv3gr3cc9zfyz78wsygfy5e2zku4933jpchg7mam85s7rvvjc"
+  }
+}

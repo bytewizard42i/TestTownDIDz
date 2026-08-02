@@ -1,0 +1,43 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "maple-hollow-elementary-school",
+  "displayName": "Maple Hollow Elementary School",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "31-7702158",
+    "stateRegistration": "PA-G-0000031",
+    "founded": "1962-08-01"
+  },
+  "authority": {
+    "issuerType": "school-k12",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EDUCATION_K12"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Dana Whitfield",
+      "role": "Principal"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "41ed9789069ec583ea83fe23b7814a78d57cdfbb95b1b9f930746db6493a8579",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-greta.md",
+    "preprodAddress": "mn_addr_preprod1t59xn4jmdht9k5utzk5puu9ydqsc4p4y8rzg65fjn23wq0ys9xrsm8tdyh"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "animal",
+  "slug": "smokey-the-barn-cat",
+  "displayName": "Smokey (domestic shorthair, b. 2020)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "species": "cat",
+  "identityBinding": {
+    "kind": "microchip",
+    "chipId": "985-141-002-450-77",
+    "implantedBy": "willow-creek-veterinary-clinic"
+  },
+  "custodianCitizenSlug": "harold-quist",
+  "careHistory": [],
+  "documents": []
+}

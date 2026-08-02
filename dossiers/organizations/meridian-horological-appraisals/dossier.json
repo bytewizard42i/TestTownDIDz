@@ -1,0 +1,44 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "meridian-horological-appraisals",
+  "displayName": "Meridian Horological Appraisals LLC",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "39-1120458",
+    "stateRegistration": "PA-C-0433981",
+    "founded": "2015-11-15"
+  },
+  "authority": {
+    "issuerType": "appraiser",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "AUTHENTICITY",
+      "APPRAISAL"
+    ],
+    "subjectTiers": [
+      "rwa"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Jules Fontaine",
+      "role": "Certified Appraiser"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "97198db915e6940df94bf40d6b3fa3631bd8c74359e2707cefbf59a3d94bd397",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-bianca.md",
+    "preprodAddress": "mn_addr_preprod13w30su4w5tmam849gs7r8n8ymv729ymjpjw26dzgch8nmgkytgzsmanal2"
+  }
+}

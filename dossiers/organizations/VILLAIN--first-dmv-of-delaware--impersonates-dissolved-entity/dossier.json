@@ -1,0 +1,46 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "VILLAIN--first-dmv-of-delaware--impersonates-dissolved-entity",
+  "displayName": "First DMV of Delaware Inc.",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "Real historical identifiers, dead entity: the IRS registry shows EIN 77-4491062 REVOKED and the State registry shows DE-C-0092716 DISSOLVED (2009-03-31); claimed officers do not match the historical record. A zombie wearing a real name."
+  },
+  "identifiers": {
+    "ein": "77-4491062",
+    "stateRegistration": "DE-C-0092716",
+    "founded": "1988-06-20"
+  },
+  "authority": {
+    "issuerType": "dmv",
+    "requestedAssuranceLevel": "SYSTEM_CRITICAL",
+    "attestationScopes": [
+      "DRIVERS_LICENSE",
+      "VEHICLE_TITLE"
+    ],
+    "subjectTiers": [
+      "human",
+      "rwa"
+    ]
+  },
+  "officers": [
+    {
+      "name": "M. Hollowell",
+      "role": "Director (claimed)"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "6cd88e19f5c2ba191773d9a664b037ee96349fccbad452970c60ad950b249725",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": null,
+    "preprodAddress": null,
+    "note": "bulk org \u2014 headless derived key planned"
+  }
+}

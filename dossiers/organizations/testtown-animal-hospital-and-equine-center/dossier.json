@@ -1,0 +1,46 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "testtown-animal-hospital-and-equine-center",
+  "displayName": "TestTown Animal Hospital & Equine Center",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "88-2245911",
+    "stateRegistration": "PA-C-0187330",
+    "founded": "1998-09-20"
+  },
+  "authority": {
+    "issuerType": "veterinary",
+    "requestedAssuranceLevel": "REGULATED_ENTITY",
+    "attestationScopes": [
+      "VACCINATION",
+      "MICROCHIP_BINDING",
+      "HEALTH_CERT",
+      "LINEAGE"
+    ],
+    "subjectTiers": [
+      "animal"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Dr. Amara Chen",
+      "role": "DVM, Chief of Medicine"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "36ff403f6ad1075edacc1659f29108a59cc977569c1626ce2349a87c4a14da01",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-emma.md",
+    "preprodAddress": "mn_addr_preprod15yyy5az5crv2f8usjxg5hurwyyknv8g93648f4n68450yd5c555stt4wdt"
+  }
+}

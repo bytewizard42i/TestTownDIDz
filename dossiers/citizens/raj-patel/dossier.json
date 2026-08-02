@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "raj-patel",
+  "displayName": "Raj Patel",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1975-07-16",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "summit-peak-outfitters",
+      "role": "Owner",
+      "from": "2005-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [
+      "duchess-the-warmblood"
+    ],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}

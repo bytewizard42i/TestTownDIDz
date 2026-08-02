@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "keystone-ridge-college",
+  "displayName": "Keystone Ridge College",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "23-5561201",
+    "stateRegistration": "PA-C-0011203",
+    "founded": "1911-09-01"
+  },
+  "authority": {
+    "issuerType": "college",
+    "requestedAssuranceLevel": "REGULATED_ENTITY",
+    "attestationScopes": [
+      "DEGREE",
+      "ENROLLMENT"
+    ],
+    "subjectTiers": [
+      "human"
+    ],
+    "accreditor": "Mid-Atlantic Commission on Higher Education"
+  },
+  "officers": [
+    {
+      "name": "Priya Natarajan",
+      "role": "President"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "c3775eccaf2f61ab53fe97c1e622aca81766951a7cbf4ab53bbd67e878ddeddc",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-rachel.md",
+    "preprodAddress": "mn_addr_preprod1mr9rndczh2zxcu0mlfhem63x4ledl88kvl4xl2jv3j5mfgrm7gasmqqfvc"
+  }
+}

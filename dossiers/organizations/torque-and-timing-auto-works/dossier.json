@@ -1,0 +1,44 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "torque-and-timing-auto-works",
+  "displayName": "Torque & Timing Auto Works",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "61-3308825",
+    "stateRegistration": "PA-C-0356102",
+    "founded": "2010-05-10"
+  },
+  "authority": {
+    "issuerType": "mechanic",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "INSPECTION",
+      "SERVICE_RECORD"
+    ],
+    "subjectTiers": [
+      "rwa"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Ray Okonkwo",
+      "role": "Owner/Master Technician"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "1e016b7fb1951b697fe633e5647b4cfe268b0dc5642f0a3cf8e7a0ed0c1ef99c",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-tessa.md",
+    "preprodAddress": "mn_addr_preprod1xnqxhtmnklw6wxujzky5gaap0q8hatxlmppwhfwfczrdvgfdeqpscnw6f4"
+  }
+}

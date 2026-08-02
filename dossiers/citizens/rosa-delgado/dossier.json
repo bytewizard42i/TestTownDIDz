@@ -3,12 +3,32 @@
   "category": "citizen",
   "slug": "rosa-delgado",
   "displayName": "Rosa Delgado",
-  "honesty": { "role": "AUTHENTIC", "fraudMechanism": null },
-  "identifiers": { "born": "1989-03-17", "birthRecordIssuer": "st-brigids-general-hospital" },
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1989-03-17",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
   "employment": [
-    { "employerSlug": "torque-and-timing-auto-works", "role": "Service Manager", "from": "2015-06-01", "to": null }
+    {
+      "employerSlug": "torque-and-timing-auto-works",
+      "role": "Service Manager",
+      "from": "2007-06-01",
+      "to": null
+    }
   ],
-  "householdSlugs": { "animals": ["comet-the-thoroughbred"], "assets": ["heirloom-lange-1815-wristwatch"] },
+  "householdSlugs": {
+    "animals": [
+      "comet-the-thoroughbred"
+    ],
+    "assets": [
+      "heirloom-lange-1815-wristwatch"
+    ]
+  },
   "documents": [],
-  "operator": { "note": "Citizens hold their OWN keys — self-sovereign; a wallet is assigned when the population build-out lands." }
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
 }

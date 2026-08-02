@@ -1,0 +1,45 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "commonwealth-dmv-testtown-office",
+  "displayName": "Commonwealth Department of Motor Vehicles, TestTown Office",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "45-0093377",
+    "stateRegistration": "PA-G-0000017",
+    "founded": "1971-01-04"
+  },
+  "authority": {
+    "issuerType": "dmv",
+    "requestedAssuranceLevel": "SYSTEM_CRITICAL",
+    "attestationScopes": [
+      "DRIVERS_LICENSE",
+      "VEHICLE_TITLE"
+    ],
+    "subjectTiers": [
+      "human",
+      "rwa"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Gwen Harper",
+      "role": "Office Director"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "274618e3b0861262a713ccb58132d98314072e51a1c0c796f5e17b1af579231b",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-jessica.md",
+    "preprodAddress": "mn_addr_preprod19r90qtcekt224vgmmhd4q4625w7kn3epgw32k09wguy0tnsqrlnqh28dn9"
+  }
+}

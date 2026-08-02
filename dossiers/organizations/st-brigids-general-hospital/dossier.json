@@ -3,22 +3,40 @@
   "category": "organization",
   "slug": "st-brigids-general-hospital",
   "displayName": "St. Brigid's General Hospital",
-  "honesty": { "role": "AUTHENTIC", "fraudMechanism": null },
-  "identifiers": { "ein": "82-4410973", "stateRegistration": "PA-C-0048291", "founded": "1987-04-12" },
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "82-4410973",
+    "stateRegistration": "PA-C-0048291",
+    "founded": "1987-04-12"
+  },
   "authority": {
     "issuerType": "hospital",
     "requestedAssuranceLevel": "REGULATED_ENTITY",
-    "attestationScopes": ["BIRTH_CERTIFICATE", "MEDICAL_RECORD"],
-    "subjectTiers": ["human"]
+    "attestationScopes": [
+      "BIRTH_CERTIFICATE",
+      "MEDICAL_RECORD"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
   },
   "officers": [
-    { "name": "Maren Okafor", "role": "Administrator" },
-    { "name": "Luis Reyes", "role": "CFO" }
+    {
+      "name": "Maren Okafor",
+      "role": "Administrator"
+    },
+    {
+      "name": "Luis Reyes",
+      "role": "CFO"
+    }
   ],
   "documents": [
     {
       "file": "articles-of-incorporation.md",
-      "kind": "articles-of-incorporation",
+      "kind": "incorporation-record",
       "sha256": "0b44c6019eea3b320c618eb23e4b6e1c6ffa9746ec804fbca0f6581ed342fb4f",
       "confirmableBy": "registries/state-corporations-registry.json"
     }

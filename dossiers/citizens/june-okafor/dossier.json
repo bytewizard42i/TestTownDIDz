@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "june-okafor",
+  "displayName": "June Okafor",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "born": "1994-06-21",
+    "birthRecordIssuer": "st-brigids-general-hospital"
+  },
+  "employment": [
+    {
+      "employerSlug": "st-brigids-general-hospital",
+      "role": "Registered Nurse",
+      "from": "2012-06-01",
+      "to": null
+    }
+  ],
+  "householdSlugs": {
+    "animals": [
+      "biscuit-the-corgi"
+    ],
+    "assets": []
+  },
+  "documents": [],
+  "operator": {
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+  }
+}
