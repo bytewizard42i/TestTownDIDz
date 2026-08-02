@@ -188,10 +188,17 @@ docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md
 
 ## Future districts (ideas parked, not promised)
 
-- **MidnightCity** 🌃 (John, Aug 2 2026): a SIBLING module for autonomous
-  test AGENTS — the verbs to TestTown's nouns. Agents pick up TestTown
-  identities and act: shopper agents under scoped grants, issuer-clerk
-  bots, verifier bots, and ADVERSARIAL agents (cap-probing, proof replay,
-  post-admission scope creep) that chaos-test the kernel's enforcement and
-  budget mechanics. Iron rule if built: MidnightCity READS TestTown, never
-  writes it — dependencies flow MidnightCity → TestTown → (nothing).
+- **Midnight City integration** 🌃 (John, Aug 2 2026): [midnight.city](https://www.midnight.city/)
+  is the OFFICIAL Midnight ecosystem's persistent AI-agent world (dcSpark +
+  IO, on Midnight L2) — thousands of autonomous agents with professions,
+  factions, and (per their roadmap) their own wallets "to trade, pay, and
+  earn on your behalf. Privately." Ambition: offer **Citizen DIDz** —
+  agent-tier DIDz custodied by owners, scoped grants (two-cap bounded
+  spending) governing agent wallets, faction/profession attestations
+  provable in ZK. See `AgenticDID/docs/MIDNIGHT_CITY_INTEGRATION_BRIEF.md`.
+- **Test-agent module** (the earlier riff worth keeping under another
+  name): a sibling module of autonomous test agents — the verbs to
+  TestTown's nouns — including ADVERSARIAL agents (cap-probing, proof
+  replay, post-admission scope creep) chaos-testing the kernel's
+  enforcement and budget mechanics. Iron rule if built: it READS TestTown,
+  never writes it.
