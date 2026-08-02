@@ -8,6 +8,73 @@
 > (see `DIDzMonolith-docs/standards/BUILD_STAGES.md`)
 > **License**: Apache-2.0
 
+## 🗺️ A Visitor's Map of the DIDzM Ecosystem
+
+*Every town needs a map on the welcome sign. TestTown is where the whole
+DIDzMonolith comes to be tested — so here is the whole town it belongs
+to, laid out the way the trust kernel sees it: six civic functions that
+every working society (and every working identity system) must staff.*
+
+### The Town Charter — the DIDz Trust Kernel
+
+**[didz-kernel](https://github.com/bytewizard42i/DIDzMonolith/tree/main/didz-kernel)**
+is the constitution everything else swears to: the **DIDz Protocol v0.1**
+(RFC-style spec, DIF/W3C introduction letters drafted), five provider
+seams, an orchestrator, and a conformance suite that IS the law — any
+backend that passes it is a lawful citizen. Shipped and green:
+`kernel-types` · `kernel-core` · `kernel-demoland` (MOCK reference) ·
+`kernel-conformance` · `adapter-midnight` (real circuits, both pillars) ·
+`adapter-midnight-localnet` (REALDEAL_TEST on a live network) ·
+**`@didz/wallet`** — the seven-tier Tiered Wallet (humans, agents,
+organizations, animals, devices, locations, objects/RWAs).
+
+### The Six Civic Functions
+
+| Civic function | "Who staffs it in a town" | Repo | Honest status (Aug 2, 2026) |
+|---|---|---|---|
+| **Identity** — WHO exists | The records office | [DIDz-io](https://github.com/bytewizard42i/DIDz_io) | `DIDzRegistry` (17 circuits) + `TrustedIssuerRegistry` (11) verified on compactc 0.31.1; **deployed on a live Midnight network with real ZK proofs**; preprod in flight |
+| **Authority** — WHAT may act, within what bounds | The commissioner of permits | [AgenticDID](https://github.com/bytewizard42i/AgenticDID_io_me) | Scoped-grant delegation REAL (midnight-modules `scoped-grant`, TestWired in-process); the flashy web demo is honest DemoLand (MOCK) |
+| **Objects** — WHAT things exist, who holds title | The county clerk (deeds & titles) | [RWAz](https://github.com/bytewizard42i/RWAz) | `rwa_registry` — **first DIDzM contract ever on a live chain**: VIN-model identity, movable title, liens, provenance chain, ZK proof-of-ownership |
+| **Data** — WHAT data, served at what tier | The librarian who checks your card | [HelixCTW](https://github.com/bytewizard42i/HelixCTW) | CockroachDB cluster + Bedrock agent + tiered gating live (hackathon build); kernel `DataGateway` adapter planned |
+| **Enforcement** — is THIS action allowed right now? | The gatehouse | taskFence_Ai | ⛔ **FROZEN** (OpenAI hackathon hold) — kernel expresses the concept natively meanwhile |
+| **Observation** — who's watching the watchers | The night watchtower | [ZKSplunk](https://github.com/bytewizard42i/ZKSplunk_Splunking_w_Midnight) / PrivateEye | Splunk forwarding + dashboards built; vitals implementation lives in the ZKSplunk fork |
+
+### The Town Services
+
+| Service | Repo | What it does |
+|---|---|---|
+| 🏥 **The clinic** | [MidnightVitals](https://github.com/bytewizard42i/MidnightVitals) | `@midnight-vitals/core` + `vitals` CLI — headless health probes (node, indexer, proof server, toolchain, Docker, on-chain address) for ANY project; React panel + MCP wrapper planned |
+| ⚙️ **The power plant** | midnight-modules | 16 engine contracts (scoped-grant, pol-credential, human-credentials, recovery-core…) — the shared circuits products compose |
+| 🚉 **The train to the real world** | midnight-local-dev | One-command local Midnight network (node 1.0.0 / indexer 4.3.3 / proof-server 8.1.0) — where TestWired begins |
+| 🏙️ **This repo** | TestTownDIDz | The test population: dossiers, authorities of record, villains |
+| 💰 **The bank vault** | `utils_Midnight/preProd-Wallets` (local-only) | Ten named operator wallets (Sarah…Greta), seeds in `tdust-secrets/`, never in git |
+| 📚 **Reference library** | utils_midnight-expert (official!) + Kapa MCP | Source-of-truth for Compact/Midnight; the deprecated Idris MCP retired with honors |
+
+### The Neighborhoods (products that consume the kernel)
+
+**Identity-first:** KYCz · selectConnect (first paying product) · ProMingle
+· SouLink · onlyHumans · realVote · SentinelDID — **Assets & lineage:**
+petProData · equineProData · LegacyKey (estate flows; localnet-deployed,
+45 tests) · SilentLedger · CryptoSure — **Data & discovery:**
+DiscoveryManagement (Vegas Summit demo) · safeHealthData · sharedScience —
+**and ~30 more** in the [monolith](https://github.com/bytewizard42i/DIDzMonolith),
+plus five books.
+
+### The Town Laws (conventions every repo obeys)
+
+1. **Build stages**: DemoLand → TestWired → RealDeal
+   (`DIDzMonolith-docs/standards/BUILD_STAGES.md`)
+2. **Evidence labels**: every output declares `MOCK` / `REALDEAL_TEST` /
+   `REALDEAL` / `PLANNED` — a demo must never be mistakable for a proof
+3. **Identity is never a token**: no transfer circuits exist, by
+   construction; keys rotate, identity stays
+4. **Privacy by default**: commitments on-chain, facts with the holder,
+   one-bit disclosures on demand
+5. **Issuer admission is sacred**: the gate cross-checks dossiers against
+   authorities of record — and TestTown's villains keep it honest
+
+---
+
 ## What TestTown is
 
 TestTown is the DIDzM ecosystem's **test population**: a small American
