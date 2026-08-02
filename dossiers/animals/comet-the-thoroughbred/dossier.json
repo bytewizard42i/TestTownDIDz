@@ -1,0 +1,12 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "animal",
+  "slug": "comet-the-thoroughbred",
+  "displayName": "Comet (Thoroughbred gelding, b. 2019)",
+  "honesty": { "role": "AUTHENTIC", "fraudMechanism": null },
+  "species": "horse",
+  "identityBinding": { "kind": "microchip", "chipId": "985-141-002-776-31", "implantedBy": "testtown-animal-hospital-and-equine-center" },
+  "custodianCitizenSlug": "rosa-delgado",
+  "careHistory": [],
+  "documents": []
+}

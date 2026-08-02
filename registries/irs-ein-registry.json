@@ -1,0 +1,23 @@
+{
+  "registry": "TestTown mock IRS — Employer Identification Number registry",
+  "note": "The authority of record for EINs. If an EIN is not in here, the IRS never issued it — no matter how well-formed it looks. The DIDz.io admission gate cross-checks every applicant against this file (DemoLand: file read; TestWired: served as a test API).",
+  "eins": {
+    "82-4410973": { "legalName": "St. Brigid's General Hospital", "issued": "1987-04-20", "status": "active" },
+    "31-7702158": { "legalName": "Maple Hollow Elementary School District", "issued": "1962-08-01", "status": "active" },
+    "31-7702159": { "legalName": "Maple Hollow Middle School District", "issued": "1962-08-01", "status": "active" },
+    "31-7702160": { "legalName": "Maple Hollow Senior High School District", "issued": "1962-08-01", "status": "active" },
+    "23-5561201": { "legalName": "Keystone Ridge College", "issued": "1911-09-15", "status": "active" },
+    "45-0093377": { "legalName": "Commonwealth Department of Motor Vehicles, TestTown Office", "issued": "1971-01-04", "status": "active" },
+    "52-8814406": { "legalName": "TestTown Social Security Field Office", "issued": "1954-06-30", "status": "active" },
+    "88-2245910": { "legalName": "Willow Creek Veterinary Clinic", "issued": "2003-03-11", "status": "active" },
+    "88-2245911": { "legalName": "TestTown Animal Hospital & Equine Center", "issued": "1998-10-02", "status": "active" },
+    "61-3308825": { "legalName": "Torque & Timing Auto Works", "issued": "2010-05-22", "status": "active" },
+    "74-6650391": { "legalName": "Hearthstone Realty Group", "issued": "1995-02-14", "status": "active" },
+    "39-1120458": { "legalName": "Meridian Horological Appraisals LLC", "issued": "2015-11-30", "status": "active" },
+    "77-4491062": { "legalName": "First DMV of Delaware Inc.", "issued": "1988-07-07", "status": "revoked", "revokedReason": "entity dissolved 2009-03-31; EIN retired" }
+  },
+  "deliberately_absent": {
+    "note": "VILLAIN tells — these EINs appear in villain dossiers and MUST fail lookup:",
+    "94-7316285": "claimed by VILLAIN--shady-docs-llc--forged-ein-not-in-irs-registry (well-formed, never issued)"
+  }
+}

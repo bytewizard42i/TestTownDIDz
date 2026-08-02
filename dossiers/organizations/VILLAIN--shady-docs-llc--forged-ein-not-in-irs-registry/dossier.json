@@ -1,0 +1,28 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "VILLAIN--shady-docs-llc--forged-ein-not-in-irs-registry",
+  "displayName": "Shady Docs LLC (dba TestTown Credential Services)",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "EIN 94-7316285 is well-formed but was NEVER issued by the IRS registry, and claimed state filing PA-C-9990001 does not exist in the State corporations registry. The admission gate MUST refuse this applicant citing both failed confirmations."
+  },
+  "identifiers": { "ein": "94-7316285", "stateRegistration": "PA-C-9990001", "founded": "2024-01-05" },
+  "authority": {
+    "issuerType": "appraiser",
+    "requestedAssuranceLevel": "SYSTEM_CRITICAL",
+    "attestationScopes": ["BIRTH_CERTIFICATE", "DRIVERS_LICENSE", "DEGREE", "APPRAISAL"],
+    "subjectTiers": ["human", "agent", "animal", "rwa"],
+    "note": "Grossly over-broad scope request at maximum assurance — a second tell, independent of the forged identifiers."
+  },
+  "officers": [{ "name": "P. Fictus", "role": "Managing Member" }],
+  "documents": [
+    {
+      "file": "articles-of-incorporation.md",
+      "kind": "articles-of-incorporation",
+      "sha256": "f8ad0c2468318fe0846c37a1f27d2754f3d32c27d392bcd3ee4d8f19406f82db",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "operator": { "walletCard": null, "preprodAddress": null }
+}

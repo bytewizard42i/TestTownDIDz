@@ -1,0 +1,21 @@
+{
+  "registry": "TestTown mock State Corporations registry (Secretary of State)",
+  "note": "The authority of record for legal existence and standing. Cross-check target #2 for the DIDz.io admission gate. Standing values: GOOD_STANDING | DISSOLVED | SUSPENDED.",
+  "registrations": {
+    "PA-C-0048291": { "legalName": "St. Brigid's General Hospital", "standing": "GOOD_STANDING", "incorporated": "1987-04-12", "officers": ["Maren Okafor (Administrator)", "Luis Reyes (CFO)"] },
+    "PA-C-0011203": { "legalName": "Keystone Ridge College", "standing": "GOOD_STANDING", "incorporated": "1911-09-01", "officers": ["Priya Natarajan (President)"] },
+    "PA-G-0000017": { "legalName": "Commonwealth Department of Motor Vehicles, TestTown Office", "standing": "GOOD_STANDING", "kind": "government-agency", "charter": "state-charter" },
+    "PA-G-0000004": { "legalName": "TestTown Social Security Field Office", "standing": "GOOD_STANDING", "kind": "government-agency", "charter": "federal-charter" },
+    "PA-C-0290114": { "legalName": "Willow Creek Veterinary Clinic", "standing": "GOOD_STANDING", "incorporated": "2003-03-01" },
+    "PA-C-0187330": { "legalName": "TestTown Animal Hospital & Equine Center", "standing": "GOOD_STANDING", "incorporated": "1998-09-20" },
+    "PA-C-0356102": { "legalName": "Torque & Timing Auto Works", "standing": "GOOD_STANDING", "incorporated": "2010-05-10" },
+    "PA-C-0244875": { "legalName": "Hearthstone Realty Group", "standing": "GOOD_STANDING", "incorporated": "1995-02-01" },
+    "PA-C-0433981": { "legalName": "Meridian Horological Appraisals LLC", "standing": "GOOD_STANDING", "incorporated": "2015-11-15" },
+    "DE-C-0092716": { "legalName": "First DMV of Delaware Inc.", "standing": "DISSOLVED", "incorporated": "1988-06-20", "dissolved": "2009-03-31", "note": "VILLAIN tell: villain dossier claims this registration as if in good standing; officers listed in the villain dossier do not match historical record" }
+  },
+  "deliberately_absent": {
+    "note": "VILLAIN tells — registration numbers that MUST fail lookup:",
+    "PA-C-9990001": "claimed by VILLAIN--shady-docs-llc--forged-ein-not-in-irs-registry",
+    "accreditor 'National Board of Continental Academics'": "cited by VILLAIN--evergreen-diploma-mill--accreditation-cites-nonexistent-board; no such accreditor exists in any registry"
+  }
+}
