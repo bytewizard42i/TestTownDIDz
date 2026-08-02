@@ -185,3 +185,13 @@ docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md
 3. Villains are permanent residents: removing one weakens the gate's tests.
 4. All data is fictional; resemblance to real entities is coincidental.
 ```
+
+## Future districts (ideas parked, not promised)
+
+- **MidnightCity** 🌃 (John, Aug 2 2026): a SIBLING module for autonomous
+  test AGENTS — the verbs to TestTown's nouns. Agents pick up TestTown
+  identities and act: shopper agents under scoped grants, issuer-clerk
+  bots, verifier bots, and ADVERSARIAL agents (cap-probing, proof replay,
+  post-admission scope creep) that chaos-test the kernel's enforcement and
+  budget mechanics. Iron rule if built: MidnightCity READS TestTown, never
+  writes it — dependencies flow MidnightCity → TestTown → (nothing).
