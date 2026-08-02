@@ -195,7 +195,7 @@ docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md
   earn on your behalf. Privately." Ambition: offer **Citizen DIDz** —
   agent-tier DIDz custodied by owners, scoped grants (two-cap bounded
   spending) governing agent wallets, faction/profession attestations
-  provable in ZK. See `AgenticDID/docs/MIDNIGHT_CITY_INTEGRATION_BRIEF.md`.
+  provable in ZK. See `MidnightCity_outreach/INTEGRATION_BRIEF.md`.
 - **Test-agent module** (the earlier riff worth keeping under another
   name): a sibling module of autonomous test agents — the verbs to
   TestTown's nouns — including ADVERSARIAL agents (cap-probing, proof
