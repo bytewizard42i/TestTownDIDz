@@ -1,0 +1,26 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "hartmann-vintage-projector",
+  "displayName": "Hartmann restored 1948 carbon-arc cinema projector",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "serial-number",
+    "value": "TT-PRJ-1948-0112-R"
+  },
+  "ownerCitizenSlug": "lena-hartmann",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "restored-re-anchored",
+    "story": "Lena restored the projector; the corroded serial plate was replaced during restoration (new anchor value ends in -R). Ship of Theseus: identity survives an AUTHORIZED re-anchor ceremony with a qualified attester; an unauthorized anchor change is presumptive fraud.",
+    "kernelExpectations": [
+      "authorized re-anchoring updates the binding and appends a provenance block",
+      "the asset DIDz is unchanged across the anchor replacement"
+    ]
+  }
+}

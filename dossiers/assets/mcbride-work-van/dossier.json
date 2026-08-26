@@ -1,0 +1,26 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "mcbride-work-van",
+  "displayName": "McBride 2015 plumbing work van (total loss)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "vehicle",
+  "identityAnchor": {
+    "kind": "vin",
+    "value": "1TTMC15X3FZ007733"
+  },
+  "ownerCitizenSlug": "colin-mcbride",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "destroyed",
+    "story": "Totaled in 2025; Ironclad Insurance (adjuster: Theo Brandt) settled the claim \u2014 the settlement is the FINAL provenance block. Terminal means terminal: a salvage rebuild would be a NEW asset DIDz carrying a salvage-history credential pointing at this one.",
+    "kernelExpectations": [
+      "all transfer attempts on a destroyed asset are rejected forever",
+      "the vault becomes a read-only archive; history remains verifiable"
+    ]
+  }
+}

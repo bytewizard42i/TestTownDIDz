@@ -161,9 +161,12 @@ dossiers/
   organizations/   hospitals, schools, DMV, SSA, vets, employers, ... + VILLAINs
   citizens/        ~20 residents with job histories pointing at the employers
   animals/         pets and horses (custodians point at citizens)
-  assets/          watches, vehicles, real estate (owners point at citizens)
+  assets/          watches, vehicles, real estate, artwork... — every asset
+                   is a LIFECYCLE test vector (creation, lien, escrow,
+                   fractional shares, inheritance, re-anchoring, destruction)
+                   + a VILLAIN with a cloned serial; see docs/LIFECYCLE_CATALOG.md
 registries/        the authorities of record (mock IRS, State corporations)
-docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md
+docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md
 ```
 
 ## How the ecosystem consumes TestTown

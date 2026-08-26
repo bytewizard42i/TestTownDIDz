@@ -1,0 +1,26 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "VILLAIN--phantom-1815-wristwatch--serial-cloned-from-registered-heirloom",
+  "displayName": "Counterfeit 1815-style wristwatch presenting a cloned serial",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "identity anchor TT-1815-004417 is CLONED from the registered heirloom-lange-1815-wristwatch; the registry already binds that serial to an existing asset DIDz \u2014 first-registered wins, the clone is refused"
+  },
+  "assetKind": "watch",
+  "identityAnchor": {
+    "kind": "serial-number",
+    "value": "TT-1815-004417"
+  },
+  "claimedOwnership": "presented by an unregistered seller claiming clear title",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "fraud-cloned-anchor",
+    "story": "presented by an unregistered seller claiming clear title",
+    "kernelExpectations": [
+      "duplicate identity anchor is detected against the registry",
+      "registration of the clone is REFUSED; the fixture reads as an alarm if admitted"
+    ]
+  }
+}

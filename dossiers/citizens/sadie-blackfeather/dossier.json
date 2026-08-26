@@ -21,7 +21,9 @@
   ],
   "householdSlugs": {
     "animals": [],
-    "assets": []
+    "assets": [
+      "blackfeather-commissioned-mural"
+    ]
   },
   "documents": [],
   "operator": {

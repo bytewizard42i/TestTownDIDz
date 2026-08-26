@@ -14,5 +14,13 @@
   },
   "ownerCitizenSlug": "amos-fairweather",
   "papers": [],
-  "documents": []
+  "documents": [],
+  "lifecycle": {
+    "stage": "financed-with-lien",
+    "story": "Amos financed the truck through Testtown Savings & Loan; the lien is active until the loan is repaid.",
+    "kernelExpectations": [
+      "transfer attempts are REJECTED while the LienCredential is active",
+      "'is this vehicle lien-free?' answers false in one bit, owner not revealed"
+    ]
+  }
 }

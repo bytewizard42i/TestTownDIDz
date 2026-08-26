@@ -207,6 +207,149 @@ ASSETS = [
      "vehicle", "vin", "1TTFW18X7JZ004821", "amos-fairweather"),
     ("zhao-grand-seiko-snowflake", "Zhao Grand Seiko-style 'Snowflake' wristwatch (fictional)",
      "watch", "serial-number", "TT-GS-2210-88031", "mei-lin-zhao"),
+    # --- Lifecycle assortment (Aug 26, 2026 ideation session) -------------
+    # Each of these assets exists to exercise ONE stage of the RWA lifecycle
+    # at the gate. The story lives in ASSET_LIFECYCLES below; the full
+    # hard-think is docs/LIFECYCLE_CATALOG.md §8.
+    ("blackfeather-commissioned-mural", "'Dawn Over Quarry Road' commissioned mural panel",
+     "artwork", "catalog-id", "TT-GFG-2026-0007", "sadie-blackfeather"),
+    ("petrova-lakeside-cottage", "Petrova lakeside cottage, 9 Millpond Lane",
+     "real-estate", "parcel-id", "TT-PARCEL-0221-033", "anya-petrova"),
+    ("riverbend-quarry-warehouse", "Riverbend quarry-road warehouse (fractionalized)",
+     "real-estate", "parcel-id", "TT-PARCEL-0917-201", "olaf-bjornsen"),
+    ("quist-estate-grand-piano", "Quist estate 1962 concert grand piano",
+     "instrument", "serial-number", "TT-PNO-1962-0448", "harold-quist"),
+    ("hartmann-vintage-projector", "Hartmann restored 1948 carbon-arc cinema projector",
+     "equipment", "serial-number", "TT-PRJ-1948-0112-R", "lena-hartmann"),
+    ("mcbride-work-van", "McBride 2015 plumbing work van (total loss)",
+     "vehicle", "vin", "1TTMC15X3FZ007733", "colin-mcbride"),
+]
+
+# ---------------------------------------------------------------------------
+# ASSET LIFECYCLES — every asset is a lifecycle TEST VECTOR.
+#
+# WHY (teaching note): wallet systems die at the ENDS of lifecycles, not the
+# beginnings. Each block below declares the stage an asset is frozen at, the
+# plain-English story, and the behaviors the kernel gate MUST exhibit when
+# this fixture is played through it ("kernelExpectations" become test
+# assertions). Full reasoning: docs/LIFECYCLE_CATALOG.md.
+# ---------------------------------------------------------------------------
+ASSET_LIFECYCLES = {
+    "heirloom-lange-1815-wristwatch": {
+        "stage": "heirloom-in-family",
+        "story": "In the Delgado family three generations; long provenance chain, "
+                 "never sold at retail within living memory.",
+        "kernelExpectations": [
+            "long provenance chain verifies end-to-end from the head hash",
+            "ownership provable in ZK without revealing the family history",
+        ],
+    },
+    "morrow-family-farmhouse": {
+        "stage": "homestead",
+        "story": "Edgar Morrow's lifelong home; decades of inspection, repair, and "
+                 "insurance records accrue in the asset's vault.",
+        "kernelExpectations": [
+            "thick vault stays fully private until a sale process begins",
+            "records filed to the HOUSE convey; records about the OWNER never enter this vault",
+        ],
+    },
+    "fairweather-pickup-truck": {
+        "stage": "financed-with-lien",
+        "story": "Amos financed the truck through Testtown Savings & Loan; the lien "
+                 "is active until the loan is repaid.",
+        "kernelExpectations": [
+            "transfer attempts are REJECTED while the LienCredential is active",
+            "'is this vehicle lien-free?' answers false in one bit, owner not revealed",
+        ],
+    },
+    "zhao-grand-seiko-snowflake": {
+        "stage": "clean-retail-purchase",
+        "story": "Mei-Lin bought the watch new; provenance is a single retail block. "
+                 "The happy path every other fixture complicates.",
+        "kernelExpectations": [
+            "unencumbered transfer succeeds and appends exactly one provenance block",
+        ],
+    },
+    "blackfeather-commissioned-mural": {
+        "stage": "creation",
+        "story": "Commissioned through the Gilded Frame gallery and completed this "
+                 "year; the artist's attestation is provenance block #1 — the asset "
+                 "DIDz is minted at the moment of making.",
+        "kernelExpectations": [
+            "registration ceremony mints a permanent asset identity with creator attestation",
+            "creator is the first trusted attester in the provenance chain",
+        ],
+    },
+    "petrova-lakeside-cottage": {
+        "stage": "mid-sale-escrow",
+        "story": "Anya is selling; Marcus Reid prequalified and paid a deposit held "
+                 "in escrow. The tiered disclosure ladder is LIVE: public sees a "
+                 "price band, prequalified buyers see the address, the escrowed "
+                 "buyer sees inspection history — and nobody sees Anya's personal "
+                 "records, which were never filed in the house's vault.",
+        "kernelExpectations": [
+            "EscrowCredential unlocks deeper history tiers at query time",
+            "same query returns different visibility per caller authority (spec §6.5)",
+            "seller-personal records are absent from the asset vault by construction",
+        ],
+    },
+    "riverbend-quarry-warehouse": {
+        "stage": "fractionalized",
+        "story": "Olaf (managing shareholder), Priscilla Vance, and Victor Osei hold "
+                 "50/30/20 shares as credentials over ONE asset DIDz — shares are "
+                 "credentials, not sub-entities (RWAz ruling: no entity explosion).",
+        "kernelExpectations": [
+            "many share-credentials bind to a single permanent asset identity",
+            "'do I hold at least N shares?' provable without revealing total holdings",
+        ],
+    },
+    "quist-estate-grand-piano": {
+        "stage": "inherited",
+        "story": "Harold inherited the piano when his mother Ingrid passed in 2024; "
+                 "her DIDz is deceased (terminal) and the executor-authorized estate "
+                 "transfer is the latest provenance block.",
+        "kernelExpectations": [
+            "deceased owner triggers succession, never a transfer FROM the terminal identity itself",
+            "executor authority (a scoped grant) signs the estate transfer",
+            "provenance records the succession without exposing the estate's private details",
+        ],
+    },
+    "hartmann-vintage-projector": {
+        "stage": "restored-re-anchored",
+        "story": "Lena restored the projector; the corroded serial plate was replaced "
+                 "during restoration (new anchor value ends in -R). Ship of Theseus: "
+                 "identity survives an AUTHORIZED re-anchor ceremony with a qualified "
+                 "attester; an unauthorized anchor change is presumptive fraud.",
+        "kernelExpectations": [
+            "authorized re-anchoring updates the binding and appends a provenance block",
+            "the asset DIDz is unchanged across the anchor replacement",
+        ],
+    },
+    "mcbride-work-van": {
+        "stage": "destroyed",
+        "story": "Totaled in 2025; Ironclad Insurance (adjuster: Theo Brandt) settled "
+                 "the claim — the settlement is the FINAL provenance block. Terminal "
+                 "means terminal: a salvage rebuild would be a NEW asset DIDz "
+                 "carrying a salvage-history credential pointing at this one.",
+        "kernelExpectations": [
+            "all transfer attempts on a destroyed asset are rejected forever",
+            "the vault becomes a read-only archive; history remains verifiable",
+        ],
+    },
+}
+
+# Villain assets: identical schema, fraud in the details (iron rule #2).
+# NOT linked into any citizen's household — a fraudulent claim of ownership
+# must never appear in an authentic citizen's dossier.
+# slug, name, kind, anchor-kind, anchor, claimed-owner-description, fraud
+VILLAIN_ASSETS = [
+    ("VILLAIN--phantom-1815-wristwatch--serial-cloned-from-registered-heirloom",
+     "Counterfeit 1815-style wristwatch presenting a cloned serial",
+     "watch", "serial-number", "TT-1815-004417",
+     "presented by an unregistered seller claiming clear title",
+     "identity anchor TT-1815-004417 is CLONED from the registered "
+     "heirloom-lange-1815-wristwatch; the registry already binds that serial "
+     "to an existing asset DIDz — first-registered wins, the clone is refused"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -353,10 +496,36 @@ def main():
             "assetKind": kind,
             "identityAnchor": {"kind": anchor_kind, "value": anchor},
             "ownerCitizenSlug": owner, "papers": [], "documents": [],
+            # Optional v0.2 extension: the lifecycle test vector this asset
+            # embodies (docs/LIFECYCLE_CATALOG.md §8, §11).
+            **({"lifecycle": ASSET_LIFECYCLES[slug]} if slug in ASSET_LIFECYCLES else {}),
+        })
+
+    # Villain assets: same shape as authentic ones, fraud named verbosely.
+    # No ownerCitizenSlug — a fraudulent ownership claim never touches an
+    # authentic citizen's household; the claim text lives in the dossier.
+    for slug, name, kind, anchor_kind, anchor, claimed, fraud in VILLAIN_ASSETS:
+        write_json(os.path.join(ROOT, "dossiers", "assets", slug, "dossier.json"), {
+            "schema": "testtown/dossier/v0.1", "category": "asset", "slug": slug,
+            "displayName": name,
+            "honesty": {"role": "VILLAIN", "fraudMechanism": fraud},
+            "assetKind": kind,
+            "identityAnchor": {"kind": anchor_kind, "value": anchor},
+            "claimedOwnership": claimed,
+            "papers": [], "documents": [],
+            "lifecycle": {
+                "stage": "fraud-cloned-anchor",
+                "story": claimed,
+                "kernelExpectations": [
+                    "duplicate identity anchor is detected against the registry",
+                    "registration of the clone is REFUSED; the fixture reads as an alarm if admitted",
+                ],
+            },
         })
 
     print(f"generated: {len(all_orgs)} organizations ({len(VILLAINS)} villains), "
-          f"{len(CITIZENS)} citizens, {len(ANIMALS)} animals, {len(ASSETS)} assets")
+          f"{len(CITIZENS)} citizens, {len(ANIMALS)} animals, "
+          f"{len(ASSETS)} assets (+{len(VILLAIN_ASSETS)} villain assets)")
 
 if __name__ == "__main__":
     main()

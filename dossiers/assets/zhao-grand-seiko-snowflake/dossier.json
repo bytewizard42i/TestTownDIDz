@@ -14,5 +14,12 @@
   },
   "ownerCitizenSlug": "mei-lin-zhao",
   "papers": [],
-  "documents": []
+  "documents": [],
+  "lifecycle": {
+    "stage": "clean-retail-purchase",
+    "story": "Mei-Lin bought the watch new; provenance is a single retail block. The happy path every other fixture complicates.",
+    "kernelExpectations": [
+      "unencumbered transfer succeeds and appends exactly one provenance block"
+    ]
+  }
 }

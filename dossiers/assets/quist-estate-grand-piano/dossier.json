@@ -1,0 +1,27 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "quist-estate-grand-piano",
+  "displayName": "Quist estate 1962 concert grand piano",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "instrument",
+  "identityAnchor": {
+    "kind": "serial-number",
+    "value": "TT-PNO-1962-0448"
+  },
+  "ownerCitizenSlug": "harold-quist",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "inherited",
+    "story": "Harold inherited the piano when his mother Ingrid passed in 2024; her DIDz is deceased (terminal) and the executor-authorized estate transfer is the latest provenance block.",
+    "kernelExpectations": [
+      "deceased owner triggers succession, never a transfer FROM the terminal identity itself",
+      "executor authority (a scoped grant) signs the estate transfer",
+      "provenance records the succession without exposing the estate's private details"
+    ]
+  }
+}

@@ -21,7 +21,9 @@
   ],
   "householdSlugs": {
     "animals": [],
-    "assets": []
+    "assets": [
+      "hartmann-vintage-projector"
+    ]
   },
   "documents": [],
   "operator": {

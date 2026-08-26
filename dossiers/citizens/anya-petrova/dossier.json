@@ -21,7 +21,9 @@
   ],
   "householdSlugs": {
     "animals": [],
-    "assets": []
+    "assets": [
+      "petrova-lakeside-cottage"
+    ]
   },
   "documents": [],
   "operator": {

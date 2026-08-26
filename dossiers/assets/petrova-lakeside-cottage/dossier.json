@@ -1,0 +1,27 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "petrova-lakeside-cottage",
+  "displayName": "Petrova lakeside cottage, 9 Millpond Lane",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "real-estate",
+  "identityAnchor": {
+    "kind": "parcel-id",
+    "value": "TT-PARCEL-0221-033"
+  },
+  "ownerCitizenSlug": "anya-petrova",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "mid-sale-escrow",
+    "story": "Anya is selling; Marcus Reid prequalified and paid a deposit held in escrow. The tiered disclosure ladder is LIVE: public sees a price band, prequalified buyers see the address, the escrowed buyer sees inspection history \u2014 and nobody sees Anya's personal records, which were never filed in the house's vault.",
+    "kernelExpectations": [
+      "EscrowCredential unlocks deeper history tiers at query time",
+      "same query returns different visibility per caller authority (spec \u00a76.5)",
+      "seller-personal records are absent from the asset vault by construction"
+    ]
+  }
+}

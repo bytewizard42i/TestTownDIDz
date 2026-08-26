@@ -14,5 +14,13 @@
   },
   "ownerCitizenSlug": "edgar-morrow",
   "papers": [],
-  "documents": []
+  "documents": [],
+  "lifecycle": {
+    "stage": "homestead",
+    "story": "Edgar Morrow's lifelong home; decades of inspection, repair, and insurance records accrue in the asset's vault.",
+    "kernelExpectations": [
+      "thick vault stays fully private until a sale process begins",
+      "records filed to the HOUSE convey; records about the OWNER never enter this vault"
+    ]
+  }
 }

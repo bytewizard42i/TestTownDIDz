@@ -1,0 +1,26 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "riverbend-quarry-warehouse",
+  "displayName": "Riverbend quarry-road warehouse (fractionalized)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "real-estate",
+  "identityAnchor": {
+    "kind": "parcel-id",
+    "value": "TT-PARCEL-0917-201"
+  },
+  "ownerCitizenSlug": "olaf-bjornsen",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "fractionalized",
+    "story": "Olaf (managing shareholder), Priscilla Vance, and Victor Osei hold 50/30/20 shares as credentials over ONE asset DIDz \u2014 shares are credentials, not sub-entities (RWAz ruling: no entity explosion).",
+    "kernelExpectations": [
+      "many share-credentials bind to a single permanent asset identity",
+      "'do I hold at least N shares?' provable without revealing total holdings"
+    ]
+  }
+}

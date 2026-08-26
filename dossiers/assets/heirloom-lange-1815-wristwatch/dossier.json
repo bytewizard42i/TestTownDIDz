@@ -14,5 +14,13 @@
   },
   "ownerCitizenSlug": "rosa-delgado",
   "papers": [],
-  "documents": []
+  "documents": [],
+  "lifecycle": {
+    "stage": "heirloom-in-family",
+    "story": "In the Delgado family three generations; long provenance chain, never sold at retail within living memory.",
+    "kernelExpectations": [
+      "long provenance chain verifies end-to-end from the head hash",
+      "ownership provable in ZK without revealing the family history"
+    ]
+  }
 }

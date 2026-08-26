@@ -79,9 +79,25 @@ dossiers/<category>/<slug>/
 a biometric), `custodianCitizenSlug`, `careHistory[]` (vet visit documents).
 
 ### asset
-`assetKind` (watch | vehicle | real-estate ...), `identityAnchor` (serial
-number / VIN / parcel id document), `ownerCitizenSlug`, `papers[]`
-(title, appraisal, service records).
+`assetKind` (watch | vehicle | real-estate | artwork | instrument |
+equipment ...), `identityAnchor` (serial number / VIN / parcel id document),
+`ownerCitizenSlug`, `papers[]` (title, appraisal, service records).
+
+**Optional `lifecycle` block (v0.2 candidate, Aug 26 2026):** every asset is
+a lifecycle TEST VECTOR — the block declares which stage of an RWA's life the
+fixture is frozen at, the plain-English story, and the behaviors the gate
+must exhibit (`kernelExpectations` become test assertions). Villain assets
+carry it too, with `claimedOwnership` in place of `ownerCitizenSlug` (a
+fraudulent claim never touches an authentic citizen's household). Full
+catalog and rationale: `LIFECYCLE_CATALOG.md`.
+
+```jsonc
+"lifecycle": {
+  "stage": "mid-sale-escrow",        // stage name from LIFECYCLE_CATALOG.md §8
+  "story": "…",                       // the situation, in plain English
+  "kernelExpectations": ["…"]        // what the gate MUST do with this fixture
+}
+```
 
 ## The three iron rules
 

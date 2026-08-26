@@ -21,7 +21,9 @@
   ],
   "householdSlugs": {
     "animals": [],
-    "assets": []
+    "assets": [
+      "mcbride-work-van"
+    ]
   },
   "documents": [],
   "operator": {

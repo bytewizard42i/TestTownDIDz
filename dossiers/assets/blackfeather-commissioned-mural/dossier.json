@@ -1,0 +1,26 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "blackfeather-commissioned-mural",
+  "displayName": "'Dawn Over Quarry Road' commissioned mural panel",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "artwork",
+  "identityAnchor": {
+    "kind": "catalog-id",
+    "value": "TT-GFG-2026-0007"
+  },
+  "ownerCitizenSlug": "sadie-blackfeather",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "creation",
+    "story": "Commissioned through the Gilded Frame gallery and completed this year; the artist's attestation is provenance block #1 \u2014 the asset DIDz is minted at the moment of making.",
+    "kernelExpectations": [
+      "registration ceremony mints a permanent asset identity with creator attestation",
+      "creator is the first trusted attester in the provenance chain"
+    ]
+  }
+}
