@@ -1,0 +1,59 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-inez-brook",
+  "displayName": "Inez Brook",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "bf2273dc23fcee0706f723ca464040dde4699d1d3dccce0f459a548af3e4ede7",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-inez-brook"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-prismsprout-infrastructure",
+      "role": "developer",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "inez-brook",
+    "role": "developer",
+    "companyId": "prismsprout-infrastructure",
+    "biography": "A fictional embedded-systems developer studying receiver diagnostics and honest location uncertainty.",
+    "interests": [
+      "device identity",
+      "hardware",
+      "offline resilience"
+    ],
+    "availability": "unknown",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": false,
+      "availabilitySharing": false,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

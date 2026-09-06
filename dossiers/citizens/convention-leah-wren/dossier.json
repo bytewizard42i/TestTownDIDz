@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-leah-wren",
+  "displayName": "Leah Wren",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "ac1fdcf911844e25619e972076c2f52c8ef5e8497446d9a350f6d3f82594624f",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-leah-wren"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-lanternmoss-proofworks",
+      "role": "founder",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "leah-wren",
+    "role": "founder",
+    "companyId": "lanternmoss-proofworks",
+    "biography": "A fictional founder looking for practical privacy use cases and carefully scoped pilot partners.",
+    "interests": [
+      "selective privacy",
+      "enterprise adoption",
+      "pilot partnerships"
+    ],
+    "availability": "busy",
+    "presenceSlot": "privacy",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

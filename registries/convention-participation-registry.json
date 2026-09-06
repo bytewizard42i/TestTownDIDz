@@ -1,0 +1,205 @@
+{
+  "schema": "testtown/convention-participation/v1",
+  "eventId": "demo-convention-2026",
+  "evidence": "MOCK",
+  "fictional": true,
+  "scope": "Fictional convention participation only. This registry does not establish legal incorporation, government registration, trusted issuer admission, ownership proof, or live device possession.",
+  "organizations": {
+    "convention-lanternmoss-proofworks": {
+      "displayName": "LanternMoss Proofworks",
+      "status": "participating"
+    },
+    "convention-copperkite-wallet-studio": {
+      "displayName": "CopperKite Wallet Studio",
+      "status": "participating"
+    },
+    "convention-prismsprout-infrastructure": {
+      "displayName": "PrismSprout Infrastructure",
+      "status": "participating"
+    },
+    "convention-sunnyorchard-kitchen": {
+      "displayName": "SunnyOrchard Kitchen",
+      "status": "participating"
+    }
+  },
+  "citizens": {
+    "convention-avery-bloom": {
+      "displayName": "Avery Bloom",
+      "status": "participating"
+    },
+    "convention-elio-reed": {
+      "displayName": "Elio Reed",
+      "status": "participating"
+    },
+    "convention-june-alder": {
+      "displayName": "June Alder",
+      "status": "participating"
+    },
+    "convention-mina-vale": {
+      "displayName": "Mina Vale",
+      "status": "participating"
+    },
+    "convention-tariq-fern": {
+      "displayName": "Tariq Fern",
+      "status": "participating"
+    },
+    "convention-inez-brook": {
+      "displayName": "Inez Brook",
+      "status": "participating"
+    },
+    "convention-leah-wren": {
+      "displayName": "Leah Wren",
+      "status": "participating"
+    },
+    "convention-omar-finch": {
+      "displayName": "Omar Finch",
+      "status": "participating"
+    },
+    "convention-nia-calder": {
+      "displayName": "Nia Calder",
+      "status": "participating"
+    },
+    "convention-suri-moss": {
+      "displayName": "Suri Moss",
+      "status": "participating"
+    },
+    "convention-theo-birch": {
+      "displayName": "Theo Birch",
+      "status": "participating"
+    },
+    "convention-mara-sol": {
+      "displayName": "Mara Sol",
+      "status": "participating"
+    }
+  },
+  "assets": {
+    "convention-venue-studio-hall": {
+      "displayName": "TestTown Studio Hall",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-VENUE-studio-hall"
+      },
+      "status": "active"
+    },
+    "convention-venue-split-level": {
+      "displayName": "TestTown Terrace Forum",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-VENUE-split-level"
+      },
+      "status": "active"
+    },
+    "convention-venue-three-building-campus": {
+      "displayName": "TestTown Lantern Campus",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-VENUE-three-building-campus"
+      },
+      "status": "active"
+    },
+    "convention-privacy-kiosk": {
+      "displayName": "LanternMoss Privacy Lab",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-KIOSK-privacy-kiosk"
+      },
+      "status": "active"
+    },
+    "convention-mingle-kiosk": {
+      "displayName": "CopperKite Connection Corner",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-KIOSK-mingle-kiosk"
+      },
+      "status": "active"
+    },
+    "convention-future-kiosk": {
+      "displayName": "PrismSprout Device Workshop",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-KIOSK-future-kiosk"
+      },
+      "status": "active"
+    },
+    "convention-food-kiosk": {
+      "displayName": "SunnyOrchard Coffee and Bowls",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-KIOSK-food-kiosk"
+      },
+      "status": "active"
+    },
+    "convention-bc021-twin-001": {
+      "displayName": "Fictional BC021 tag 001",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-BC021-001"
+      },
+      "status": "active"
+    },
+    "convention-bc021-twin-002": {
+      "displayName": "Fictional BC021 tag 002",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-BC021-002"
+      },
+      "status": "active"
+    },
+    "convention-bc021-twin-003": {
+      "displayName": "Fictional BC021 tag 003",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-BC021-003"
+      },
+      "status": "active"
+    },
+    "convention-bc021-twin-004": {
+      "displayName": "Fictional BC021 tag 004",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-BC021-004"
+      },
+      "status": "active"
+    },
+    "convention-bc021-twin-005": {
+      "displayName": "Fictional BC021 tag 005",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-BC021-005"
+      },
+      "status": "active"
+    },
+    "convention-bc021-twin-006": {
+      "displayName": "Fictional BC021 tag 006",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-BC021-006"
+      },
+      "status": "active"
+    },
+    "convention-arduino-twin-001": {
+      "displayName": "Fictional Arduino receiver 001",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-ARDUINO-001"
+      },
+      "status": "active"
+    },
+    "convention-arduino-twin-002": {
+      "displayName": "Fictional Arduino receiver 002",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-ARDUINO-002"
+      },
+      "status": "active"
+    },
+    "convention-arduino-twin-003": {
+      "displayName": "Fictional Arduino receiver 003",
+      "identityAnchor": {
+        "kind": "synthetic-inventory-identifier",
+        "value": "TT-CONV-ARDUINO-003"
+      },
+      "status": "active"
+    }
+  }
+}

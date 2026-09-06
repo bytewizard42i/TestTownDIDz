@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-mara-sol",
+  "displayName": "Mara Sol",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "b6d03f30e88d1fe436a82afe2332a09ece9ba30440256f30ca7eea30febc10e9",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-mara-sol"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-sunnyorchard-kitchen",
+      "role": "worker",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "mara-sol",
+    "role": "worker",
+    "companyId": "sunnyorchard-kitchen",
+    "biography": "A fictional food-service host who helps attendees find dietary options during scheduled breaks.",
+    "interests": [
+      "food",
+      "coffee",
+      "dietary accessibility"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "food",
+    "consent": {
+      "discoverable": true,
+      "matching": false,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

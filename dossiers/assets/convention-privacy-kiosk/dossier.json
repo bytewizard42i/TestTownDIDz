@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-privacy-kiosk",
+  "displayName": "LanternMoss Privacy Lab",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "840da356f73c7f6d6a1de2094b8271a7056c6be0c430d9140a3b674cea4b685c",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-KIOSK-privacy-kiosk"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "ownerOrganizationSlug": "convention-lanternmoss-proofworks",
+  "venueIds": [
+    "studio-hall",
+    "split-level",
+    "three-building-campus"
+  ],
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional kiosk equipment rehearsed at a named destination slot.",
+    "kernelExpectations": [
+      "staff profiles remain citizens rather than owned equipment"
+    ]
+  }
+}

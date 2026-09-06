@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "convention-sunnyorchard-kitchen",
+  "displayName": "SunnyOrchard Kitchen",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "adb5cb6da2096fb4e7b2516cd78fa1f8ddc725e8b8e6cb609e79dc948e21b6da",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionRegistration": "TT-CONV-ORG-sunnyorchard-kitchen"
+  },
+  "participation": {
+    "eventId": "demo-convention-2026",
+    "kind": "food-vendor",
+    "issuerAdmission": "not-requested",
+    "trustedIssuer": false
+  },
+  "operator": {
+    "note": "No live wallet, keys, issuer privileges, or legal registration are claimed."
+  }
+}

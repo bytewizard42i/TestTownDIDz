@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-tariq-fern",
+  "displayName": "Tariq Fern",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "dc28f05b4d7bc9f4989e3061d31f5efdc6b1feab88b39df6b72cd293ba118547",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-tariq-fern"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-copperkite-wallet-studio",
+      "role": "developer",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "tariq-fern",
+    "role": "developer",
+    "companyId": "copperkite-wallet-studio",
+    "biography": "A fictional front-end developer exploring keyboard-friendly wallets and clear account recovery experiences.",
+    "interests": [
+      "wallets",
+      "accessibility",
+      "account recovery"
+    ],
+    "availability": "busy",
+    "presenceSlot": "mingle",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

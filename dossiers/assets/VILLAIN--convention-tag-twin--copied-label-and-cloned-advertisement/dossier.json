@@ -1,0 +1,38 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "VILLAIN--convention-tag-twin--copied-label-and-cloned-advertisement",
+  "displayName": "Counterfeit convention tag claiming an existing twin identity",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "copied synthetic label and radio advertisement do not establish possession or authorized ownership"
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "4e0a347de9fe8945b7b2bcee0438accfa6e53beaf660c0f29ac1ef6721017520",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-BC021-001"
+  },
+  "claimedOwnership": "An unregistered operator presents a copied label and duplicated advertisement.",
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "lifecycle": {
+    "stage": "fraud-cloned-anchor",
+    "story": "A readable copied code cannot prove which physical device is genuine.",
+    "kernelExpectations": [
+      "the duplicate identity binding is detected and held for review",
+      "first registration alone does not prove legitimate ownership",
+      "the clone cannot become a fresh location observation or a consensus voter"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "convention-copperkite-wallet-studio",
+  "displayName": "CopperKite Wallet Studio",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "9b8608974cda97bde8f25f8582d6ca8a3c8b417a70571ce9dbd05081f06a1ad6",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionRegistration": "TT-CONV-ORG-copperkite-wallet-studio"
+  },
+  "participation": {
+    "eventId": "demo-convention-2026",
+    "kind": "crypto-company",
+    "issuerAdmission": "not-requested",
+    "trustedIssuer": false
+  },
+  "operator": {
+    "note": "No live wallet, keys, issuer privileges, or legal registration are claimed."
+  }
+}

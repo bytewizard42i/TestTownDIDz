@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-mingle-kiosk",
+  "displayName": "CopperKite Connection Corner",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "657b727e05a305ccf2506c25b8ee6b2bdc6f1086c9ffb91a54e5dc995361571a",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-KIOSK-mingle-kiosk"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "ownerOrganizationSlug": "convention-copperkite-wallet-studio",
+  "venueIds": [
+    "studio-hall",
+    "split-level",
+    "three-building-campus"
+  ],
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional kiosk equipment rehearsed at a named destination slot.",
+    "kernelExpectations": [
+      "staff profiles remain citizens rather than owned equipment"
+    ]
+  }
+}

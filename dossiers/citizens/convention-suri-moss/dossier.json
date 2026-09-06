@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-suri-moss",
+  "displayName": "Suri Moss",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "0c48b529be7e12406990cf8aba493d9bced3451599d182a5f118b17ff791a11f",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-suri-moss"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-lanternmoss-proofworks",
+      "role": "worker",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "suri-moss",
+    "role": "worker",
+    "companyId": "lanternmoss-proofworks",
+    "biography": "A fictional booth guide who offers short introductory demonstrations when the kiosk queue is quiet.",
+    "interests": [
+      "zero-knowledge proofs",
+      "developer tooling",
+      "introductions"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "privacy",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

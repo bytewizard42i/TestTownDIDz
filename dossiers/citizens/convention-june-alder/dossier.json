@@ -1,0 +1,51 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-june-alder",
+  "displayName": "June Alder",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "d7027e6a042b5162e00c3d689153fb511ccc8cf001542c8c99fd438718998f77",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-june-alder"
+  },
+  "employment": [],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "june-alder",
+    "role": "enthusiast",
+    "biography": "A fictional attendee comparing independent hardware projects and taking a private break from discovery.",
+    "interests": [
+      "device identity",
+      "hardware",
+      "offline resilience"
+    ],
+    "availability": "unavailable",
+    "consent": {
+      "discoverable": false,
+      "matching": false,
+      "locationSharing": false,
+      "availabilitySharing": false,
+      "paused": true
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

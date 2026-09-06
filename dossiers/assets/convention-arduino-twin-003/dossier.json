@@ -1,0 +1,62 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-arduino-twin-003",
+  "displayName": "Fictional Arduino receiver 003",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "bb8e325d0ec5cae6f45a284e3dfedeac51a45f9da78bdffb1ff1c3c1983607b7",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-ARDUINO-003"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "ownerOrganizationSlug": "convention-prismsprout-infrastructure",
+  "device": {
+    "id": "arduino-twin-003",
+    "dossierSlug": "convention-arduino-twin-003",
+    "name": "Fictional Arduino receiver 003",
+    "kind": "arduino-uno-r4",
+    "model": "Arduino UNO R4 WiFi",
+    "role": "receiver",
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ],
+    "inventoryIdentifier": "TT-CONV-ARDUINO-003",
+    "evidence": "MOCK",
+    "capabilities": {
+      "advertises": true,
+      "scansTags": true,
+      "measuresDistance": false,
+      "suppliesTrustedLocation": false,
+      "votesInConsensus": false
+    },
+    "measurementFreshness": "unknown",
+    "measurementTimestampMs": null
+  },
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional convention equipment with separate event-scoped custody assignments.",
+    "kernelExpectations": [
+      "a copied label does not prove physical possession or ownership",
+      "asset registration does not authorize tracking or consensus voting",
+      "temporary assignment does not transfer permanent ownership"
+    ]
+  }
+}

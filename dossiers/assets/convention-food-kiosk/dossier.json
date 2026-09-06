@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-food-kiosk",
+  "displayName": "SunnyOrchard Coffee and Bowls",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "cfd336198ff47e2f1a8c45451fcd8e4931c55c45ac3bd43ec0652ca48e1fa6e6",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-KIOSK-food-kiosk"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "ownerOrganizationSlug": "convention-sunnyorchard-kitchen",
+  "venueIds": [
+    "studio-hall",
+    "split-level",
+    "three-building-campus"
+  ],
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional kiosk equipment rehearsed at a named destination slot.",
+    "kernelExpectations": [
+      "staff profiles remain citizens rather than owned equipment"
+    ]
+  }
+}

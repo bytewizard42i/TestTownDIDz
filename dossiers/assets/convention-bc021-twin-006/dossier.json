@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-bc021-twin-006",
+  "displayName": "Fictional BC021 tag 006",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "7bc2b47cf3241b84e50aaafeed1730ec85bce58571d322ade83ffb6dd8891594",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-BC021-006"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "ownerOrganizationSlug": "convention-prismsprout-infrastructure",
+  "device": {
+    "id": "bc021-twin-006",
+    "dossierSlug": "convention-bc021-twin-006",
+    "name": "Fictional BC021 tag 006",
+    "kind": "bc021-tag",
+    "model": "BlueCharm BC021",
+    "role": "kiosk-tag",
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ],
+    "inventoryIdentifier": "TT-CONV-BC021-006",
+    "evidence": "MOCK",
+    "capabilities": {
+      "advertises": true,
+      "scansTags": false,
+      "measuresDistance": false,
+      "suppliesTrustedLocation": false,
+      "votesInConsensus": false
+    }
+  },
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional convention equipment with separate event-scoped custody assignments.",
+    "kernelExpectations": [
+      "a copied label does not prove physical possession or ownership",
+      "asset registration does not authorize tracking or consensus voting",
+      "temporary assignment does not transfer permanent ownership"
+    ]
+  }
+}

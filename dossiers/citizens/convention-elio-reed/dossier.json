@@ -1,0 +1,52 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-elio-reed",
+  "displayName": "Elio Reed",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "a3923dd1f9951c25dc6fce4703eccda7e0f81b75a61700d3ff04c2c8065629fb",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-elio-reed"
+  },
+  "employment": [],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "elio-reed",
+    "role": "enthusiast",
+    "biography": "A fictional community organizer interested in accessible onboarding and thoughtful professional connections.",
+    "interests": [
+      "accessibility",
+      "professional networking",
+      "community"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "mingle",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

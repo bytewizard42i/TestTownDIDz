@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-future-kiosk",
+  "displayName": "PrismSprout Device Workshop",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "c0b253a46249438a09f9b208e007919178eadc31aedddae0ba3a6b26b81a00aa",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-KIOSK-future-kiosk"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "ownerOrganizationSlug": "convention-prismsprout-infrastructure",
+  "venueIds": [
+    "studio-hall",
+    "split-level",
+    "three-building-campus"
+  ],
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional kiosk equipment rehearsed at a named destination slot.",
+    "kernelExpectations": [
+      "staff profiles remain citizens rather than owned equipment"
+    ]
+  }
+}

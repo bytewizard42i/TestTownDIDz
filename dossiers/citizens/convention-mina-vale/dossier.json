@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-mina-vale",
+  "displayName": "Mina Vale",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "2c0ce8f8d37029d06061fb3dc72a006a97076d9a602d82978da82b66873da37d",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-mina-vale"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-lanternmoss-proofworks",
+      "role": "developer",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "mina-vale",
+    "role": "developer",
+    "companyId": "lanternmoss-proofworks",
+    "biography": "A fictional developer building understandable selective-disclosure workflows and practical proof tooling.",
+    "interests": [
+      "zero-knowledge proofs",
+      "developer tooling",
+      "selective privacy"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "privacy",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

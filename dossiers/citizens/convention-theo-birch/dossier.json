@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-theo-birch",
+  "displayName": "Theo Birch",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "e1d4cb146f25359a8e05b878faa7ee2e4721de453edfe77edf8f56e92ea8ae08",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-theo-birch"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-prismsprout-infrastructure",
+      "role": "worker",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "theo-birch",
+    "role": "worker",
+    "companyId": "prismsprout-infrastructure",
+    "biography": "A fictional equipment technician currently servicing a demo receiver and unavailable for meetings.",
+    "interests": [
+      "hardware",
+      "device identity",
+      "offline resilience"
+    ],
+    "availability": "busy",
+    "presenceSlot": "future",
+    "consent": {
+      "discoverable": true,
+      "matching": false,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

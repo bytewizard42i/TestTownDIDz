@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-omar-finch",
+  "displayName": "Omar Finch",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "d2ec102fbb00f7f455fd9afdf2c561fe94062ac7f602fa521483814a1bede7e7",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-omar-finch"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-copperkite-wallet-studio",
+      "role": "founder",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "omar-finch",
+    "role": "founder",
+    "companyId": "copperkite-wallet-studio",
+    "biography": "A fictional founder meeting designers and community organizers who make wallets easier to understand.",
+    "interests": [
+      "wallets",
+      "accessibility",
+      "professional networking"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "mingle",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

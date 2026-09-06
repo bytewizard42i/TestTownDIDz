@@ -1,0 +1,38 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "VILLAIN--convention-receiver--retained-signal-presented-as-fresh-proof",
+  "displayName": "Convention receiver presenting retained signal as fresh location proof",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "retained signal and board uptime are misrepresented as fresh authenticated person-location evidence"
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "266352511cf53b5928595b484f67196e3dd32f2a0fc12a02334fcecd4fe7ace6",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-RETAINED-READING-001"
+  },
+  "claimedOwnership": "An untrusted operator claims the board can authorize a person's location.",
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "lifecycle": {
+    "stage": "fraud-stale-measurement",
+    "story": "Legacy board elapsed time is passed off as the epoch time of an individual retained measurement.",
+    "kernelExpectations": [
+      "measurement freshness stays unknown when individual timestamps are absent",
+      "the diagnostic cannot become a position fix or consensus vote",
+      "radio address counts cannot become attendee counts"
+    ]
+  }
+}

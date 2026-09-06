@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "convention-lanternmoss-proofworks",
+  "displayName": "LanternMoss Proofworks",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "40c35ba427968250ba0756c6478888377cbf6d64c79d70150ca7dba7ea910687",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionRegistration": "TT-CONV-ORG-lanternmoss-proofworks"
+  },
+  "participation": {
+    "eventId": "demo-convention-2026",
+    "kind": "crypto-company",
+    "issuerAdmission": "not-requested",
+    "trustedIssuer": false
+  },
+  "operator": {
+    "note": "No live wallet, keys, issuer privileges, or legal registration are claimed."
+  }
+}

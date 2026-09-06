@@ -1,0 +1,37 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-venue-studio-hall",
+  "displayName": "TestTown Studio Hall",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "020d563ea3e895324bbbbc4e7bccd374a028a63238b4bb4a07cecd000c9c4bf3",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "real-estate",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-VENUE-studio-hall"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "venueId": "studio-hall",
+  "ownerCitizenSlug": "convention-leah-wren",
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional venue available as an alternate rehearsal layout.",
+    "kernelExpectations": [
+      "venue identity is separate from the consumer's coordinate geometry"
+    ]
+  }
+}

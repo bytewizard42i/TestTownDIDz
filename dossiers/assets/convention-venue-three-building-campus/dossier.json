@@ -1,0 +1,37 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "convention-venue-three-building-campus",
+  "displayName": "TestTown Lantern Campus",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "dcbda3a248f3ff34e90bca3e70b9aa11a069d1cc8d36252a98e172033241efe1",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "assetKind": "real-estate",
+  "identityAnchor": {
+    "kind": "synthetic-inventory-identifier",
+    "value": "TT-CONV-VENUE-three-building-campus"
+  },
+  "papers": [
+    "fictional-evidence.md"
+  ],
+  "venueId": "three-building-campus",
+  "ownerCitizenSlug": "convention-leah-wren",
+  "lifecycle": {
+    "stage": "active",
+    "story": "Fictional venue available as an alternate rehearsal layout.",
+    "kernelExpectations": [
+      "venue identity is separate from the consumer's coordinate geometry"
+    ]
+  }
+}

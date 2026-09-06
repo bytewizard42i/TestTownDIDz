@@ -1,0 +1,728 @@
+{
+  "schema": "testtown/eventrevolution-convention/v1",
+  "datasetId": "testtown-convention-2026-09-06",
+  "eventId": "demo-convention-2026",
+  "evidence": "MOCK",
+  "fictional": true,
+  "note": "All records are invented rehearsal fixtures. Venue layouts are alternatives, not simultaneous live locations. No real people, companies, label codes, hardware serials, or radio observations are represented.",
+  "venues": [
+    {
+      "id": "studio-hall",
+      "name": "TestTown Studio Hall",
+      "layoutKind": "single-level",
+      "description": "Fictional single-level convention hall with a main exhibition area and peripheral meeting rooms. Geometry belongs to the consuming venue adapter."
+    },
+    {
+      "id": "split-level",
+      "name": "TestTown Terrace Forum",
+      "layoutKind": "split-level",
+      "description": "Fictional two-floor convention venue with a halfway VIP (Very Important Person) lounge between the principal floors. Geometry belongs to the consuming venue adapter."
+    },
+    {
+      "id": "three-building-campus",
+      "name": "TestTown Lantern Campus",
+      "layoutKind": "three-building-campus",
+      "description": "Fictional main convention building and two satellite buildings connected by outdoor walkways. Geometry belongs to the consuming venue adapter."
+    }
+  ],
+  "people": [
+    {
+      "id": "avery-bloom",
+      "displayName": "Avery Bloom",
+      "role": "enthusiast",
+      "biography": "A fictional first-time convention visitor learning how selective privacy can improve everyday apps.",
+      "interests": [
+        "selective privacy",
+        "wallets",
+        "meeting builders"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "privacy",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-avery-bloom",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "elio-reed",
+      "displayName": "Elio Reed",
+      "role": "enthusiast",
+      "biography": "A fictional community organizer interested in accessible onboarding and thoughtful professional connections.",
+      "interests": [
+        "accessibility",
+        "professional networking",
+        "community"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "mingle",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-elio-reed",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "june-alder",
+      "displayName": "June Alder",
+      "role": "enthusiast",
+      "biography": "A fictional attendee comparing independent hardware projects and taking a private break from discovery.",
+      "interests": [
+        "device identity",
+        "hardware",
+        "offline resilience"
+      ],
+      "availability": "unavailable",
+      "consent": {
+        "discoverable": false,
+        "matching": false,
+        "locationSharing": false,
+        "availabilitySharing": false,
+        "paused": true
+      },
+      "dossierSlug": "convention-june-alder",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "mina-vale",
+      "displayName": "Mina Vale",
+      "role": "developer",
+      "companyId": "lanternmoss-proofworks",
+      "biography": "A fictional developer building understandable selective-disclosure workflows and practical proof tooling.",
+      "interests": [
+        "zero-knowledge proofs",
+        "developer tooling",
+        "selective privacy"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "privacy",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-mina-vale",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "tariq-fern",
+      "displayName": "Tariq Fern",
+      "role": "developer",
+      "companyId": "copperkite-wallet-studio",
+      "biography": "A fictional front-end developer exploring keyboard-friendly wallets and clear account recovery experiences.",
+      "interests": [
+        "wallets",
+        "accessibility",
+        "account recovery"
+      ],
+      "availability": "busy",
+      "presenceSlot": "mingle",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-tariq-fern",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "inez-brook",
+      "displayName": "Inez Brook",
+      "role": "developer",
+      "companyId": "prismsprout-infrastructure",
+      "biography": "A fictional embedded-systems developer studying receiver diagnostics and honest location uncertainty.",
+      "interests": [
+        "device identity",
+        "hardware",
+        "offline resilience"
+      ],
+      "availability": "unknown",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": false,
+        "availabilitySharing": false,
+        "paused": false
+      },
+      "dossierSlug": "convention-inez-brook",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "leah-wren",
+      "displayName": "Leah Wren",
+      "role": "founder",
+      "companyId": "lanternmoss-proofworks",
+      "biography": "A fictional founder looking for practical privacy use cases and carefully scoped pilot partners.",
+      "interests": [
+        "selective privacy",
+        "enterprise adoption",
+        "pilot partnerships"
+      ],
+      "availability": "busy",
+      "presenceSlot": "privacy",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-leah-wren",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "omar-finch",
+      "displayName": "Omar Finch",
+      "role": "founder",
+      "companyId": "copperkite-wallet-studio",
+      "biography": "A fictional founder meeting designers and community organizers who make wallets easier to understand.",
+      "interests": [
+        "wallets",
+        "accessibility",
+        "professional networking"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "mingle",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-omar-finch",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "nia-calder",
+      "displayName": "Nia Calder",
+      "role": "founder",
+      "companyId": "prismsprout-infrastructure",
+      "biography": "A fictional founder exploring equipment provenance and reliable convention infrastructure.",
+      "interests": [
+        "asset provenance",
+        "device identity",
+        "offline resilience"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "future",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-nia-calder",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "suri-moss",
+      "displayName": "Suri Moss",
+      "role": "worker",
+      "companyId": "lanternmoss-proofworks",
+      "biography": "A fictional booth guide who offers short introductory demonstrations when the kiosk queue is quiet.",
+      "interests": [
+        "zero-knowledge proofs",
+        "developer tooling",
+        "introductions"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "privacy",
+      "consent": {
+        "discoverable": true,
+        "matching": true,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-suri-moss",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "theo-birch",
+      "displayName": "Theo Birch",
+      "role": "worker",
+      "companyId": "prismsprout-infrastructure",
+      "biography": "A fictional equipment technician currently servicing a demo receiver and unavailable for meetings.",
+      "interests": [
+        "hardware",
+        "device identity",
+        "offline resilience"
+      ],
+      "availability": "busy",
+      "presenceSlot": "future",
+      "consent": {
+        "discoverable": true,
+        "matching": false,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-theo-birch",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "mara-sol",
+      "displayName": "Mara Sol",
+      "role": "worker",
+      "companyId": "sunnyorchard-kitchen",
+      "biography": "A fictional food-service host who helps attendees find dietary options during scheduled breaks.",
+      "interests": [
+        "food",
+        "coffee",
+        "dietary accessibility"
+      ],
+      "availability": "open-to-meet",
+      "presenceSlot": "food",
+      "consent": {
+        "discoverable": true,
+        "matching": false,
+        "locationSharing": true,
+        "availabilitySharing": true,
+        "paused": false
+      },
+      "dossierSlug": "convention-mara-sol",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "lanternmoss-proofworks",
+      "dossierSlug": "convention-lanternmoss-proofworks",
+      "name": "LanternMoss Proofworks",
+      "kind": "crypto-company",
+      "description": "Fictional developer tools company exploring selective disclosure and privacy-preserving proofs.",
+      "interests": [
+        "selective privacy",
+        "zero-knowledge proofs",
+        "developer tooling"
+      ]
+    },
+    {
+      "id": "copperkite-wallet-studio",
+      "dossierSlug": "convention-copperkite-wallet-studio",
+      "name": "CopperKite Wallet Studio",
+      "kind": "crypto-company",
+      "description": "Fictional wallet company exploring accessible onboarding and participant-controlled connections.",
+      "interests": [
+        "wallets",
+        "accessibility",
+        "professional networking"
+      ]
+    },
+    {
+      "id": "prismsprout-infrastructure",
+      "dossierSlug": "convention-prismsprout-infrastructure",
+      "name": "PrismSprout Infrastructure",
+      "kind": "crypto-company",
+      "description": "Fictional infrastructure company exploring device identity, asset provenance, and resilient event tools.",
+      "interests": [
+        "device identity",
+        "asset provenance",
+        "offline resilience"
+      ]
+    },
+    {
+      "id": "sunnyorchard-kitchen",
+      "dossierSlug": "convention-sunnyorchard-kitchen",
+      "name": "SunnyOrchard Kitchen",
+      "kind": "food-vendor",
+      "description": "Fictional convention food vendor serving coffee, fruit bowls, and simple dietary options.",
+      "interests": [
+        "food",
+        "coffee",
+        "dietary accessibility"
+      ]
+    }
+  ],
+  "kiosks": [
+    {
+      "id": "privacy-kiosk",
+      "name": "LanternMoss Privacy Lab",
+      "companyId": "lanternmoss-proofworks",
+      "kind": "crypto",
+      "destinationSlot": "privacy",
+      "workerIds": [
+        "suri-moss",
+        "mina-vale"
+      ],
+      "description": "Fictional privacy demonstrations and developer conversations.",
+      "dossierSlug": "convention-privacy-kiosk",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "mingle-kiosk",
+      "name": "CopperKite Connection Corner",
+      "companyId": "copperkite-wallet-studio",
+      "kind": "crypto",
+      "destinationSlot": "mingle",
+      "workerIds": [
+        "omar-finch",
+        "tariq-fern"
+      ],
+      "description": "Fictional wallet onboarding and participant-controlled networking demonstrations.",
+      "dossierSlug": "convention-mingle-kiosk",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "future-kiosk",
+      "name": "PrismSprout Device Workshop",
+      "companyId": "prismsprout-infrastructure",
+      "kind": "crypto",
+      "destinationSlot": "future",
+      "workerIds": [
+        "theo-birch",
+        "nia-calder"
+      ],
+      "description": "Fictional equipment provenance, receiver diagnostics, and offline-resilience demonstrations.",
+      "dossierSlug": "convention-future-kiosk",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    },
+    {
+      "id": "food-kiosk",
+      "name": "SunnyOrchard Coffee and Bowls",
+      "companyId": "sunnyorchard-kitchen",
+      "kind": "food",
+      "destinationSlot": "food",
+      "workerIds": [
+        "mara-sol"
+      ],
+      "description": "Fictional coffee, fruit bowls, and dietary-option guidance.",
+      "dossierSlug": "convention-food-kiosk",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ]
+    }
+  ],
+  "deviceTwins": [
+    {
+      "id": "bc021-twin-001",
+      "dossierSlug": "convention-bc021-twin-001",
+      "name": "Fictional BC021 tag 001",
+      "kind": "bc021-tag",
+      "model": "BlueCharm BC021",
+      "role": "mobile-tag",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-BC021-001",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": false,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      }
+    },
+    {
+      "id": "bc021-twin-002",
+      "dossierSlug": "convention-bc021-twin-002",
+      "name": "Fictional BC021 tag 002",
+      "kind": "bc021-tag",
+      "model": "BlueCharm BC021",
+      "role": "mobile-tag",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-BC021-002",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": false,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      }
+    },
+    {
+      "id": "bc021-twin-003",
+      "dossierSlug": "convention-bc021-twin-003",
+      "name": "Fictional BC021 tag 003",
+      "kind": "bc021-tag",
+      "model": "BlueCharm BC021",
+      "role": "mobile-tag",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-BC021-003",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": false,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      }
+    },
+    {
+      "id": "bc021-twin-004",
+      "dossierSlug": "convention-bc021-twin-004",
+      "name": "Fictional BC021 tag 004",
+      "kind": "bc021-tag",
+      "model": "BlueCharm BC021",
+      "role": "kiosk-tag",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-BC021-004",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": false,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      }
+    },
+    {
+      "id": "bc021-twin-005",
+      "dossierSlug": "convention-bc021-twin-005",
+      "name": "Fictional BC021 tag 005",
+      "kind": "bc021-tag",
+      "model": "BlueCharm BC021",
+      "role": "kiosk-tag",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-BC021-005",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": false,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      }
+    },
+    {
+      "id": "bc021-twin-006",
+      "dossierSlug": "convention-bc021-twin-006",
+      "name": "Fictional BC021 tag 006",
+      "kind": "bc021-tag",
+      "model": "BlueCharm BC021",
+      "role": "kiosk-tag",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-BC021-006",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": false,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      }
+    },
+    {
+      "id": "arduino-twin-001",
+      "dossierSlug": "convention-arduino-twin-001",
+      "name": "Fictional Arduino receiver 001",
+      "kind": "arduino-uno-r4",
+      "model": "Arduino UNO R4 WiFi",
+      "role": "receiver",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-ARDUINO-001",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": true,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      },
+      "measurementFreshness": "unknown",
+      "measurementTimestampMs": null
+    },
+    {
+      "id": "arduino-twin-002",
+      "dossierSlug": "convention-arduino-twin-002",
+      "name": "Fictional Arduino receiver 002",
+      "kind": "arduino-uno-r4",
+      "model": "Arduino UNO R4 WiFi",
+      "role": "receiver",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-ARDUINO-002",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": true,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      },
+      "measurementFreshness": "unknown",
+      "measurementTimestampMs": null
+    },
+    {
+      "id": "arduino-twin-003",
+      "dossierSlug": "convention-arduino-twin-003",
+      "name": "Fictional Arduino receiver 003",
+      "kind": "arduino-uno-r4",
+      "model": "Arduino UNO R4 WiFi",
+      "role": "receiver",
+      "venueIds": [
+        "studio-hall",
+        "split-level",
+        "three-building-campus"
+      ],
+      "inventoryIdentifier": "TT-CONV-ARDUINO-003",
+      "evidence": "MOCK",
+      "capabilities": {
+        "advertises": true,
+        "scansTags": true,
+        "measuresDistance": false,
+        "suppliesTrustedLocation": false,
+        "votesInConsensus": false
+      },
+      "measurementFreshness": "unknown",
+      "measurementTimestampMs": null
+    }
+  ],
+  "assignments": [
+    {
+      "id": "assignment-attendee-001",
+      "eventId": "demo-convention-2026",
+      "deviceId": "bc021-twin-001",
+      "profileId": "avery-bloom",
+      "kind": "temporary-custody",
+      "evidence": "MOCK"
+    },
+    {
+      "id": "assignment-developer-001",
+      "eventId": "demo-convention-2026",
+      "deviceId": "bc021-twin-002",
+      "profileId": "mina-vale",
+      "kind": "temporary-custody",
+      "evidence": "MOCK"
+    },
+    {
+      "id": "assignment-founder-001",
+      "eventId": "demo-convention-2026",
+      "deviceId": "bc021-twin-003",
+      "profileId": "nia-calder",
+      "kind": "temporary-custody",
+      "evidence": "MOCK"
+    },
+    {
+      "id": "assignment-privacy-kiosk",
+      "eventId": "demo-convention-2026",
+      "deviceId": "bc021-twin-004",
+      "kioskId": "privacy-kiosk",
+      "kind": "temporary-placement",
+      "evidence": "MOCK"
+    },
+    {
+      "id": "assignment-mingle-kiosk",
+      "eventId": "demo-convention-2026",
+      "deviceId": "bc021-twin-005",
+      "kioskId": "mingle-kiosk",
+      "kind": "temporary-placement",
+      "evidence": "MOCK"
+    },
+    {
+      "id": "assignment-future-kiosk",
+      "eventId": "demo-convention-2026",
+      "deviceId": "bc021-twin-006",
+      "kioskId": "future-kiosk",
+      "kind": "temporary-placement",
+      "evidence": "MOCK"
+    }
+  ]
+}

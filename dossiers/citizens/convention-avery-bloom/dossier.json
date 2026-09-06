@@ -1,0 +1,52 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-avery-bloom",
+  "displayName": "Avery Bloom",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "622c66787309081c87827e18f91d7f58c98eadcff1f78adaad04692557df13b5",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-avery-bloom"
+  },
+  "employment": [],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "avery-bloom",
+    "role": "enthusiast",
+    "biography": "A fictional first-time convention visitor learning how selective privacy can improve everyday apps.",
+    "interests": [
+      "selective privacy",
+      "wallets",
+      "meeting builders"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "privacy",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}

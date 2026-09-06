@@ -1,0 +1,32 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "convention-prismsprout-infrastructure",
+  "displayName": "PrismSprout Infrastructure",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "380a0bbec9c9fc48aa91e7625f51e429809e1f126f222ee02e7e321d87801a14",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionRegistration": "TT-CONV-ORG-prismsprout-infrastructure"
+  },
+  "participation": {
+    "eventId": "demo-convention-2026",
+    "kind": "crypto-company",
+    "issuerAdmission": "not-requested",
+    "trustedIssuer": false
+  },
+  "operator": {
+    "note": "No live wallet, keys, issuer privileges, or legal registration are claimed."
+  }
+}

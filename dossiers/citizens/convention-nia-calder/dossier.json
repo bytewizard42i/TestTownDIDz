@@ -1,0 +1,60 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "citizen",
+  "slug": "convention-nia-calder",
+  "displayName": "Nia Calder",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "fictional-evidence.md",
+      "kind": "fictional-convention-evidence",
+      "sha256": "bde0e2dfe9f1e0d8d1be5801d4ca07eec6a9ae3de0e2e343213a87ac38f972bb",
+      "confirmableBy": "registries/convention-participation-registry.json"
+    }
+  ],
+  "identifiers": {
+    "conventionParticipantId": "TT-CONV-PERSON-nia-calder"
+  },
+  "employment": [
+    {
+      "employerSlug": "convention-prismsprout-infrastructure",
+      "role": "founder",
+      "from": null,
+      "to": null
+    }
+  ],
+  "householdSlugs": [],
+  "conventionProfile": {
+    "id": "nia-calder",
+    "role": "founder",
+    "companyId": "prismsprout-infrastructure",
+    "biography": "A fictional founder exploring equipment provenance and reliable convention infrastructure.",
+    "interests": [
+      "asset provenance",
+      "device identity",
+      "offline resilience"
+    ],
+    "availability": "open-to-meet",
+    "presenceSlot": "future",
+    "consent": {
+      "discoverable": true,
+      "matching": true,
+      "locationSharing": true,
+      "availabilitySharing": true,
+      "paused": false
+    },
+    "venueIds": [
+      "studio-hall",
+      "split-level",
+      "three-building-campus"
+    ]
+  },
+  "operator": {
+    "note": "Fictional person. No real personal data, account, or keys are assigned."
+  }
+}
