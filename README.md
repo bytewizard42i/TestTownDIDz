@@ -205,3 +205,10 @@ docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md
   replay, post-admission scope creep) chaos-testing the kernel's
   enforcement and budget mechanics. Iron rule if built: it READS TestTown,
   never writes it.
+
+
+## Shared sign-in options
+
+See [the shared sign-in module pointer](SIGN_IN_SELECTIONS.md) for reusable choice
+configuration and this repository's integration boundaries. This documentation
+pointer does not activate authentication.
