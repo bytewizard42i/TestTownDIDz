@@ -228,7 +228,7 @@ never move. Each lifecycle stage below now has a named TestTown fixture:
 |---|---|---|
 | **Creation** — identity minted at the moment of making, creator's attestation is provenance block #1 | registration ceremony; creator-as-first-issuer | `blackfeather-commissioned-mural` |
 | **Clean retail purchase** — short provenance, no encumbrance | happy-path transfer | `zhao-grand-seiko-snowflake` |
-| **Financed** — active lien; sale blocked until release | encumbrance-blocked transfer circuit | `fairweather-pickup-truck` (lien: Testtown Savings & Loan) |
+| **Financed** — active lien; sale blocked until release | encumbrance-blocked transfer circuit | `fairweather-pickup-truck` (lien: Testtown Savings & Loan); `thatcher-rowhouse` (real-estate twin — mortgage lien, cosigned release) |
 | **Mid-sale escrow** — deposit paid, tiered disclosure ladder live | EscrowCredential unlocks deeper history tiers; prequalified-buyer gating | `petrova-lakeside-cottage` (buyer: marcus-reid, deposit escrowed) |
 | **Fractionalized** — many share-credentials over ONE asset DIDz (no entity explosion) | share registry; prove ≥N shares without revealing holdings | `riverbend-quarry-warehouse` (3 shareholders) |
 | **Inherited** — owner deceased; estate succession ceremony | terminal-status cascade → executor-authorized title transfer | `quist-estate-grand-piano` |
@@ -256,10 +256,12 @@ never move. Each lifecycle stage below now has a named TestTown fixture:
   the common event (sale of a horse = custody + ownership credential move;
   the animal's DIDz and care history travel like an asset vault). Chip
   replacement = re-anchor ceremony (R5 applies). Fixtures: the four
-  existing animals; `petProData`/`equineProData` own the verticals.
+  existing animals plus `ember-the-broodmare` (insured; liveness window +
+  vet-issuer gating); `petProData`/`equineProData` own the verticals.
 - **Devices:** manufacture → active → retired/destroyed. Firmware
   attestation is the device's POL-analog; decommissioning must revoke the
   device's standing grants (a dead sensor must not keep authority).
+  Fixture: `nightowl-river-sensor-7` (decommissioned telemetry node).
 
 ---
 

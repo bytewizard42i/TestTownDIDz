@@ -1,0 +1,29 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "animal",
+  "slug": "ember-the-broodmare",
+  "displayName": "Ember (Standardbred broodmare, b. 2014)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "species": "horse",
+  "identityBinding": {
+    "kind": "microchip",
+    "chipId": "985-141-002-440-17",
+    "implantedBy": "testtown-animal-hospital-and-equine-center"
+  },
+  "custodianCitizenSlug": "rosa-delgado",
+  "careHistory": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "insured-requires-liveness",
+    "story": "Ember is insured by Ironclad under a mortality-and-fertility policy. Coverage continues only while a licensed veterinarian attests proof-of-life every 30 days; any sale additionally requires a fresh liveness credential issued within 72 hours of transfer. Rosa cannot attest her own horse.",
+    "kernelExpectations": [
+      "liveness credentials carry a freshness window — a stale attestation fails closed at the gate",
+      "the issuer must be a TIR-approved veterinary issuer for the ANIMAL_HEALTH scope — a self-attestation by the custodian is rejected",
+      "the liveness credential lives privately in the custodian's wallet; 'is Ember certified alive within 30 days?' answers in one bit without revealing the vet, the visit, or the mare",
+      "sale escrow holds until a liveness credential issued within 72h is presented — the vault releases the credential, never the care history"
+    ]
+  }
+}
