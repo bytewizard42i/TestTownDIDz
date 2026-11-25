@@ -1,0 +1,174 @@
+{
+  "schema": "testtown/intents-examples/v0.1",
+  "readme": "Worked examples of the intents layer. These are teaching material, NOT town canon: nobody in TestTown has actually voiced them. Each example says what it teaches and whether the validator should accept it. The tests run every one, so an example can never drift out of date. Run `python3 tools/validate_intents.py` to see them checked.",
+  "examples": [
+    {
+      "id": "generic-minimal",
+      "title": "The smallest possible intent",
+      "teaches": "Only three fields are required: wants, expressedAt, status. No category, no dates, no story.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Sell the grand piano",
+        "expressedAt": "2026-11-01",
+        "status": "open"
+      }
+    },
+    {
+      "id": "generic-with-lifecycle",
+      "title": "A generic intent with a start date and an expiry",
+      "teaches": "startDate and expiresAt are optional on a generic intent. Here the owner wants an appraisal done in January and will stop asking after February.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Get the mural appraised before the spring show",
+        "expressedAt": "2026-11-10",
+        "startDate": "2027-01-05",
+        "expiresAt": "2027-02-28",
+        "status": "open",
+        "story": "The gallery asked for a current valuation ahead of the spring show."
+      }
+    },
+    {
+      "id": "generic-unknown-category",
+      "title": "A category nobody has written rules for yet",
+      "teaches": "An unknown category is allowed. Its details block is free-form. This is how a new kind of want gets tried out before anyone writes a checker for it.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Lend the work van to a neighbor for a week",
+        "expressedAt": "2026-11-12",
+        "startDate": "2026-12-08",
+        "expiresAt": "2026-12-07",
+        "status": "open",
+        "category": "lending",
+        "lending": {
+          "toCitizenSlug": "amos-fairweather",
+          "days": 7,
+          "condition": "returned with a full tank"
+        }
+      }
+    },
+    {
+      "id": "generic-withdrawn",
+      "title": "The owner changed their mind",
+      "teaches": "withdrawn is the owner's own act. The intent stays in the dossier as history; consumers must not treat it as a live ask.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Sell the lakeside cottage",
+        "expressedAt": "2026-06-01",
+        "status": "withdrawn",
+        "story": "Listed it in June, then decided to keep it in the family."
+      }
+    },
+    {
+      "id": "insurance-open-wish",
+      "title": "A live insurance wish",
+      "teaches": "An insurance wish is a generic intent with category 'insurance'. It must have startDate, expiresAt, and an insurance block with wish and coverageUsd.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Insure this wallet for $2,500",
+        "expressedAt": "2026-11-09",
+        "startDate": "2026-12-01",
+        "expiresAt": "2027-02-07",
+        "status": "open",
+        "category": "insurance",
+        "insurance": { "wish": "cover-asset", "coverageUsd": 2500 }
+      }
+    },
+    {
+      "id": "insurance-expired-wish",
+      "title": "An insurance wish that ran out unanswered",
+      "teaches": "expiresAt is in the past relative to frozenNow, so the status must be expired. A consumer that offers cover against this is making a mistake.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Insure this wallet for $5,000",
+        "expressedAt": "2026-04-11",
+        "startDate": "2026-05-01",
+        "expiresAt": "2026-07-10",
+        "status": "expired",
+        "category": "insurance",
+        "insurance": { "wish": "cover-asset", "coverageUsd": 5000 }
+      }
+    },
+    {
+      "id": "insurance-accepted-wish",
+      "title": "The owner accepted an offer",
+      "teaches": "accepted records that the OWNER said yes to an offer. It does not say a policy was bound or that any check passed; those facts belong to the insurer's own records.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Insure this wallet for $1,000",
+        "expressedAt": "2026-10-02",
+        "startDate": "2026-11-01",
+        "expiresAt": "2026-12-31",
+        "status": "accepted",
+        "category": "insurance",
+        "insurance": { "wish": "cover-asset", "coverageUsd": 1000 }
+      }
+    },
+    {
+      "id": "insurance-expiry-before-start",
+      "title": "Offer window closes before cover starts",
+      "teaches": "expiresAt may fall before startDate: 'my ask is open through Dec 31, for cover starting Jan 1'. This is normal renewal-season behavior, not an error.",
+      "frozenNow": "2026-11-24",
+      "expectValid": true,
+      "intent": {
+        "wants": "Insure this wallet for $1,000",
+        "expressedAt": "2026-10-30",
+        "startDate": "2027-01-01",
+        "expiresAt": "2026-12-31",
+        "status": "open",
+        "category": "insurance",
+        "insurance": { "wish": "cover-asset", "coverageUsd": 1000 }
+      }
+    },
+    {
+      "id": "BROKEN-outcome-smuggled-in",
+      "title": "BROKEN: an intent that records a gate's decision",
+      "teaches": "The rule that must never bend. 'approved' is an outcome, and outcomes belong to gatekeepers. The validator rejects this.",
+      "frozenNow": "2026-11-24",
+      "expectValid": false,
+      "intent": {
+        "wants": "Insure this wallet for $500",
+        "expressedAt": "2026-11-18",
+        "startDate": "2026-12-01",
+        "expiresAt": "2027-02-16",
+        "status": "open",
+        "category": "insurance",
+        "insurance": { "wish": "cover-asset", "coverageUsd": 500, "approved": true }
+      }
+    },
+    {
+      "id": "BROKEN-insurance-without-expiry",
+      "title": "BROKEN: an insurance wish with no expiry",
+      "teaches": "Fine as a generic intent, but not as an insurance wish: an insurer cannot quote an ask that never goes stale.",
+      "frozenNow": "2026-11-24",
+      "expectValid": false,
+      "intent": {
+        "wants": "Insure this wallet for $500",
+        "expressedAt": "2026-11-18",
+        "startDate": "2026-12-01",
+        "status": "open",
+        "category": "insurance",
+        "insurance": { "wish": "cover-asset", "coverageUsd": 500 }
+      }
+    },
+    {
+      "id": "BROKEN-open-but-stale",
+      "title": "BROKEN: marked open after its expiry date",
+      "teaches": "Status and dates must agree. Past expiresAt, an unanswered intent is expired, not open.",
+      "frozenNow": "2026-11-24",
+      "expectValid": false,
+      "intent": {
+        "wants": "Sell the vintage projector",
+        "expressedAt": "2026-03-01",
+        "expiresAt": "2026-06-01",
+        "status": "open"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "patel-spending-wallet",
+  "displayName": "Raj Patel's spending wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "0xRajPate1Outfitters0000000fictional000000b7c2"
+  },
+  "ownerCitizenSlug": "raj-patel",
+  "holdings": {
+    "chain": "ethereum",
+    "balanceUsd": 950,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $1,000",
+      "expressedAt": "2026-11-20",
+      "startDate": "2026-12-01",
+      "expiresAt": "2027-02-18",
+      "status": "open",
+      "story": "Raj accepts crypto at the outfitters counter from the occasional customer and lets it accumulate. He is cautious by nature: small balance, small policy, everything matched.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 1000
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

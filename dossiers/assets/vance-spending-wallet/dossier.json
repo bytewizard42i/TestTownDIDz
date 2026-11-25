@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "vance-spending-wallet",
+  "displayName": "Priscilla Vance's spending wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "mn_addr1qqvance00spending0fictional0000000000000000000000k4tn8"
+  },
+  "ownerCitizenSlug": "priscilla-vance",
+  "holdings": {
+    "chain": "midnight",
+    "balanceUsd": 14200,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $1,000",
+      "expressedAt": "2026-10-30",
+      "startDate": "2027-01-01",
+      "expiresAt": "2026-12-31",
+      "status": "open",
+      "story": "Priscilla manages a savings-and-loan branch and thinks in buckets and calendar years: the offer is open through December 31 for a January 1 start, the way renewal season works at the branch. Most of her holdings sit in cold storage she considers out of scope; she wants only the spending money covered, and under-insuring this wallet is deliberate, not a mistake.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 1000
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

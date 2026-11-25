@@ -21,7 +21,9 @@
   ],
   "householdSlugs": {
     "animals": [],
-    "assets": []
+    "assets": [
+      "reid-road-savings-wallet"
+    ]
   },
   "documents": [],
   "operator": {

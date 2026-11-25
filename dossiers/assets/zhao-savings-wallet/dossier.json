@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "zhao-savings-wallet",
+  "displayName": "Mei-Lin Zhao's savings wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "mn_addr1qqzhao00savings00fictional0000000000000000000000x9wv2"
+  },
+  "ownerCitizenSlug": "mei-lin-zhao",
+  "holdings": {
+    "chain": "midnight",
+    "balanceUsd": 8750,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $10,000",
+      "expressedAt": "2026-11-22",
+      "startDate": "2026-12-01",
+      "expiresAt": "2027-02-20",
+      "status": "open",
+      "story": "Mei-Lin runs her own numbers before she buys anything. She specced the coverage tier herself, rounded up to the ten-thousand policy because her balance keeps growing, and read the policy wording twice before signing anything.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 10000
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

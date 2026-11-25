@@ -1,0 +1,54 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "reid-road-savings-wallet",
+  "displayName": "Marcus Reid's road savings wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "bc1qmarcusreid00road00savings0fictional0000p3hd7"
+  },
+  "ownerCitizenSlug": "marcus-reid",
+  "holdings": {
+    "chain": "bitcoin",
+    "balanceUsd": 4600,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $5,000",
+      "expressedAt": "2026-04-11",
+      "startDate": "2026-05-01",
+      "expiresAt": "2026-07-10",
+      "status": "expired",
+      "story": "Marcus first asked about coverage in the spring, before the quarry-road contract got renewed and life got loud. Nobody answered in ninety days and the want went stale \u2014 the fixture keeps it because a consumer MUST not mistake it for a live ask.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 5000
+      }
+    },
+    {
+      "wants": "Insure this wallet for $5,000",
+      "expressedAt": "2026-11-15",
+      "startDate": "2026-12-01",
+      "expiresAt": "2027-02-13",
+      "status": "open",
+      "story": "Marcus is on the road eleven months a year and keeps his savings where he can reach them from any truck stop. A wallet he can check from the cab is the point \u2014 he came back in November and asked again, and this time he means to see it through.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 5000
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

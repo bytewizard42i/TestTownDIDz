@@ -99,6 +99,70 @@ catalog and rationale: `LIFECYCLE_CATALOG.md`.
 }
 ```
 
+**Optional `intents` block (v0.2 candidate, Nov 24 2026):** an intent is a
+WANT expressed about the asset — not a fact, not an outcome, never a gate
+decision. It is a modular block any asset dossier can carry: the same shape
+serves a wallet its owner wants insured today and a vehicle or deed tomorrow.
+Outcomes always belong to the gatekeepers (oracles, registries, contracts);
+TestTown only records what the world wanted before the trust system answered.
+
+```jsonc
+"intents": [
+  // A generic intent: it can be about anything.
+  {
+    "wants": "Sell the piano before the estate sale",  // required, plain English
+    "expressedAt": "2026-11-15",   // required: when the want was voiced
+    "status": "open",              // required: open | accepted | withdrawn | expired
+    "startDate": "2026-12-01",     // optional: when it should take effect
+    "expiresAt": "2027-02-13",     // optional: unanswered past this, it is stale
+    "story": "…"                 // optional: why, in plain English
+  },
+
+  // An insurance wish: a generic intent plus the insurance block.
+  {
+    "wants": "Insure this wallet for $5,000",
+    "expressedAt": "2026-11-15",
+    "startDate": "2026-12-01",     // REQUIRED for insurance wishes
+    "expiresAt": "2027-02-13",     // REQUIRED for insurance wishes
+    "status": "open",
+    "story": "…",
+    "category": "insurance",       // names the block below
+    "insurance": {
+      "wish": "cover-asset",       // the insurance wish, open vocabulary
+      "coverageUsd": 5000          // what the owner asked for — may mismatch
+                                   // the balance on purpose (people do that)
+    }
+  }
+]
+```
+
+**Generic first, specific second.** The intent object is open: `wants`,
+`expressedAt` and `status` are all it needs, so it can record any want about
+any asset. `category` is optional. When present it names one extra block
+holding the details of that kind of want; an unknown category is allowed and
+its block is free-form. `insurance` is the first category with rules of its
+own: an insurance wish must carry `startDate`, `expiresAt`, and an
+`insurance` block with `wish` and a positive `coverageUsd`.
+
+**Intents have a lifecycle.** A want is voiced (`expressedAt`), asks to take
+effect on a `startDate`, and goes stale at `expiresAt` if nobody answers,
+the way a quote does. `status` freezes the fixture at one stage:
+`open` (live ask), `accepted` (the owner took an offer — still the owner's
+act, not a gate verdict), `withdrawn` (the owner changed their mind), or
+`expired` (ran out unanswered). An asset may carry several intents over
+time; an expired one stays in the dossier as history, and a consumer MUST
+NOT treat it as a live ask. "Now" for a fixture is the asset's
+`holdings.asOf` date: an `open` intent has not passed its `expiresAt` as of
+that date, an `expired` one has. `expiresAt` may fall before `startDate`
+(an offer open through Dec 31 for a Jan 1 start).
+
+**`crypto-wallet` assetKind + `holdings` block:** a wallet's identity anchor
+IS its address (`kind: "wallet-address"`), the serial-number analog. The
+balance is not identity — it is a temporal observation — so it lives in a
+separate `holdings` block (`chain`, `balanceUsd`, `asOf`, `evidence: "MOCK"`),
+in-world confirmable on-chain at the anchor. No keys exist; pretend wallets
+need none, and the no-secrets rule is kept by construction.
+
 ## The three iron rules
 
 1. **Every claim is confirmable or it is decoration.** Claims either cite a

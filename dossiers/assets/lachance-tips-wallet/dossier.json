@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "lachance-tips-wallet",
+  "displayName": "Bonnie LaChance's tips wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "bc1qtt0l4chance00tips00fictional000000x7qk2"
+  },
+  "ownerCitizenSlug": "bonnie-lachance",
+  "holdings": {
+    "chain": "bitcoin",
+    "balanceUsd": 420,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $500",
+      "expressedAt": "2026-11-18",
+      "startDate": "2026-12-01",
+      "expiresAt": "2027-02-16",
+      "status": "open",
+      "story": "Bonnie keeps her tip money in a small bitcoin wallet a diner regular helped her set up. She heard customers talking about wallet insurance and wants her savings covered \u2014 four hundred dollars is real money on a line cook's wages.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 500
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

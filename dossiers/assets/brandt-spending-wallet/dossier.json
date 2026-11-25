@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "brandt-spending-wallet",
+  "displayName": "Theo Brandt's spending wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "0xThe0Brandt5pending000000fictional000000aa41"
+  },
+  "ownerCitizenSlug": "theo-brandt",
+  "holdings": {
+    "chain": "ethereum",
+    "balanceUsd": 2300,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $2,500",
+      "expressedAt": "2026-11-09",
+      "startDate": "2026-12-01",
+      "expiresAt": "2027-02-07",
+      "status": "open",
+      "story": "Theo adjusts claims at Ironclad all week and still insures everything he owns. He read the entire policy, asked three questions nobody else has asked, and chose the tier that matches his balance to the hundred dollars.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 2500
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

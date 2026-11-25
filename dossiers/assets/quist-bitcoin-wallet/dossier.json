@@ -1,0 +1,41 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "quist-bitcoin-wallet",
+  "displayName": "Harold Quist's bitcoin wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": "bc1qhar0ldquist00grandson00fictional000000w9xe5"
+  },
+  "ownerCitizenSlug": "harold-quist",
+  "holdings": {
+    "chain": "bitcoin",
+    "balanceUsd": 310,
+    "asOf": "2026-11-24",
+    "evidence": "MOCK",
+    "fictional": true,
+    "note": "Pretend balance for a pretend wallet. In-world the claim is confirmable on-chain at the identity anchor; no keys exist because none are needed."
+  },
+  "intents": [
+    {
+      "wants": "Insure this wallet for $1,000",
+      "expressedAt": "2026-11-24",
+      "startDate": "2026-12-25",
+      "expiresAt": "2027-02-22",
+      "status": "open",
+      "story": "Harold's grandson set the wallet up for him last Christmas. He overheard talk of crypto insurance at the diner and wants 'the good one' \u2014 the thousand-dollar policy sounds right to him even though it outsizes his balance three to one. He asked for a Christmas Day start, when the grandson is back in town to walk him through it.",
+      "category": "insurance",
+      "insurance": {
+        "wish": "cover-asset",
+        "coverageUsd": 1000
+      }
+    }
+  ],
+  "papers": [],
+  "documents": []
+}
