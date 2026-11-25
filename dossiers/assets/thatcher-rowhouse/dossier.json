@@ -1,0 +1,28 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "thatcher-rowhouse",
+  "displayName": "Thatcher rowhouse, 12 Cinder Lane",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "real-estate",
+  "identityAnchor": {
+    "kind": "parcel-id",
+    "value": "TT-PARCEL-1188-042"
+  },
+  "ownerCitizenSlug": "bonnie-lachance",
+  "papers": [],
+  "documents": [],
+  "lifecycle": {
+    "stage": "mortgaged-encumbered",
+    "story": "Bonnie bought the rowhouse with a mortgage from Testtown Savings & Loan. The lien is active: title cannot transfer until the bank cosigns a lien-release into the asset's vault. The payoff amount, rate, and payment history are private vault records — a buyer learns only the single bit 'encumbered'.",
+    "kernelExpectations": [
+      "'is this property lien-free?' answers false in one bit — owner, lender, and balance not revealed",
+      "the transfer circuit halts at the encumbrance check: no escrow credential issues while the lien stands",
+      "lien release is a cosigned ceremony — the lender's release attestation must come from a TIR-approved financial issuer, not from the owner",
+      "after release the encumbrance record stays in the vault as provenance (released), preserving the VIN invariant: records never move, access rotates"
+    ]
+  }
+}

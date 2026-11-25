@@ -1,0 +1,43 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "nightowl-river-sensor-7",
+  "displayName": "Nightowl river telemetry node #7",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "equipment",
+  "identityAnchor": {
+    "kind": "serial-number",
+    "value": "NO-RS-0007"
+  },
+  "ownerOrganizationSlug": "nightowl-data-systems",
+  "papers": [],
+  "documents": [],
+  "device": {
+    "id": "river-sensor-7",
+    "dossierSlug": "nightowl-river-sensor-7",
+    "name": "Nightowl river telemetry node #7",
+    "kind": "environmental-sensor",
+    "model": "Nightowl RS-2",
+    "role": "telemetry-source",
+    "inventoryIdentifier": "NO-RS-0007",
+    "evidence": "MOCK",
+    "firmwareAttestation": {
+      "version": "2.4.1",
+      "attestedBy": "nightowl-data-systems",
+      "story": "firmware attestation is the device's proof-of-liveness analog — a signed reading is only as alive as the firmware that produced it"
+    }
+  },
+  "lifecycle": {
+    "stage": "decommissioned",
+    "story": "Node #7 was pulled from the riverbank after flood damage and formally decommissioned. Its device DIDz is terminal: the standing grants that let it write telemetry into Nightowl's data plane are revoked, and a 'fresh' reading signed by this node must be rejected — exactly the retained-signal fraud the convention receiver villain probes.",
+    "kernelExpectations": [
+      "decommissioning revokes the device's standing grants recursively — a dead sensor must not keep authority",
+      "no new credential may be issued by or about this device after the terminal status flips",
+      "a retained pre-decommission reading replayed as 'fresh' fails the freshness check — same rule as VILLAIN--convention-receiver--retained-signal-presented-as-fresh-proof",
+      "the device's history stays readable as a terminal archive; the vault never deletes provenance"
+    ]
+  }
+}
