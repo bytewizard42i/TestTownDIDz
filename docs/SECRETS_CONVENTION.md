@@ -85,3 +85,28 @@ If you run your own test population:
 
 If you are about to commit a file and you are not sure whether it is a
 secret: it is a secret.
+
+## Who is who: operators vs test subjects (Nov 26 2026)
+
+Two kinds of actor hold wallets, and confusing them corrupts tests
+silently — it is the referee playing in the match:
+
+| | **Operator wallet** (the roster) | **Test subject** (citizens, orgs, signer keys) |
+|---|---|---|
+| What it is | a pseudonym for whoever OPERATES the system: John, a sister, a tool | a fictional character the system acts UPON |
+| Examples | sarah, adele, violet | bonnie-lachance, ironclad-insurance-group, quarry-street-exchange--treasury-signer-1 |
+| Naming shape | one bare first name, lowercase, unique first letter | full name or organization name, always two or more words |
+| May it be a test subject? | never | always |
+
+The rules a test enforces:
+
+1. A roster name is a RESERVED word. No citizen, organization or asset may
+   ever use it, alone or as its first name.
+2. A roster wallet never owns, buys or wishes for anything in town. It only
+   ever acts for an institution. If a test ever shows "sarah" as a test
+   subject, the test is wrong.
+3. Operator pseudonyms are fictional personas, not real people. Never put a
+   real person's name in a roster wallet.
+
+When reading a vault file or the INDEX: the GROUP line says which kind an
+actor is. "Named operator wallet" = us acting. Anything else = a character.

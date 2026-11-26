@@ -84,6 +84,40 @@ class OperatorWalletTests(unittest.TestCase):
         self.assertEqual([p for p in ROOT.rglob("*.seed") if ".git" not in p.parts], [])
 
 
+class OperatorsAreNotSubjectsTests(unittest.TestCase):
+    """Operators are us acting; citizens and orgs are characters we act upon.
+    The two must never be confusable, or a test can silently put the
+    referee in the match (docs/SECRETS_CONVENTION.md)."""
+
+    def roster_names(self):
+        text = (ROOT / "tools" / "generate_population.py").read_text()
+        import re as _re
+        block = _re.search(r"LADIES = \{(.*?)\n\}", text, _re.S).group(1)
+        return set(_re.findall(r'"(\w+)":\s*"mn_addr', block))
+
+    def test_no_test_subject_uses_a_roster_name(self):
+        roster = self.roster_names()
+        self.assertEqual(len(roster), 20)
+        for category in ("citizens", "organizations", "animals", "assets"):
+            for dossier in load(category):
+                slug = dossier["slug"]
+                self.assertNotIn(slug, roster, f"{category}/{slug} collides with a roster name")
+                first = dossier["displayName"].split()[0].lower()
+                self.assertNotIn(first, roster,
+                                 f"{dossier['displayName']}'s first name collides with roster wallet '{first}'")
+
+    def test_roster_names_are_single_lowercase_words_with_unique_initials(self):
+        roster = sorted(self.roster_names())
+        for name in roster:
+            self.assertRegex(name, r"^[a-z]+$")
+        self.assertEqual(len(roster), len({n[0] for n in roster}))
+
+    def test_subjects_have_multi_word_display_names(self):
+        # A bare first name is what operators look like. Subjects must not.
+        for dossier in load("citizens"):
+            self.assertIn(" ", dossier["displayName"], dossier["slug"])
+
+
 class WalletChartTests(unittest.TestCase):
     def test_the_chart_matches_the_assignments(self):
         sys_path_added = str(ROOT / "tools")
