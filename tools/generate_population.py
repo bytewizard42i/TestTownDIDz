@@ -31,6 +31,20 @@ LADIES = {
     "tessa":   "mn_addr_preprod1xnqxhtmnklw6wxujzky5gaap0q8hatxlmppwhfwfczrdvgfdeqpscnw6f4",
     "bianca":  "mn_addr_preprod13w30su4w5tmam849gs7r8n8ymv729ymjpjw26dzgch8nmgkytgzsmanal2",
     "greta":   "mn_addr_preprod1t59xn4jmdht9k5utzk5puu9ydqsc4p4y8rzg65fjn23wq0ys9xrsm8tdyh",
+    # Wallets 11 to 20, added Nov 26 2026 as SPARES: no institution is
+    # assigned to them yet. Every roster name starts with a different letter
+    # so two can never be confused at a glance. To put one to work, name it
+    # as the operator of an organization in the ORGS table below.
+    "adele":   "mn_addr_preprod17q0m3k77jjqt9s8g40slahsc802pswnn0v4zr262n9naetnuss0qn8eq4y",
+    "daphne":  "mn_addr_preprod1avegu273cz7qqrzg40tnhdzgvwedl8ndy79pejn3wh2rshpdf4nsgtql58",
+    "fiona":   "mn_addr_preprod18xm2q8u4vpkl7txm5tnegtqglfq5y8jlx8vlesuqaj0q0rdj4p4sqt88nn",
+    "hazel":   "mn_addr_preprod1l9tug0m92sky9zh5tpr2ct4mux49flva5xqyvdggvfjd2sh8wfysp2asls",
+    "iris":    "mn_addr_preprod1e0c6pd2n3uv979lcnwf53qdkr3pp4y7rrrh0ljcdpe4trv5gvryqfqy88m",
+    "kira":    "mn_addr_preprod1l5hdl6dqvchzjuylve3kdcwlk897gnf6e8lxwsh8f5m6ql6n7agqgk7nrn",
+    "lydia":   "mn_addr_preprod1qkpsc8yvptne82gm3znzjzl2tpe9s8s52lsupl7pne9cgqepjjgqc5rzd2",
+    "paloma":  "mn_addr_preprod1jgsxrlqujujhrc3fuqexdmpqqxcmf7a5wc324vmlrzkvqn4cnt0qyw07q2",
+    "quinn":   "mn_addr_preprod1yx5kfx87xxlg0xg7qwrrr9uxs4dw9y57e7fspvnwhlq28fxt47ks2rljnm",
+    "violet":  "mn_addr_preprod19476j2yd7ul8v7l3urxxyk7j49gd8qcucs5r09nk6ff7cw6nmayq2r8awq",
 }
 
 # Headless wallets for everyone else: every resident citizen, every other

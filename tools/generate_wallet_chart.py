@@ -3,7 +3,7 @@
 
 WHAT THIS IS
     A human-readable preview of the machine-readable truth in
-    tools/wallet-assignments.json plus the ten named operator wallets in
+    tools/wallet-assignments.json plus the named operator wallets in
     tools/generate_population.py. Everything in it is a PUBLIC half:
     addresses are safe to publish. Seeds never appear here or anywhere in
     the repo (docs/SECRETS_CONVENTION.md).
@@ -31,7 +31,7 @@ OUT = ROOT / "docs" / "PREPROD_WALLETS.md"
 FAUCET = "https://faucet.preprod.midnight.network/"
 
 def named_operator_wallets():
-    """The ten civic institutions act through shared named operator wallets."""
+    """The named operator wallets, in roster order (LADIES in the generator)."""
     text = (ROOT / "tools" / "generate_population.py").read_text()
     block = re.search(r"LADIES = \{(.*?)\}", text, re.S).group(1)
     return re.findall(r'"(\w+)":\s*"(mn_addr_preprod1\w+)"', block)
@@ -65,12 +65,24 @@ def build_chart():
     lines.append("")
 
     ladies = named_operator_wallets()
-    lines.append("## Named operator wallets (the ten civic institutions)")
+    # Which institutions each named wallet operates, read from the dossiers.
+    operates = {}
+    for folder in sorted((ROOT / "dossiers" / "organizations").iterdir()):
+        dossier = json.loads((folder / "dossier.json").read_text())
+        card = (dossier.get("operator") or {}).get("walletCard") or ""
+        match = re.search(r"wallet-([a-z]+)\.md$", card)
+        if match:
+            operates.setdefault(match.group(1), []).append(dossier["displayName"])
+
+    lines.append(f"## Named operator wallets ({len(ladies)})")
     lines.append("")
-    lines.append("| operator | address |")
-    lines.append("|---|---|")
-    for name, address in sorted(ladies):
-        lines.append(f"| {name} | `{address}` |")
+    lines.append("Roster order. A wallet marked *spare* is not assigned to anything yet.")
+    lines.append("")
+    lines.append("| # | operator | operates | address |")
+    lines.append("|---|---|---|---|")
+    for number, (name, address) in enumerate(ladies, start=1):
+        runs = "; ".join(operates.get(name, [])) or "*spare*"
+        lines.append(f"| {number:02d} | {name} | {runs} | `{address}` |")
     lines.append("")
 
     wallets = ASSIGNMENTS["wallets"]

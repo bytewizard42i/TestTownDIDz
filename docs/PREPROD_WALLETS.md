@@ -19,20 +19,32 @@ Both are the same captcha-protected page: paste an address, solve
 the captcha, and test tNIGHT arrives in a few minutes. The captcha
 means a human has to do this; it cannot be scripted.
 
-## Named operator wallets (the ten civic institutions)
+## Named operator wallets (20)
 
-| operator | address |
-|---|---|
-| bianca | `mn_addr_preprod13w30su4w5tmam849gs7r8n8ymv729ymjpjw26dzgch8nmgkytgzsmanal2` |
-| emma | `mn_addr_preprod15yyy5az5crv2f8usjxg5hurwyyknv8g93648f4n68450yd5c555stt4wdt` |
-| greta | `mn_addr_preprod1t59xn4jmdht9k5utzk5puu9ydqsc4p4y8rzg65fjn23wq0ys9xrsm8tdyh` |
-| jessica | `mn_addr_preprod19r90qtcekt224vgmmhd4q4625w7kn3epgw32k09wguy0tnsqrlnqh28dn9` |
-| monica | `mn_addr_preprod1v4mjk8pf9hkxwkc3d6nd53c2v4m2gmvesrusghpgaucma9glc4vs6fw4a9` |
-| nadia | `mn_addr_preprod12htexfpvc870xzz5lx50jv33vj5kfuls3efatn724hfet3uldt7sud377s` |
-| olivia | `mn_addr_preprod1mw7e5j8r0nv3gr3cc9zfyz78wsygfy5e2zku4933jpchg7mam85s7rvvjc` |
-| rachel | `mn_addr_preprod1mr9rndczh2zxcu0mlfhem63x4ledl88kvl4xl2jv3j5mfgrm7gasmqqfvc` |
-| sarah | `mn_addr_preprod17jsz4gpr2t3qsw3nmw2hert4tc0ltu84d86lnc45rjgv4cp8muwsxplsm2` |
-| tessa | `mn_addr_preprod1xnqxhtmnklw6wxujzky5gaap0q8hatxlmppwhfwfczrdvgfdeqpscnw6f4` |
+Roster order. A wallet marked *spare* is not assigned to anything yet.
+
+| # | operator | operates | address |
+|---|---|---|---|
+| 01 | sarah | St. Brigid's General Hospital | `mn_addr_preprod17jsz4gpr2t3qsw3nmw2hert4tc0ltu84d86lnc45rjgv4cp8muwsxplsm2` |
+| 02 | jessica | Commonwealth Department of Motor Vehicles, TestTown Office | `mn_addr_preprod19r90qtcekt224vgmmhd4q4625w7kn3epgw32k09wguy0tnsqrlnqh28dn9` |
+| 03 | monica | TestTown Social Security Field Office | `mn_addr_preprod1v4mjk8pf9hkxwkc3d6nd53c2v4m2gmvesrusghpgaucma9glc4vs6fw4a9` |
+| 04 | rachel | Keystone Ridge College | `mn_addr_preprod1mr9rndczh2zxcu0mlfhem63x4ledl88kvl4xl2jv3j5mfgrm7gasmqqfvc` |
+| 05 | emma | TestTown Animal Hospital & Equine Center | `mn_addr_preprod15yyy5az5crv2f8usjxg5hurwyyknv8g93648f4n68450yd5c555stt4wdt` |
+| 06 | olivia | Willow Creek Veterinary Clinic | `mn_addr_preprod1mw7e5j8r0nv3gr3cc9zfyz78wsygfy5e2zku4933jpchg7mam85s7rvvjc` |
+| 07 | nadia | Hearthstone Realty Group | `mn_addr_preprod12htexfpvc870xzz5lx50jv33vj5kfuls3efatn724hfet3uldt7sud377s` |
+| 08 | tessa | Torque & Timing Auto Works | `mn_addr_preprod1xnqxhtmnklw6wxujzky5gaap0q8hatxlmppwhfwfczrdvgfdeqpscnw6f4` |
+| 09 | bianca | Meridian Horological Appraisals LLC | `mn_addr_preprod13w30su4w5tmam849gs7r8n8ymv729ymjpjw26dzgch8nmgkytgzsmanal2` |
+| 10 | greta | Maple Hollow Elementary School; Maple Hollow Middle School; Maple Hollow Senior High School | `mn_addr_preprod1t59xn4jmdht9k5utzk5puu9ydqsc4p4y8rzg65fjn23wq0ys9xrsm8tdyh` |
+| 11 | adele | *spare* | `mn_addr_preprod17q0m3k77jjqt9s8g40slahsc802pswnn0v4zr262n9naetnuss0qn8eq4y` |
+| 12 | daphne | *spare* | `mn_addr_preprod1avegu273cz7qqrzg40tnhdzgvwedl8ndy79pejn3wh2rshpdf4nsgtql58` |
+| 13 | fiona | *spare* | `mn_addr_preprod18xm2q8u4vpkl7txm5tnegtqglfq5y8jlx8vlesuqaj0q0rdj4p4sqt88nn` |
+| 14 | hazel | *spare* | `mn_addr_preprod1l9tug0m92sky9zh5tpr2ct4mux49flva5xqyvdggvfjd2sh8wfysp2asls` |
+| 15 | iris | *spare* | `mn_addr_preprod1e0c6pd2n3uv979lcnwf53qdkr3pp4y7rrrh0ljcdpe4trv5gvryqfqy88m` |
+| 16 | kira | *spare* | `mn_addr_preprod1l5hdl6dqvchzjuylve3kdcwlk897gnf6e8lxwsh8f5m6ql6n7agqgk7nrn` |
+| 17 | lydia | *spare* | `mn_addr_preprod1qkpsc8yvptne82gm3znzjzl2tpe9s8s52lsupl7pne9cgqepjjgqc5rzd2` |
+| 18 | paloma | *spare* | `mn_addr_preprod1jgsxrlqujujhrc3fuqexdmpqqxcmf7a5wc324vmlrzkvqn4cnt0qyw07q2` |
+| 19 | quinn | *spare* | `mn_addr_preprod1yx5kfx87xxlg0xg7qwrrr9uxs4dw9y57e7fspvnwhlq28fxt47ks2rljnm` |
+| 20 | violet | *spare* | `mn_addr_preprod19476j2yd7ul8v7l3urxxyk7j49gd8qcucs5r09nk6ff7cw6nmayq2r8awq` |
 
 ## Assigned wallets (48 total)
 
