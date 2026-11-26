@@ -27,6 +27,26 @@
       "kind": "citizen",
       "preprodAddress": "mn_addr_preprod1f7uhadmw2cml5w0522qt5cu437vgypdkhh2ysyhnvklqd9msc3wqcfy956"
     },
+    "big-corp-multisig--signer-1": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1k2k6q59fxxdnlrdrk2ut5h0fmsnfad68r87dppp2eztunaw32juq4gs5w5"
+    },
+    "big-corp-multisig--signer-2": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1tcwkxplfa3k4xhmnlnczellgcc8rcjq2rm44h6022f8gksuuy9nstxm5ya"
+    },
+    "big-corp-multisig--signer-3": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1awgsxfnvwjpae3dlh369kpz34788aas28renc5j9t3mdj7rrz34swaslhn"
+    },
+    "big-corp-multisig--signer-4": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1cnsddm06jhf07ttwvnnnaa2wluuyz846pdp6u5q6v3tsvu90svrslcnqcs"
+    },
+    "big-corp-multisig--signer-5": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1z9we2s0f0uc4hq52cd64v9lmepevyyzqpy0emj8nyva9e52q3pcsxphthn"
+    },
     "blue-heron-bakery": {
       "kind": "organization",
       "preprodAddress": "mn_addr_preprod1ww7t8vwzzjflc3hjzugx563vfr2lpvfcdlr8gfnykpfnhhnmvqds6fwhwt"
@@ -62,6 +82,34 @@
     "foxglove-pharmacy": {
       "kind": "organization",
       "preprodAddress": "mn_addr_preprod1g4x70s926qfegw4wup4qvtsyqj7ekuqmlcl96pt8k774dqpw5hsql7fjay"
+    },
+    "giant-corp-multisig--signer-1": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1vwx5dkzgehjwj6ssksszycjrda7tqwlgqa6vfaz8wsg5r8m95hgsedch4x"
+    },
+    "giant-corp-multisig--signer-2": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1qgxnf2vyy93gjmyzujqaajs3s0hh8uh7g66393vmwfm5g8gpaaaskd5zev"
+    },
+    "giant-corp-multisig--signer-3": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1402z8ylajy868vx9yug2h4q700e7av42uwlhhemm80z88npx4czqal7g29"
+    },
+    "giant-corp-multisig--signer-4": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1x4xmvzz7lxm6kgq6r9nvf9hpmm3xu6nqg8h6xxvgfrlsx40ta2rqc9tthe"
+    },
+    "giant-corp-multisig--signer-5": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1v7d2wpvjwf033jt3rtqcmphfcexzyt5xcv7j827snf2h3f7gw2vsuxgucz"
+    },
+    "giant-corp-multisig--signer-6": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1yd57sc87zke3kkazftv3mj8k8wk287jv5umgpadt74hkxvymjquqmjfxd6"
+    },
+    "giant-corp-multisig--signer-7": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1ghxlhvrjx79hlpzfwyxvzvywvqpqzrkxj4a243um5q0z6u7ujvvqyzz52s"
     },
     "gilded-frame-art-gallery": {
       "kind": "organization",
@@ -102,6 +150,18 @@
     "marcus-reid": {
       "kind": "citizen",
       "preprodAddress": "mn_addr_preprod1nz4vdysgvdvfpdshrausmvf22e6tplwtgs57e3cjcvvqjmgfnh7qq9at7h"
+    },
+    "med-corp-multisig--signer-1": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1kp05rguastmh7y08gvnw5hrhuv2gwslw22q47vwmzmlsa5h8svusfrzps6"
+    },
+    "med-corp-multisig--signer-2": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1kq0h75ue3g0swv5xkh3vajn442lm3dk8qv9lu44w9jq57hcerlrqy56n28"
+    },
+    "med-corp-multisig--signer-3": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1mxxhu6kcmvwzc8xsjsysttwdscg0q63t7r4k65a576gf4whvr66s5jcfp7"
     },
     "mei-lin-zhao": {
       "kind": "citizen",
@@ -190,6 +250,14 @@
     "theo-brandt": {
       "kind": "citizen",
       "preprodAddress": "mn_addr_preprod16euj8um6jqgkhek77rmpeakux7pxccca6yvd5z7tf0kwqkgg6htqcjmf0e"
+    },
+    "tiny-corp-multisig--signer-1": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1w62l4n0h6pnmhz7p8c5258ec52d7y3snegar9pt0c5cu6w8ntrwqf0qh7e"
+    },
+    "tiny-corp-multisig--signer-2": {
+      "kind": "multisig-pool-signer",
+      "preprodAddress": "mn_addr_preprod1sxz5rrlj9ezk34c6njdpd98krx6mwqd7tkw5kglzzrw8mccx4qwqrdd0xz"
     },
     "victor-osei": {
       "kind": "citizen",

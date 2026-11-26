@@ -1,0 +1,92 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "big-corp-multisig",
+  "displayName": "Big Corp Multisig (3-of-5)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": null,
+    "status": "PLACEHOLDER"
+  },
+  "fixturePool": {
+    "pool": "corporate-multisig",
+    "kind": "variable corporate asset",
+    "ownedBy": null,
+    "assignableTo": "any corporate object (organization, exchange, institution) a test assigns it to",
+    "status": "placeholder: requires multisig contract deployment"
+  },
+  "custody": {
+    "model": "multi-sig",
+    "threshold": 3,
+    "signerCount": 5,
+    "signers": [
+      {
+        "role": "pool-signer",
+        "heldBy": "big-corp-multisig--signer-1-addrk2k6q5",
+        "preprodAddress": "mn_addr_preprod1k2k6q59fxxdnlrdrk2ut5h0fmsnfad68r87dppp2eztunaw32juq4gs5w5",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-big-corp-multisig--signer-1.md"
+      },
+      {
+        "role": "pool-signer",
+        "heldBy": "big-corp-multisig--signer-2-addrtcwkxp",
+        "preprodAddress": "mn_addr_preprod1tcwkxplfa3k4xhmnlnczellgcc8rcjq2rm44h6022f8gksuuy9nstxm5ya",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-big-corp-multisig--signer-2.md"
+      },
+      {
+        "role": "pool-signer",
+        "heldBy": "big-corp-multisig--signer-3-addrawgsxf",
+        "preprodAddress": "mn_addr_preprod1awgsxfnvwjpae3dlh369kpz34788aas28renc5j9t3mdj7rrz34swaslhn",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-big-corp-multisig--signer-3.md"
+      },
+      {
+        "role": "pool-signer",
+        "heldBy": "big-corp-multisig--signer-4-addrcnsddm",
+        "preprodAddress": "mn_addr_preprod1cnsddm06jhf07ttwvnnnaa2wluuyz846pdp6u5q6v3tsvu90svrslcnqcs",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-big-corp-multisig--signer-4.md"
+      },
+      {
+        "role": "pool-signer",
+        "heldBy": "big-corp-multisig--signer-5-addrz9we2s",
+        "preprodAddress": "mn_addr_preprod1z9we2s0f0uc4hq52cd64v9lmepevyyzqpy0emj8nyva9e52q3pcsxphthn",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-big-corp-multisig--signer-5.md"
+      }
+    ],
+    "assetCustody": null,
+    "story": "A 3-of-5 corporate multi-signature wallet fixture. Nobody owns it: it is a spare part in the corporate multisig pool, assigned to a corporate object when a test needs this shape. Its signers are pseudonymous keys, not officers of anything."
+  },
+  "holdings": {
+    "chain": "midnight",
+    "network": "preprod",
+    "balanceUsd": null,
+    "asOf": "2026-11-25",
+    "evidence": "MOCK",
+    "fictional": true
+  },
+  "placeholders": [
+    {
+      "field": "identityAnchor.value",
+      "status": "PLACEHOLDER",
+      "reason": "No multi-sig account exists yet. Midnight has no native multi-signature account or account abstraction, so this wallet must be a Compact contract that counts approvals. That contract has not been written or deployed.",
+      "unblockedBy": "Write and deploy a multi-party authorization contract on pre-prod, then record its contract address here."
+    },
+    {
+      "field": "holdings.balanceUsd",
+      "status": "PLACEHOLDER",
+      "reason": "Nothing is funded. The signer keys are real pre-prod addresses holding no tNIGHT.",
+      "unblockedBy": "Fund the signers from the faucet or a funded wallet."
+    },
+    {
+      "field": "custody.assetCustody",
+      "status": "PLACEHOLDER",
+      "reason": "Not verified here that a contract on current pre-prod can hold tNIGHT on behalf of its signers. Midnight's own contract-custody account design (Midnight Passport, MIP-0012 and MIP-0013) was at the Proposed stage and Stagenet-only as of 3 Oct 2026.",
+      "unblockedBy": "Confirm against the current support matrix, then test with a small funded contract."
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

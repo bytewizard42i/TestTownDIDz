@@ -288,6 +288,50 @@ EXCHANGES = [
 ]
 
 # ---------------------------------------------------------------------------
+# THE CORPORATE MULTISIG POOL: variable corporate assets, owned by nobody
+#
+# WHAT THIS IS
+#   Four multi-signature wallet fixtures in four distinct test shapes:
+#   2-of-2, 2-of-3, 3-of-5 and 4-of-7. They are VARIABLE corporate assets:
+#   no organization owns them. They sit in a pool, and a test assigns one to
+#   any corporate object (an organization, the exchange, an institution)
+#   when it needs a corporate multi-sig of that shape — like matching a
+#   spare part to a machine.
+#
+#   Contrast with the exchange's treasury wallet above: that one is FIXED —
+#   it belongs to Quarry Street Exchange forever, its signers are the named
+#   officers. A pool wallet belongs to nobody until a test says otherwise,
+#   and its signers are pseudonymous keys, not officers.
+#
+# WHAT IS REAL AND WHAT IS A PLACEHOLDER
+#   Same rule as the exchange: the 17 signer keys are real pre-prod
+#   addresses with seeds in the local vault (public halves in
+#   tools/wallet-assignments.json, kind "multisig-pool-signer"). The
+#   multi-sig ACCOUNTS are placeholders: Midnight has no native
+#   multi-signature account, so each wallet is "placeholder: requires
+#   multisig contract deployment" until the contract exists.
+#
+#   The same table lives in the private vault tool
+#   (TestTown-DIDz-private/tools/vault/wallet-vault.mjs) so the vault knows
+#   which signer keys exist. The two must agree; a test checks it.
+# ---------------------------------------------------------------------------
+CORPORATE_MULTISIG_POOL = [
+    {"slug": "tiny-corp-multisig",  "name": "Tiny Corp Multisig",  "signers": 2, "threshold": 2},
+    {"slug": "med-corp-multisig",   "name": "Med Corp Multisig",   "signers": 3, "threshold": 2},
+    {"slug": "big-corp-multisig",   "name": "Big Corp Multisig",   "signers": 5, "threshold": 3},
+    {"slug": "giant-corp-multisig", "name": "Giant Corp Multisig", "signers": 7, "threshold": 4},
+]
+
+POOL_STATUS = "placeholder: requires multisig contract deployment"
+
+
+def pool_signer_pseudonym(key_slug):
+    """The display form of a signer key: lowercase slug plus the first six
+    characters of its pre-prod address body, e.g. tiny-corp-multisig--signer-1-addrw62l4n."""
+    return f"{key_slug}-addr{wallet_address(key_slug).replace('mn_addr_preprod1', '')[:6]}"
+
+
+# ---------------------------------------------------------------------------
 # THE PRODUCT CATALOG (what the town's shops have on the shelf)
 #
 # WHY IT EXISTS
@@ -820,6 +864,54 @@ def main():
              ("recovery-trustee", "TestTown Savings & Loan", EXCHANGE_RECOVERY_TRUSTEE)],
             "Funds the exchange holds for a customer. Any two of the three "
             "signers must approve, so the exchange cannot move them alone.")
+
+    # The corporate multisig pool: variable corporate assets, owned by no
+    # organization. Same dossier shape as the exchange's multi-sig wallets,
+    # but instead of an owner they carry a fixturePool block saying what
+    # they are for. The pool registry (the machine-readable list a test
+    # draws from) is written beside the other registries.
+    pool_registry_entries = []
+    for entry in CORPORATE_MULTISIG_POOL:
+        signer_keys = [f"{entry['slug']}--signer-{i}" for i in range(1, entry["signers"] + 1)]
+        multisig_wallet_dossier(
+            entry["slug"], f"{entry['name']} ({entry['threshold']}-of-{entry['signers']})",
+            {"fixturePool": {
+                "pool": "corporate-multisig",
+                "kind": "variable corporate asset",
+                "ownedBy": None,
+                "assignableTo": "any corporate object (organization, exchange, institution) "
+                                "a test assigns it to",
+                "status": POOL_STATUS,
+            }}, entry["threshold"],
+            [("pool-signer", pool_signer_pseudonym(key), key) for key in signer_keys],
+            f"A {entry['threshold']}-of-{entry['signers']} corporate multi-signature wallet "
+            "fixture. Nobody owns it: it is a spare part in the corporate multisig pool, "
+            "assigned to a corporate object when a test needs this shape. Its signers are "
+            "pseudonymous keys, not officers of anything.")
+        pool_registry_entries.append({
+            "slug": entry["slug"],
+            "displayName": entry["name"],
+            "signerCount": entry["signers"],
+            "threshold": entry["threshold"],
+            "status": POOL_STATUS,
+            "assetDossier": f"dossiers/assets/{entry['slug']}/dossier.json",
+            "signers": [{"keySlug": key,
+                          "pseudonym": pool_signer_pseudonym(key),
+                          "preprodAddress": wallet_address(key),
+                          "walletCard": wallet_card(key)}
+                         for key in signer_keys],
+        })
+    write_json(os.path.join(ROOT, "registries", "corporate-multisig-pool.json"), {
+        "registry": "TestTown corporate multisig pool — variable corporate assets",
+        "note": "A reusable pool of multi-signature wallet fixtures in distinct shapes. "
+                "No organization owns them: a test assigns one to any corporate object "
+                "that needs a corporate multi-sig of that shape. Signer keys are real "
+                "pre-prod addresses (public halves only — seeds live in the local vault, "
+                "never here). The multi-sig ACCOUNTS are placeholders until a multisig "
+                "contract is deployed. GENERATED by tools/generate_population.py; edit "
+                "the CORPORATE_MULTISIG_POOL table there, not this file.",
+        "pool": pool_registry_entries,
+    })
 
     # Hand-authored dossiers (not in the tables above) also belong to a
     # household. Scan the disk so regenerating never drops them: the insured

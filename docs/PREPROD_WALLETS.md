@@ -46,7 +46,7 @@ Roster order. A wallet marked *spare* is not assigned to anything yet.
 | 19 | quinn | *spare* | `mn_addr_preprod1yx5kfx87xxlg0xg7qwrrr9uxs4dw9y57e7fspvnwhlq28fxt47ks2rljnm` |
 | 20 | violet | *spare* | `mn_addr_preprod19476j2yd7ul8v7l3urxxyk7j49gd8qcucs5r09nk6ff7cw6nmayq2r8awq` |
 
-## Assigned wallets (48 total)
+## Assigned wallets (65 total)
 
 | who | address (elided) | full address |
 |---|---|---|
@@ -56,6 +56,11 @@ Roster order. A wallet marked *spare* is not assigned to anything yet.
 | amos-fairweather | `mn_addr_preprod1fpj5t7yg…dq8qkss2` | `mn_addr_preprod1fpj5t7ygu2kjjya9qxzra24se6fe7f6h0pv86qzsukcn8mtaxvdq8qkss2` |
 | anvil-oak-furniture-makers | `mn_addr_preprod1g5sjv5af…js3wlp3z` | `mn_addr_preprod1g5sjv5afn99njp83lj53sy2mutjxhe43ehj8jkm0q508d9cuanjs3wlp3z` |
 | anya-petrova | `mn_addr_preprod1f7uhadmw…wqcfy956` | `mn_addr_preprod1f7uhadmw2cml5w0522qt5cu437vgypdkhh2ysyhnvklqd9msc3wqcfy956` |
+| big-corp-multisig--signer-1 | `mn_addr_preprod1k2k6q59f…uq4gs5w5` | `mn_addr_preprod1k2k6q59fxxdnlrdrk2ut5h0fmsnfad68r87dppp2eztunaw32juq4gs5w5` |
+| big-corp-multisig--signer-2 | `mn_addr_preprod1tcwkxplf…nstxm5ya` | `mn_addr_preprod1tcwkxplfa3k4xhmnlnczellgcc8rcjq2rm44h6022f8gksuuy9nstxm5ya` |
+| big-corp-multisig--signer-3 | `mn_addr_preprod1awgsxfnv…4swaslhn` | `mn_addr_preprod1awgsxfnvwjpae3dlh369kpz34788aas28renc5j9t3mdj7rrz34swaslhn` |
+| big-corp-multisig--signer-4 | `mn_addr_preprod1cnsddm06…rslcnqcs` | `mn_addr_preprod1cnsddm06jhf07ttwvnnnaa2wluuyz846pdp6u5q6v3tsvu90svrslcnqcs` |
+| big-corp-multisig--signer-5 | `mn_addr_preprod1z9we2s0f…csxphthn` | `mn_addr_preprod1z9we2s0f0uc4hq52cd64v9lmepevyyzqpy0emj8nyva9e52q3pcsxphthn` |
 | blue-heron-bakery | `mn_addr_preprod1ww7t8vwz…ds6fwhwt` | `mn_addr_preprod1ww7t8vwzzjflc3hjzugx563vfr2lpvfcdlr8gfnykpfnhhnmvqds6fwhwt` |
 | bonnie-lachance | `mn_addr_preprod1lvrhq4st…rq7pm0a9` | `mn_addr_preprod1lvrhq4stt8cxmt77eg6mtfmf9xvaqdt7tq8gu8v0c9tjgaeaderq7pm0a9` |
 | clearwater-plumbing-heating | `mn_addr_preprod1lkw34u76…hs54auj0` | `mn_addr_preprod1lkw34u7656pw6qgkd78v68ptr0yx8m5x96szrldgvu903ndcsphs54auj0` |
@@ -65,6 +70,13 @@ Roster order. A wallet marked *spare* is not assigned to anything yet.
 | edgar-morrow | `mn_addr_preprod1z9lq9s3f…as9778au` | `mn_addr_preprod1z9lq9s3fj5sfayeemp4nh7kn8uglpmg0ky6vx6scekfnupmpexas9778au` |
 | fern-whitaker | `mn_addr_preprod1234k8az4…lq7cq8rk` | `mn_addr_preprod1234k8az4hk4gg7mkedm5p4lqugnkez7mqkjsarp3vqhymudkgllq7cq8rk` |
 | foxglove-pharmacy | `mn_addr_preprod1g4x70s92…sql7fjay` | `mn_addr_preprod1g4x70s926qfegw4wup4qvtsyqj7ekuqmlcl96pt8k774dqpw5hsql7fjay` |
+| giant-corp-multisig--signer-1 | `mn_addr_preprod1vwx5dkzg…gsedch4x` | `mn_addr_preprod1vwx5dkzgehjwj6ssksszycjrda7tqwlgqa6vfaz8wsg5r8m95hgsedch4x` |
+| giant-corp-multisig--signer-2 | `mn_addr_preprod1qgxnf2vy…askd5zev` | `mn_addr_preprod1qgxnf2vyy93gjmyzujqaajs3s0hh8uh7g66393vmwfm5g8gpaaaskd5zev` |
+| giant-corp-multisig--signer-3 | `mn_addr_preprod1402z8yla…zqal7g29` | `mn_addr_preprod1402z8ylajy868vx9yug2h4q700e7av42uwlhhemm80z88npx4czqal7g29` |
+| giant-corp-multisig--signer-4 | `mn_addr_preprod1x4xmvzz7…rqc9tthe` | `mn_addr_preprod1x4xmvzz7lxm6kgq6r9nvf9hpmm3xu6nqg8h6xxvgfrlsx40ta2rqc9tthe` |
+| giant-corp-multisig--signer-5 | `mn_addr_preprod1v7d2wpvj…vsuxgucz` | `mn_addr_preprod1v7d2wpvjwf033jt3rtqcmphfcexzyt5xcv7j827snf2h3f7gw2vsuxgucz` |
+| giant-corp-multisig--signer-6 | `mn_addr_preprod1yd57sc87…uqmjfxd6` | `mn_addr_preprod1yd57sc87zke3kkazftv3mj8k8wk287jv5umgpadt74hkxvymjquqmjfxd6` |
+| giant-corp-multisig--signer-7 | `mn_addr_preprod1ghxlhvrj…vqyzz52s` | `mn_addr_preprod1ghxlhvrjx79hlpzfwyxvzvywvqpqzrkxj4a243um5q0z6u7ujvvqyzz52s` |
 | gilded-frame-art-gallery | `mn_addr_preprod1980lavkf…xqfqt0d4` | `mn_addr_preprod1980lavkfqjx2s0rhrm63jdsjsjpk0f8lcdmwlmdaffdf9s0krjxqfqt0d4` |
 | green-gable-landscaping | `mn_addr_preprod1yu6j9jn9…3sq4j54h` | `mn_addr_preprod1yu6j9jn90rsq28tywcc8kqu5qfeswpys8hqxrj3dmvq4qw2kfv3sq4j54h` |
 | harold-quist | `mn_addr_preprod19xn6a9cr…dsrc8fnw` | `mn_addr_preprod19xn6a9crm7fe45xwdda07n4kqtpk3ua6f4n7y6lmll4229cwdwdsrc8fnw` |
@@ -75,6 +87,9 @@ Roster order. A wallet marked *spare* is not assigned to anything yet.
 | lena-hartmann | `mn_addr_preprod1a0xwahlz…6s5xsj4j` | `mn_addr_preprod1a0xwahlzmk0tkln5acyuvy7egepuv6y6nkjrkj9hl6eyaw9h426s5xsj4j` |
 | maple-main-bookshop | `mn_addr_preprod1zwmq05ja…cs790qx7` | `mn_addr_preprod1zwmq05ja2g09aws8hjupc9m2srm0hk5gp6az0ytrhmwmruj8a4cs790qx7` |
 | marcus-reid | `mn_addr_preprod1nz4vdysg…7qq9at7h` | `mn_addr_preprod1nz4vdysgvdvfpdshrausmvf22e6tplwtgs57e3cjcvvqjmgfnh7qq9at7h` |
+| med-corp-multisig--signer-1 | `mn_addr_preprod1kp05rgua…usfrzps6` | `mn_addr_preprod1kp05rguastmh7y08gvnw5hrhuv2gwslw22q47vwmzmlsa5h8svusfrzps6` |
+| med-corp-multisig--signer-2 | `mn_addr_preprod1kq0h75ue…rqy56n28` | `mn_addr_preprod1kq0h75ue3g0swv5xkh3vajn442lm3dk8qv9lu44w9jq57hcerlrqy56n28` |
+| med-corp-multisig--signer-3 | `mn_addr_preprod1mxxhu6kc…6s5jcfp7` | `mn_addr_preprod1mxxhu6kcmvwzc8xsjsysttwdscg0q63t7r4k65a576gf4whvr66s5jcfp7` |
 | mei-lin-zhao | `mn_addr_preprod1hnxtrxmp…tqkcnl3k` | `mn_addr_preprod1hnxtrxmpm5zu4dwwu07esqehttqgt7hzsqua8ardcngwm8v6uftqkcnl3k` |
 | nightowl-data-systems | `mn_addr_preprod1ag8v80e3…8s4fe4cz` | `mn_addr_preprod1ag8v80e337q02ucmthdsq8r4d5f8myedzsggg7gl6l2w8ml4wd8s4fe4cz` |
 | olaf-bjornsen | `mn_addr_preprod1l0jqw2m3…tqafpcql` | `mn_addr_preprod1l0jqw2m3667pykpj8z5gyrwskw6xn4qmdxp2fq8g709wac6fjdtqafpcql` |
@@ -97,6 +112,8 @@ Roster order. A wallet marked *spare* is not assigned to anything yet.
 | testtown-savings-loan | `mn_addr_preprod10eekedu4…kqsm82ua` | `mn_addr_preprod10eekedu4er58nrsnkzmj0ddm75fpm0x4z5v03kj23p79023y92kqsm82ua` |
 | testtown-transit-authority | `mn_addr_preprod1q4d66d9j…nsxzm35w` | `mn_addr_preprod1q4d66d9jhyq9twa4f5zunk292xmqurg3n2xzuxeu889yyxxssnnsxzm35w` |
 | theo-brandt | `mn_addr_preprod16euj8um6…tqcjmf0e` | `mn_addr_preprod16euj8um6jqgkhek77rmpeakux7pxccca6yvd5z7tf0kwqkgg6htqcjmf0e` |
+| tiny-corp-multisig--signer-1 | `mn_addr_preprod1w62l4n0h…wqf0qh7e` | `mn_addr_preprod1w62l4n0h6pnmhz7p8c5258ec52d7y3snegar9pt0c5cu6w8ntrwqf0qh7e` |
+| tiny-corp-multisig--signer-2 | `mn_addr_preprod1sxz5rrlj…wqrdd0xz` | `mn_addr_preprod1sxz5rrlj9ezk34c6njdpd98krx6mwqd7tkw5kglzzrw8mccx4qwqrdd0xz` |
 | victor-osei | `mn_addr_preprod1ve5qutph…ys9qj3pm` | `mn_addr_preprod1ve5qutphsh2zhwaatrtx6sct22znscp9whftx6xvydet26ugczys9qj3pm` |
 
 *Convention fixtures deliberately have no wallet: their own tests forbid a key.*

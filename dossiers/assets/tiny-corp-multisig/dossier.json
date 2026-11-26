@@ -1,0 +1,74 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "tiny-corp-multisig",
+  "displayName": "Tiny Corp Multisig (2-of-2)",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": null,
+    "status": "PLACEHOLDER"
+  },
+  "fixturePool": {
+    "pool": "corporate-multisig",
+    "kind": "variable corporate asset",
+    "ownedBy": null,
+    "assignableTo": "any corporate object (organization, exchange, institution) a test assigns it to",
+    "status": "placeholder: requires multisig contract deployment"
+  },
+  "custody": {
+    "model": "multi-sig",
+    "threshold": 2,
+    "signerCount": 2,
+    "signers": [
+      {
+        "role": "pool-signer",
+        "heldBy": "tiny-corp-multisig--signer-1-addrw62l4n",
+        "preprodAddress": "mn_addr_preprod1w62l4n0h6pnmhz7p8c5258ec52d7y3snegar9pt0c5cu6w8ntrwqf0qh7e",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-tiny-corp-multisig--signer-1.md"
+      },
+      {
+        "role": "pool-signer",
+        "heldBy": "tiny-corp-multisig--signer-2-addrsxz5rr",
+        "preprodAddress": "mn_addr_preprod1sxz5rrlj9ezk34c6njdpd98krx6mwqd7tkw5kglzzrw8mccx4qwqrdd0xz",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-tiny-corp-multisig--signer-2.md"
+      }
+    ],
+    "assetCustody": null,
+    "story": "A 2-of-2 corporate multi-signature wallet fixture. Nobody owns it: it is a spare part in the corporate multisig pool, assigned to a corporate object when a test needs this shape. Its signers are pseudonymous keys, not officers of anything."
+  },
+  "holdings": {
+    "chain": "midnight",
+    "network": "preprod",
+    "balanceUsd": null,
+    "asOf": "2026-11-25",
+    "evidence": "MOCK",
+    "fictional": true
+  },
+  "placeholders": [
+    {
+      "field": "identityAnchor.value",
+      "status": "PLACEHOLDER",
+      "reason": "No multi-sig account exists yet. Midnight has no native multi-signature account or account abstraction, so this wallet must be a Compact contract that counts approvals. That contract has not been written or deployed.",
+      "unblockedBy": "Write and deploy a multi-party authorization contract on pre-prod, then record its contract address here."
+    },
+    {
+      "field": "holdings.balanceUsd",
+      "status": "PLACEHOLDER",
+      "reason": "Nothing is funded. The signer keys are real pre-prod addresses holding no tNIGHT.",
+      "unblockedBy": "Fund the signers from the faucet or a funded wallet."
+    },
+    {
+      "field": "custody.assetCustody",
+      "status": "PLACEHOLDER",
+      "reason": "Not verified here that a contract on current pre-prod can hold tNIGHT on behalf of its signers. Midnight's own contract-custody account design (Midnight Passport, MIP-0012 and MIP-0013) was at the Proposed stage and Stagenet-only as of 3 Oct 2026.",
+      "unblockedBy": "Confirm against the current support matrix, then test with a small funded contract."
+    }
+  ],
+  "papers": [],
+  "documents": []
+}
