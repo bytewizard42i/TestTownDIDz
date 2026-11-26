@@ -173,10 +173,12 @@ dossiers/
 registries/        the authorities of record (mock IRS, State corporations)
 tools/             generate_population.py (the single source of truth),
                    wallet-assignments.json (public addresses), validate_intents.py,
-                   validate_catalog.py (product rules + the wish-meets-shelf matcher)
+                   validate_catalog.py (product rules + the wish-meets-shelf matcher),
+                   generate_wallet_chart.py (writes docs/PREPROD_WALLETS.md)
 examples/          worked intent and product examples, valid and broken on purpose
 docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md,
-                   INTENTS_LAYER.md, PRODUCT_CATALOG.md, SECRETS_CONVENTION.md
+                   INTENTS_LAYER.md, PRODUCT_CATALOG.md, SECRETS_CONVENTION.md,
+                   PREPROD_WALLETS.md (every public address + the faucet)
 ```
 
 ## How the ecosystem consumes TestTown

@@ -84,6 +84,24 @@ class OperatorWalletTests(unittest.TestCase):
         self.assertEqual([p for p in ROOT.rglob("*.seed") if ".git" not in p.parts], [])
 
 
+class WalletChartTests(unittest.TestCase):
+    def test_the_chart_matches_the_assignments(self):
+        sys_path_added = str(ROOT / "tools")
+        if sys_path_added not in __import__("sys").path:
+            __import__("sys").path.insert(0, sys_path_added)
+        from generate_wallet_chart import build_chart
+        committed = (ROOT / "docs" / "PREPROD_WALLETS.md").read_text()
+        self.assertEqual(committed, build_chart(),
+                         "run python3 tools/generate_wallet_chart.py")
+
+    def test_the_chart_mentions_the_faucet_and_no_secrets(self):
+        chart = (ROOT / "docs" / "PREPROD_WALLETS.md").read_text()
+        self.assertIn("faucet.preprod.midnight.network", chart)
+        # The word "seed" may appear in prose; what may not appear is
+        # anything shaped like one: 64 hex characters in a row.
+        self.assertIsNone(re.search(r"\b[0-9a-fA-F]{64}\b", chart))
+
+
 class ExchangeTests(unittest.TestCase):
     def setUp(self):
         self.orgs = {d["slug"]: d for d in load("organizations")}
