@@ -1,0 +1,55 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "product",
+  "slug": "wallet-theft-cover-standard",
+  "displayName": "Wallet Theft Cover, Standard",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "productKind": "insurance",
+  "underwriterOrganizationSlug": "ironclad-insurance-group",
+  "sellerOrganizationSlugs": [
+    "quarry-street-exchange",
+    "ironclad-insurance-group"
+  ],
+  "availability": {
+    "status": "on-sale",
+    "listedAt": "2026-10-01",
+    "asOf": "2026-11-25"
+  },
+  "insurance": {
+    "covers": {
+      "dossierCategory": "asset",
+      "kinds": [
+        "crypto-wallet"
+      ]
+    },
+    "peril": "unauthorized transfer out of the insured wallet",
+    "coverageUsd": {
+      "min": 1001,
+      "max": 5000
+    },
+    "deductibleUsd": 150,
+    "premiumUsdPerYear": 60,
+    "termMonths": 12,
+    "requires": [
+      "screening-check",
+      "region-check",
+      "identity-check",
+      "education-check",
+      "wallet-control-check"
+    ]
+  },
+  "story": "The middle one. Asks for every check the town knows how to run.",
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "product-sheet.md",
+      "kind": "product-sheet",
+      "sha256": "81a05ef83a1727d6f2925b7a9aa2ea9e4aec4b2b1232b72d5506f70ceaa04c5d",
+      "confirmableBy": "dossiers/organizations/ironclad-insurance-group/dossier.json"
+    }
+  ]
+}

@@ -274,6 +274,121 @@ EXCHANGES = [
 ]
 
 # ---------------------------------------------------------------------------
+# THE PRODUCT CATALOG (what the town's shops have on the shelf)
+#
+# WHY IT EXISTS
+#   Citizens already voice WANTS (docs/INTENTS_LAYER.md): "insure this wallet
+#   for $500". Until now nobody in town SOLD anything, so a want had nothing
+#   to meet. A product is the other half: a shop saying "we sell this, on
+#   these terms, to anyone". Read docs/PRODUCT_CATALOG.md for the long version.
+#
+# A PRODUCT IS NOT AN OFFER AND NOT A POLICY
+#   A product is the same for everybody, like a menu. It never names a
+#   customer and never says who qualifies. Who was offered what, and who was
+#   bound to which terms, are OUTCOMES and belong to the seller's own system.
+#
+# WHO IS WHO
+#   underwriter  carries the risk. Ironclad Insurance Group, the town insurer.
+#   sellers      put it on a shelf. Quarry Street Exchange sells wallet cover
+#                to the people whose wallets it already knows; Ironclad also
+#                sells direct.
+#
+# THESE NUMBERS ARE PLACEHOLDERS
+#   Round, invented, and deliberately not anybody's real pricing. A consumer
+#   with real terms keeps them in its own private repo, in this same shape.
+#
+# IDEAS, NOT BUILT
+#   - a licence registry (a State Insurance Department) so "is this
+#     underwriter allowed to sell insurance?" has an authority of record
+#   - non-insurance products: a loan, a custody plan, a vet wellness plan
+#   - cover on a person (health, life) once a fixture needs it
+#   - bundles and riders ("wallet cover + hardware wallet discount")
+# ---------------------------------------------------------------------------
+INSURER_SLUG = "ironclad-insurance-group"
+
+# The generic names of the checks a wallet-cover buyer must clear. These say
+# what is ASKED for, never who passed.
+WALLET_COVER_CHECKS = ["screening-check", "region-check", "identity-check",
+                       "education-check", "wallet-control-check"]
+
+def insurance_product(slug, name, sellers, covers_category, covers_kinds, peril,
+                      low, high, deductible, premium, months, requires, story,
+                      status="on-sale", listed="2026-10-01", withdrawn=None,
+                      underwriter=INSURER_SLUG, villain=None):
+    return dict(slug=slug, name=name, sellers=sellers, underwriter=underwriter,
+                covers={"dossierCategory": covers_category, "kinds": covers_kinds},
+                peril=peril, low=low, high=high, deductible=deductible,
+                premium=premium, months=months, requires=requires, story=story,
+                status=status, listed=listed, withdrawn=withdrawn, villain=villain)
+
+WALLET_THEFT = "unauthorized transfer out of the insured wallet"
+
+PRODUCTS = [
+    # Three sizes of the same wallet cover. The ranges touch but never
+    # overlap, so any amount from $100 to $25,000 fits exactly one of them.
+    insurance_product(
+        "wallet-theft-cover-starter", "Wallet Theft Cover, Starter",
+        [EXCHANGE_SLUG, INSURER_SLUG], "asset", ["crypto-wallet"], WALLET_THEFT,
+        100, 1000, 50, 20, 12, WALLET_COVER_CHECKS[:3],
+        "The small one, for a first wallet. Fewest checks, lowest price."),
+    insurance_product(
+        "wallet-theft-cover-standard", "Wallet Theft Cover, Standard",
+        [EXCHANGE_SLUG, INSURER_SLUG], "asset", ["crypto-wallet"], WALLET_THEFT,
+        1001, 5000, 150, 60, 12, WALLET_COVER_CHECKS,
+        "The middle one. Asks for every check the town knows how to run."),
+    insurance_product(
+        "wallet-theft-cover-plus", "Wallet Theft Cover, Plus",
+        [EXCHANGE_SLUG, INSURER_SLUG], "asset", ["crypto-wallet"], WALLET_THEFT,
+        5001, 25000, 500, 200, 12, WALLET_COVER_CHECKS,
+        "The large one, for savings. Same checks as Standard, bigger numbers."),
+    # A product that is NOT about wallets, to prove the shape is generic:
+    # the same catalog serves a horse. Ember the broodmare is the town's
+    # insured-animal lifecycle fixture.
+    insurance_product(
+        "equine-mortality-cover", "Equine Mortality Cover",
+        [INSURER_SLUG], "animal", ["horse"],
+        "death of the insured horse from accident, illness or disease",
+        1000, 50000, 0, 350, 12, ["veterinary-health-certificate", "liveness-check"],
+        "Sold direct by Ironclad. Needs a recent certificate from a vet."),
+    # History: a product taken off the shelf. A consumer must not sell it.
+    insurance_product(
+        "wallet-theft-cover-launch-special", "Wallet Theft Cover, Launch Special",
+        [EXCHANGE_SLUG], "asset", ["crypto-wallet"], WALLET_THEFT,
+        100, 2000, 0, 10, 6, WALLET_COVER_CHECKS[:3],
+        "A cut-price six-month cover the exchange ran when it first partnered "
+        "with Ironclad. Withdrawn at the end of the promotion.",
+        status="withdrawn", listed="2026-06-01", withdrawn="2026-08-31"),
+    # Promised, not yet for sale.
+    insurance_product(
+        "vehicle-theft-cover", "Vehicle Theft Cover",
+        [INSURER_SLUG], "asset", ["vehicle"],
+        "theft of the insured vehicle",
+        2000, 60000, 500, 480, 12, ["title-check", "identity-check"],
+        "Announced for the new year. Not for sale yet.",
+        status="announced", listed="2027-01-15"),
+]
+
+# The catalog's "today". Later than the wallets' asOf so the whole town is
+# frozen at one moment.
+CATALOG_AS_OF = "2026-11-25"
+
+# A villain product uses the IDENTICAL shape and passes every shape rule.
+# The fraud is in a claim the papers cannot back: it names Ironclad as its
+# underwriter, and Ironclad's own storefront does not list it.
+VILLAIN_PRODUCTS = [
+    insurance_product(
+        "VILLAIN--guaranteed-wallet-cover--names-an-underwriter-that-never-agreed",
+        "Guaranteed Wallet Cover (no checks, instant)",
+        ["VILLAIN--shady-docs-llc--forged-ein-not-in-irs-registry"],
+        "asset", ["crypto-wallet"], WALLET_THEFT,
+        100, 100000, 0, 5, 12, [],
+        "Too good to be true: any amount, no checks, five dollars a year.",
+        villain="Names Ironclad Insurance Group as underwriter, but Ironclad's "
+                "storefront does not list this product; the seller is itself "
+                "a villain whose EIN was never issued by the IRS registry"),
+]
+
+# ---------------------------------------------------------------------------
 # THE CITIZENS (twenty residents; jobs point at real org slugs)
 # ---------------------------------------------------------------------------
 CITIZENS = [
@@ -552,8 +667,68 @@ def multisig_wallet_dossier(slug, name, owner_fields, threshold, signers, story)
         "papers": [], "documents": [],
     })
 
+def product_dossier(p):
+    """Write one product: a plain-English product sheet, then the dossier
+    that commits to it by hash (the same pattern as an organization's charter)."""
+    d = os.path.join(ROOT, "dossiers", "products", p["slug"])
+    os.makedirs(d, exist_ok=True)
+    sheet = os.path.join(d, "product-sheet.md")
+    with open(sheet, "w") as f:
+        f.write(f"# Product sheet: {p['name']}\n\n"
+                f"- Covers: {', '.join(p['covers']['kinds'])} ({p['covers']['dossierCategory']})\n"
+                f"- Against: {p['peril']}\n"
+                f"- Amount: ${p['low']:,} to ${p['high']:,}\n"
+                f"- Deductible: ${p['deductible']:,}\n"
+                f"- Price: ${p['premium']:,} a year, {p['months']}-month term\n"
+                f"- Buyer must clear: {', '.join(p['requires']) or 'nothing'}\n\n"
+                f"{p['story']}\n\n"
+                f"*(TestTown fixture document. Invented placeholder terms; its "
+                f"sha256 is the dossier's commitment.)*\n")
+    write_json(os.path.join(d, "dossier.json"), {
+        "schema": "testtown/dossier/v0.1",
+        "category": "product",
+        "slug": p["slug"],
+        "displayName": p["name"],
+        "honesty": {"role": "VILLAIN" if p["villain"] else "AUTHENTIC",
+                     "fraudMechanism": p["villain"]},
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": p["underwriter"],
+        "sellerOrganizationSlugs": p["sellers"],
+        "availability": {"status": p["status"], "listedAt": p["listed"],
+                          **({"withdrawnAt": p["withdrawn"]} if p["withdrawn"] else {}),
+                          "asOf": CATALOG_AS_OF},
+        "insurance": {
+            "covers": p["covers"],
+            "peril": p["peril"],
+            "coverageUsd": {"min": p["low"], "max": p["high"]},
+            "deductibleUsd": p["deductible"],
+            "premiumUsdPerYear": p["premium"],
+            "termMonths": p["months"],
+            "requires": p["requires"],
+        },
+        "story": p["story"],
+        "evidence": "MOCK",
+        "fictional": True,
+        "documents": [{"file": "product-sheet.md", "kind": "product-sheet",
+                        "sha256": sha256_file(sheet),
+                        "confirmableBy": f"dossiers/organizations/{p['underwriter']}/dossier.json"}],
+    })
+
 def main():
     all_orgs = ORGS + EMPLOYERS + EXCHANGES + VILLAINS
+
+    # --- storefronts: which organization underwrites and sells what ---------
+    # Derived from the PRODUCTS table so a product and its shop can never
+    # disagree. Villain products are left out ON PURPOSE: the honest
+    # underwriter not listing a product is exactly how the fraud is caught.
+    storefronts = {}
+    for p in PRODUCTS:
+        storefronts.setdefault(p["underwriter"], {"underwrites": [], "sells": []})["underwrites"].append(p["slug"])
+        for seller in p["sellers"]:
+            storefronts.setdefault(seller, {"underwrites": [], "sells": []})["sells"].append(p["slug"])
+    for o in all_orgs:
+        if o["slug"] in storefronts:
+            o["extra"] = {**o["extra"], "storefront": storefronts[o["slug"]]}
 
     # --- registries (the authorities of record) ---
     eins, regs = {}, {}
@@ -713,9 +888,13 @@ def main():
             },
         })
 
+    for p in PRODUCTS + VILLAIN_PRODUCTS:
+        product_dossier(p)
+
     print(f"generated: {len(all_orgs)} organizations ({len(VILLAINS)} villains), "
           f"{len(CITIZENS)} citizens, {len(ANIMALS)} animals, "
-          f"{len(ASSETS)} assets (+{len(VILLAIN_ASSETS)} villain assets)")
+          f"{len(ASSETS)} assets (+{len(VILLAIN_ASSETS)} villain assets), "
+          f"{len(PRODUCTS)} products (+{len(VILLAIN_PRODUCTS)} villain product)")
 
 if __name__ == "__main__":
     main()

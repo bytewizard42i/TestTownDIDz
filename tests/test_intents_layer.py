@@ -123,7 +123,11 @@ class TestTownIntentFixtureTests(unittest.TestCase):
         without_expiry = {k: v for k, v in good.items() if k != "expiresAt"}
         zero_cover = {**good, "insurance": {"wish": "cover-asset", "coverageUsd": 0}}
         odd_wish = {**good, "insurance": {"wish": "win-lottery", "coverageUsd": 500}}
-        for intent in (without_start, without_expiry, zero_cover, odd_wish):
+        # productSlug is optional, but when present it must be a real string.
+        empty_product = {**good, "insurance": {**good["insurance"], "productSlug": ""}}
+        named_product = {**good, "insurance": {**good["insurance"], "productSlug": "any-slug"}}
+        self.assertEqual(insurance_wish_problems(named_product), [])
+        for intent in (without_start, without_expiry, zero_cover, odd_wish, empty_product):
             self.assertNotEqual(insurance_wish_problems(intent), [], intent)
 
     def test_at_most_one_open_insurance_wish_per_asset(self):

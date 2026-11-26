@@ -27,7 +27,7 @@ their living.
 | Level | Required | Optional |
 |---|---|---|
 | **Generic intent** (anything) | `wants`, `expressedAt`, `status` | `startDate`, `expiresAt`, `story`, `category` + its block |
-| **Insurance wish** (`category: "insurance"`) | all of the above **plus** `startDate`, `expiresAt`, `insurance.wish`, `insurance.coverageUsd` | `story` |
+| **Insurance wish** (`category: "insurance"`) | all of the above **plus** `startDate`, `expiresAt`, `insurance.wish`, `insurance.coverageUsd` | `story`, `insurance.productSlug` (names a product from the catalog, see `PRODUCT_CATALOG.md`) |
 
 A category names one extra block holding its details. Unknown categories are
 allowed and free-form, which is how a new kind of want gets tried before
@@ -61,6 +61,7 @@ status:  open ──► accepted   the owner took an offer
 | A quick check of everything | `python3 tools/validate_intents.py` |
 | Real fixtures | `dossiers/assets/*-wallet/dossier.json` |
 | The tests | `tests/test_intents_layer.py` |
+| What the town's shops sell, and how a wish meets it | `PRODUCT_CATALOG.md` |
 
 ## The current cast
 
@@ -121,6 +122,10 @@ first step toward a negotiation language, so it needs a real use first.
 **Offers as the mirror image.** If intents are asks, the answering side has
 offers. Offers are NOT TestTown's to hold, but a consumer might want a shared
 shape so an intent and an offer can be matched mechanically.
+*Partly answered Nov 26 2026:* the town now has a **product catalog**
+(`PRODUCT_CATALOG.md`). A product is a standing shelf entry, the same for
+everybody, so it is a fact and may live here. An offer to one person is
+still an outcome and still does not.
 
 **Privacy.** An insurance wish next to a balance tells the world how much
 someone holds. In the real system the want would be private and only a

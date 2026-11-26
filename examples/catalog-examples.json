@@ -1,0 +1,271 @@
+{
+  "schema": "testtown/catalog-examples/v0.1",
+  "readme": "Worked examples of the product catalog. These are teaching material, NOT town canon: no shop in TestTown sells them. Each example says what it teaches and whether the validator should accept it. The tests run every one, so an example can never drift out of date. Run `python3 tools/validate_catalog.py` to see them checked.",
+  "examples": [
+    {
+      "id": "generic-minimal",
+      "title": "The smallest possible product",
+      "teaches": "A product needs a slug, a name, a productKind with its details block, an underwriter, at least one seller, and an availability block. An unknown productKind is allowed and its block is free-form.",
+      "expectValid": true,
+      "product": {
+        "category": "product",
+        "slug": "piano-tuning-plan",
+        "displayName": "Piano Tuning Plan",
+        "productKind": "service-plan",
+        "service-plan": { "visitsPerYear": 2 },
+        "underwriterOrganizationSlug": "meridian-horological-appraisals",
+        "sellerOrganizationSlugs": ["meridian-horological-appraisals"],
+        "availability": { "status": "on-sale", "listedAt": "2026-01-10", "asOf": "2026-11-25" }
+      }
+    },
+    {
+      "id": "insurance-on-sale",
+      "title": "An insurance product on the shelf",
+      "teaches": "An insurance product adds: what it covers (a dossier category and kinds), the peril, a coverage range, a deductible, a yearly premium, a term, and the checks a buyer must clear. 'requires' names kinds of check; it never says who passed.",
+      "expectValid": true,
+      "product": {
+        "category": "product",
+        "slug": "artwork-transit-cover",
+        "displayName": "Artwork Transit Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["gilded-frame-art-gallery", "ironclad-insurance-group"],
+        "availability": { "status": "on-sale", "listedAt": "2026-03-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["artwork"] },
+          "peril": "damage to the artwork while it is being moved",
+          "coverageUsd": { "min": 500, "max": 40000 },
+          "deductibleUsd": 100,
+          "premiumUsdPerYear": 90,
+          "termMonths": 12,
+          "requires": ["appraisal-check"]
+        }
+      }
+    },
+    {
+      "id": "insurance-no-checks-zero-deductible",
+      "title": "Nothing required, nothing deducted",
+      "teaches": "An empty 'requires' list and a zero deductible are both allowed. Whether such a product is wise is the underwriter's business, not the schema's.",
+      "expectValid": true,
+      "product": {
+        "category": "product",
+        "slug": "bicycle-theft-cover",
+        "displayName": "Bicycle Theft Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["summit-peak-outfitters"],
+        "availability": { "status": "on-sale", "listedAt": "2026-05-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["bicycle"] },
+          "peril": "theft of the bicycle",
+          "coverageUsd": { "min": 100, "max": 3000 },
+          "deductibleUsd": 0,
+          "premiumUsdPerYear": 25,
+          "termMonths": 12,
+          "requires": []
+        }
+      }
+    },
+    {
+      "id": "insurance-withdrawn",
+      "title": "Taken off the shelf",
+      "teaches": "A withdrawn product stays in the catalog as history, with the date it was withdrawn. A consumer must not sell it, the same way it must not answer an expired intent.",
+      "expectValid": true,
+      "product": {
+        "category": "product",
+        "slug": "summer-rental-cover",
+        "displayName": "Summer Rental Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["hearthstone-realty-group"],
+        "availability": { "status": "withdrawn", "listedAt": "2026-05-15", "withdrawnAt": "2026-09-15", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["real-estate"] },
+          "peril": "damage by a short-term tenant",
+          "coverageUsd": { "min": 1000, "max": 20000 },
+          "deductibleUsd": 250,
+          "premiumUsdPerYear": 140,
+          "termMonths": 4,
+          "requires": ["identity-check", "deed-check"]
+        }
+      }
+    },
+    {
+      "id": "insurance-announced",
+      "title": "Promised, not yet for sale",
+      "teaches": "An announced product has a listedAt in the future. It is in the catalog so people can plan, but it is not on the shelf.",
+      "expectValid": true,
+      "product": {
+        "category": "product",
+        "slug": "pet-illness-cover",
+        "displayName": "Pet Illness Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["willow-creek-veterinary-clinic"],
+        "availability": { "status": "announced", "listedAt": "2027-02-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "animal", "kinds": ["dog", "cat"] },
+          "peril": "veterinary costs of an illness",
+          "coverageUsd": { "min": 250, "max": 8000 },
+          "deductibleUsd": 50,
+          "premiumUsdPerYear": 180,
+          "termMonths": 12,
+          "requires": ["microchip-check"]
+        }
+      }
+    },
+    {
+      "id": "BROKEN-names-a-customer",
+      "title": "BROKEN: a product that names who bought it",
+      "teaches": "A product is the same for everybody. The moment it lists customers it has become a sales record, which is the seller's private business. The validator rejects it.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "piano-tuning-plan",
+        "displayName": "Piano Tuning Plan",
+        "productKind": "service-plan",
+        "service-plan": { "visitsPerYear": 2, "customers": ["harold-quist"] },
+        "underwriterOrganizationSlug": "meridian-horological-appraisals",
+        "sellerOrganizationSlugs": ["meridian-horological-appraisals"],
+        "availability": { "status": "on-sale", "listedAt": "2026-01-10", "asOf": "2026-11-25" }
+      }
+    },
+    {
+      "id": "BROKEN-outcome-smuggled-in",
+      "title": "BROKEN: a product that records who qualifies",
+      "teaches": "The rule that must never bend, shared with the intents layer. 'requires' may name a check; 'approved' records a result, and results belong to gatekeepers.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "bicycle-theft-cover",
+        "displayName": "Bicycle Theft Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["summit-peak-outfitters"],
+        "availability": { "status": "on-sale", "listedAt": "2026-05-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["bicycle"] },
+          "peril": "theft of the bicycle",
+          "coverageUsd": { "min": 100, "max": 3000 },
+          "deductibleUsd": 0,
+          "premiumUsdPerYear": 25,
+          "termMonths": 12,
+          "requires": [],
+          "approved": ["raj-patel"]
+        }
+      }
+    },
+    {
+      "id": "BROKEN-no-seller",
+      "title": "BROKEN: a product nobody sells",
+      "teaches": "A product with an empty seller list is not on any shelf. If it is no longer sold, mark it withdrawn and keep the sellers as history.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "piano-tuning-plan",
+        "displayName": "Piano Tuning Plan",
+        "productKind": "service-plan",
+        "service-plan": { "visitsPerYear": 2 },
+        "underwriterOrganizationSlug": "meridian-horological-appraisals",
+        "sellerOrganizationSlugs": [],
+        "availability": { "status": "on-sale", "listedAt": "2026-01-10", "asOf": "2026-11-25" }
+      }
+    },
+    {
+      "id": "BROKEN-range-upside-down",
+      "title": "BROKEN: minimum cover above maximum cover",
+      "teaches": "The coverage range must run from low to high. An upside-down range would match no wish at all.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "artwork-transit-cover",
+        "displayName": "Artwork Transit Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["gilded-frame-art-gallery"],
+        "availability": { "status": "on-sale", "listedAt": "2026-03-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["artwork"] },
+          "peril": "damage to the artwork while it is being moved",
+          "coverageUsd": { "min": 40000, "max": 500 },
+          "deductibleUsd": 100,
+          "premiumUsdPerYear": 90,
+          "termMonths": 12,
+          "requires": ["appraisal-check"]
+        }
+      }
+    },
+    {
+      "id": "BROKEN-deductible-swallows-cover",
+      "title": "BROKEN: a deductible as large as the biggest payout",
+      "teaches": "If the customer bears the first $3,000 of a $3,000 maximum, the cover can never pay anything.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "bicycle-theft-cover",
+        "displayName": "Bicycle Theft Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["summit-peak-outfitters"],
+        "availability": { "status": "on-sale", "listedAt": "2026-05-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["bicycle"] },
+          "peril": "theft of the bicycle",
+          "coverageUsd": { "min": 100, "max": 3000 },
+          "deductibleUsd": 3000,
+          "premiumUsdPerYear": 25,
+          "termMonths": 12,
+          "requires": []
+        }
+      }
+    },
+    {
+      "id": "BROKEN-on-sale-before-listing",
+      "title": "BROKEN: on sale before its listing date",
+      "teaches": "Status and dates must agree. A product whose listedAt is still in the future is announced, not on sale.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "pet-illness-cover",
+        "displayName": "Pet Illness Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["willow-creek-veterinary-clinic"],
+        "availability": { "status": "on-sale", "listedAt": "2027-02-01", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "animal", "kinds": ["dog", "cat"] },
+          "peril": "veterinary costs of an illness",
+          "coverageUsd": { "min": 250, "max": 8000 },
+          "deductibleUsd": 50,
+          "premiumUsdPerYear": 180,
+          "termMonths": 12,
+          "requires": ["microchip-check"]
+        }
+      }
+    },
+    {
+      "id": "BROKEN-withdrawn-without-a-date",
+      "title": "BROKEN: withdrawn, but nobody wrote down when",
+      "teaches": "A withdrawn product needs its withdrawnAt, the same way an expired intent needs its expiresAt. History without a date is not history.",
+      "expectValid": false,
+      "product": {
+        "category": "product",
+        "slug": "summer-rental-cover",
+        "displayName": "Summer Rental Cover",
+        "productKind": "insurance",
+        "underwriterOrganizationSlug": "ironclad-insurance-group",
+        "sellerOrganizationSlugs": ["hearthstone-realty-group"],
+        "availability": { "status": "withdrawn", "listedAt": "2026-05-15", "asOf": "2026-11-25" },
+        "insurance": {
+          "covers": { "dossierCategory": "asset", "kinds": ["real-estate"] },
+          "peril": "damage by a short-term tenant",
+          "coverageUsd": { "min": 1000, "max": 20000 },
+          "deductibleUsd": 250,
+          "premiumUsdPerYear": 140,
+          "termMonths": 4,
+          "requires": ["identity-check", "deed-check"]
+        }
+      }
+    }
+  ]
+}

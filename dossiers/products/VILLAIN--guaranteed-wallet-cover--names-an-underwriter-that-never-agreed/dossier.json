@@ -1,0 +1,48 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "product",
+  "slug": "VILLAIN--guaranteed-wallet-cover--names-an-underwriter-that-never-agreed",
+  "displayName": "Guaranteed Wallet Cover (no checks, instant)",
+  "honesty": {
+    "role": "VILLAIN",
+    "fraudMechanism": "Names Ironclad Insurance Group as underwriter, but Ironclad's storefront does not list this product; the seller is itself a villain whose EIN was never issued by the IRS registry"
+  },
+  "productKind": "insurance",
+  "underwriterOrganizationSlug": "ironclad-insurance-group",
+  "sellerOrganizationSlugs": [
+    "VILLAIN--shady-docs-llc--forged-ein-not-in-irs-registry"
+  ],
+  "availability": {
+    "status": "on-sale",
+    "listedAt": "2026-10-01",
+    "asOf": "2026-11-25"
+  },
+  "insurance": {
+    "covers": {
+      "dossierCategory": "asset",
+      "kinds": [
+        "crypto-wallet"
+      ]
+    },
+    "peril": "unauthorized transfer out of the insured wallet",
+    "coverageUsd": {
+      "min": 100,
+      "max": 100000
+    },
+    "deductibleUsd": 0,
+    "premiumUsdPerYear": 5,
+    "termMonths": 12,
+    "requires": []
+  },
+  "story": "Too good to be true: any amount, no checks, five dollars a year.",
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "product-sheet.md",
+      "kind": "product-sheet",
+      "sha256": "95bb40f7a802707af3bef36641281be0fc46471f22d547f53e4d8b85a19fbe1d",
+      "confirmableBy": "dossiers/organizations/ironclad-insurance-group/dossier.json"
+    }
+  ]
+}

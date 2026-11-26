@@ -154,6 +154,16 @@ def insurance_wish_problems(intent):
     coverage = details.get("coverageUsd")
     if not isinstance(coverage, (int, float)) or coverage <= 0:
         problems.append("coverageUsd must be a positive number")
+
+    # productSlug is OPTIONAL: the owner may name the exact product they want
+    # ("the Plus one"), or leave it out and stay product-blind. Here we only
+    # check its shape. Whether that product exists, and whether the ask fits
+    # it, is checked against the catalog in tools/validate_catalog.py, so
+    # this file never needs to know what is on the shelf.
+    if "productSlug" in details and not (
+        isinstance(details["productSlug"], str) and details["productSlug"]
+    ):
+        problems.append("productSlug must be a non-empty string when present")
     return problems
 
 

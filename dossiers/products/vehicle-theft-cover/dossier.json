@@ -1,0 +1,51 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "product",
+  "slug": "vehicle-theft-cover",
+  "displayName": "Vehicle Theft Cover",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "productKind": "insurance",
+  "underwriterOrganizationSlug": "ironclad-insurance-group",
+  "sellerOrganizationSlugs": [
+    "ironclad-insurance-group"
+  ],
+  "availability": {
+    "status": "announced",
+    "listedAt": "2027-01-15",
+    "asOf": "2026-11-25"
+  },
+  "insurance": {
+    "covers": {
+      "dossierCategory": "asset",
+      "kinds": [
+        "vehicle"
+      ]
+    },
+    "peril": "theft of the insured vehicle",
+    "coverageUsd": {
+      "min": 2000,
+      "max": 60000
+    },
+    "deductibleUsd": 500,
+    "premiumUsdPerYear": 480,
+    "termMonths": 12,
+    "requires": [
+      "title-check",
+      "identity-check"
+    ]
+  },
+  "story": "Announced for the new year. Not for sale yet.",
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "product-sheet.md",
+      "kind": "product-sheet",
+      "sha256": "54c6381600a10274ea61a603ef405c8f006fab93ed1bbb1c46947203b15b9d42",
+      "confirmableBy": "dossiers/organizations/ironclad-insurance-group/dossier.json"
+    }
+  ]
+}

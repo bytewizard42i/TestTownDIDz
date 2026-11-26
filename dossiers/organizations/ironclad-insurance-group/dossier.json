@@ -37,6 +37,23 @@
       "confirmableBy": "registries/state-corporations-registry.json"
     }
   ],
+  "storefront": {
+    "underwrites": [
+      "wallet-theft-cover-starter",
+      "wallet-theft-cover-standard",
+      "wallet-theft-cover-plus",
+      "equine-mortality-cover",
+      "wallet-theft-cover-launch-special",
+      "vehicle-theft-cover"
+    ],
+    "sells": [
+      "wallet-theft-cover-starter",
+      "wallet-theft-cover-standard",
+      "wallet-theft-cover-plus",
+      "equine-mortality-cover",
+      "vehicle-theft-cover"
+    ]
+  },
   "operator": {
     "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-ironclad-insurance-group.md",
     "preprodAddress": "mn_addr_preprod12qj3fv7twypzy4jq596ap0jfyqtc8k0c6x67zy33wy20a50xtu9s82p2ku",

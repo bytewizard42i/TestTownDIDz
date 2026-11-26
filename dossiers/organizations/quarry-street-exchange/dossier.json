@@ -73,6 +73,15 @@
       "multiSigAccounts": "PLACEHOLDER (see each wallet dossier)"
     }
   },
+  "storefront": {
+    "underwrites": [],
+    "sells": [
+      "wallet-theft-cover-starter",
+      "wallet-theft-cover-standard",
+      "wallet-theft-cover-plus",
+      "wallet-theft-cover-launch-special"
+    ]
+  },
   "operator": {
     "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-street-exchange.md",
     "preprodAddress": "mn_addr_preprod1t23hzzvt3u6ftt47yy6073ahxkj74qxz3j37pkpvkdeshnl69qms64fvlw",

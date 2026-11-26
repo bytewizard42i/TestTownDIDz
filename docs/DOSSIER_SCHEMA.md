@@ -20,7 +20,7 @@ dossiers/<category>/<slug>/
 ```jsonc
 {
   "schema": "testtown/dossier/v0.1",
-  "category": "organization | citizen | animal | asset",
+  "category": "organization | citizen | animal | asset | product",
   "slug": "st-brigids-general-hospital",
   "displayName": "St. Brigid's General Hospital",
   "honesty": {
@@ -221,3 +221,35 @@ exists, fill the field and remove that entry in the same change.
    the local-only wallet vault. The full pattern and its reasoning:
    `SECRETS_CONVENTION.md`.
 ```
+
+### product (what an organization sells; v0.2 candidate, Nov 26 2026)
+
+A product is a standing catalog entry, the same for everybody. It is NOT an
+offer to one person and NOT a bound policy; those are outcomes and never
+live in TestTown. Full write-up: `PRODUCT_CATALOG.md`.
+
+```jsonc
+{
+  "productKind": "insurance",                 // names the details block
+  "underwriterOrganizationSlug": "ironclad-insurance-group",
+  "sellerOrganizationSlugs": ["quarry-street-exchange"],
+  "availability": { "status": "on-sale",      // announced | on-sale | withdrawn
+                    "listedAt": "2026-10-01", "asOf": "2026-11-25" },
+  "insurance": {
+    "covers": { "dossierCategory": "asset", "kinds": ["crypto-wallet"] },
+    "peril": "…",
+    "coverageUsd": { "min": 100, "max": 1000 },
+    "deductibleUsd": 50, "premiumUsdPerYear": 20, "termMonths": 12,
+    "requires": ["identity-check"]            // names of checks, never results
+  }
+}
+```
+
+An organization that underwrites or sells a product carries the backlink:
+
+```jsonc
+"storefront": { "underwrites": ["<product slug>"], "sells": ["<product slug>"] }
+```
+
+An insurance wish may name a product with the optional
+`insurance.productSlug`. A wish without it is just as valid.

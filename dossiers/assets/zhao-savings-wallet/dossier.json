@@ -32,7 +32,8 @@
       "category": "insurance",
       "insurance": {
         "wish": "cover-asset",
-        "coverageUsd": 10000
+        "coverageUsd": 10000,
+        "productSlug": "wallet-theft-cover-plus"
       }
     }
   ],

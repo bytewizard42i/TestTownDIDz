@@ -167,12 +167,16 @@ dossiers/
                    + a VILLAIN with a cloned serial; see docs/LIFECYCLE_CATALOG.md
                    Also crypto wallets: seven that their owners want insured
                    (docs/INTENTS_LAYER.md) and the exchange's multi-sig wallets
+  products/        what the town's shops SELL: insurance products on the
+                   insurer's and the exchange's shelves, + a VILLAIN product
+                   naming an underwriter that never agreed (docs/PRODUCT_CATALOG.md)
 registries/        the authorities of record (mock IRS, State corporations)
 tools/             generate_population.py (the single source of truth),
-                   wallet-assignments.json (public addresses), validate_intents.py
-examples/          worked intent examples, valid and broken on purpose
+                   wallet-assignments.json (public addresses), validate_intents.py,
+                   validate_catalog.py (product rules + the wish-meets-shelf matcher)
+examples/          worked intent and product examples, valid and broken on purpose
 docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md,
-                   INTENTS_LAYER.md, SECRETS_CONVENTION.md
+                   INTENTS_LAYER.md, PRODUCT_CATALOG.md, SECRETS_CONVENTION.md
 ```
 
 ## How the ecosystem consumes TestTown

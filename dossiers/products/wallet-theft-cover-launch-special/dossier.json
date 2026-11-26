@@ -1,0 +1,53 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "product",
+  "slug": "wallet-theft-cover-launch-special",
+  "displayName": "Wallet Theft Cover, Launch Special",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "productKind": "insurance",
+  "underwriterOrganizationSlug": "ironclad-insurance-group",
+  "sellerOrganizationSlugs": [
+    "quarry-street-exchange"
+  ],
+  "availability": {
+    "status": "withdrawn",
+    "listedAt": "2026-06-01",
+    "withdrawnAt": "2026-08-31",
+    "asOf": "2026-11-25"
+  },
+  "insurance": {
+    "covers": {
+      "dossierCategory": "asset",
+      "kinds": [
+        "crypto-wallet"
+      ]
+    },
+    "peril": "unauthorized transfer out of the insured wallet",
+    "coverageUsd": {
+      "min": 100,
+      "max": 2000
+    },
+    "deductibleUsd": 0,
+    "premiumUsdPerYear": 10,
+    "termMonths": 6,
+    "requires": [
+      "screening-check",
+      "region-check",
+      "identity-check"
+    ]
+  },
+  "story": "A cut-price six-month cover the exchange ran when it first partnered with Ironclad. Withdrawn at the end of the promotion.",
+  "evidence": "MOCK",
+  "fictional": true,
+  "documents": [
+    {
+      "file": "product-sheet.md",
+      "kind": "product-sheet",
+      "sha256": "7e2230303856287c564258501b2301275e44a57a1730465c7663153bd4dade86",
+      "confirmableBy": "dossiers/organizations/ironclad-insurance-group/dossier.json"
+    }
+  ]
+}
