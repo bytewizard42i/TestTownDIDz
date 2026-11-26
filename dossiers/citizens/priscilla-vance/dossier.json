@@ -27,6 +27,8 @@
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-priscilla-vance.md",
+    "preprodAddress": "mn_addr_preprod1xvd7acekwhxf9sqrw6s9l5fdqm3q45wx9y4j98u22shsqtydagqqsz6vwc"
   }
 }

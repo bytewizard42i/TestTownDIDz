@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-testtown-savings-loan.md",
+    "preprodAddress": "mn_addr_preprod10eekedu4er58nrsnkzmj0ddm75fpm0x4z5v03kj23p79023y92kqsm82ua",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

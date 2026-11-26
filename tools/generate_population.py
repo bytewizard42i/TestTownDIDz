@@ -33,14 +33,29 @@ LADIES = {
     "greta":   "mn_addr_preprod1t59xn4jmdht9k5utzk5puu9ydqsc4p4y8rzg65fjn23wq0ys9xrsm8tdyh",
 }
 
+# Headless wallets for everyone else: every resident citizen, every other
+# organization (villains included: a villain needs a key to attempt fraud),
+# and the exchange's signers. PUBLIC addresses only. The file is written when
+# wallets are created; the seeds never enter this repo (docs/SECRETS_CONVENTION.md).
+# Convention fixtures are deliberately absent: their own tests forbid a key.
+with open(os.path.join(ROOT, "tools", "wallet-assignments.json")) as _f:
+    WALLETS = json.load(_f)["wallets"]
+
+def wallet_card(slug):
+    return f"utils_Midnight/preProd-Wallets/wallets/wallet-{slug}.md"
+
+def wallet_address(slug):
+    return WALLETS[slug]["preprodAddress"]
+
 def org(slug, name, ein, reg, founded, issuer_type, assurance, scopes, tiers,
         officers, operator=None, standing="GOOD_STANDING", ein_status="active",
-        villain=None, extra_authority=None, kind=None):
+        villain=None, extra_authority=None, kind=None, extra=None):
+    # `extra` = additional top-level blocks for this dossier (e.g. "exchange").
     return dict(slug=slug, name=name, ein=ein, reg=reg, founded=founded,
                 issuer_type=issuer_type, assurance=assurance, scopes=scopes,
                 tiers=tiers, officers=officers, operator=operator,
                 standing=standing, ein_status=ein_status, villain=villain,
-                extra_authority=extra_authority or {}, kind=kind)
+                extra_authority=extra_authority or {}, kind=kind, extra=extra or {})
 
 # ---------------------------------------------------------------------------
 # THE CIVIC INSTITUTIONS (featured issuers, operated by the named ladies)
@@ -158,6 +173,105 @@ for i, name in enumerate(EMPLOYER_NAMES):
         f"PA-C-06{i:05d}", f"{1958 + (i * 3) % 60}-0{(i % 9) + 1}-15",
         "employer", "PEER_REVIEWED", ["EMPLOYMENT", "INCOME_RANGE"], ["human"],
         [(f"Officer {i + 1}", "Registered Agent")]))
+
+# ---------------------------------------------------------------------------
+# THE EXCHANGE (Nov 25 2026): a business that holds crypto for itself and
+# for its customers, in multi-signature wallets.
+#
+# WHY IT IS HERE
+#   Wallet insurance, screening and custody questions all need a custodian in
+#   the town: somebody whose wallet is NOT controlled by one key. The exchange
+#   gives every consumer the two shapes that matter:
+#     1. a CORPORATE wallet the company controls (2 of its 3 officers sign)
+#     2. a CUSTOMER wallet the company holds FOR a customer (any 2 of 3:
+#        the customer, the exchange, and an independent recovery trustee)
+#
+# WHAT IS REAL AND WHAT IS A PLACEHOLDER
+#   Real: every signer has a pre-prod address derived from a seed in the vault.
+#   Placeholder: the multi-sig wallets themselves. Midnight has no native
+#   multi-signature account, so each one must be a contract that counts
+#   approvals, and that contract is not written or deployed yet. Each wallet
+#   dossier carries a `placeholders` list saying exactly what is missing and
+#   what would unblock it. Fill those in; do not delete them silently.
+#
+# WHY issuerType IS "employer"
+#   The admission gate admits only issuer types it has a policy for, and a
+#   never-delete test says every AUTHENTIC organization must be admitted. An
+#   "exchange" issuer type (attesting custody or account standing) is a good
+#   idea for later; adding it means adding a gate policy first. Until then the
+#   exchange registers as what it also truthfully is: an employer.
+#
+# IDEAS, NOT BUILT
+#   - a VILLAIN exchange: looks solvent, but its treasury signers are one person
+#   - proof of reserves: the exchange proves it holds at least what it owes
+#   - a customer withdrawing while the exchange refuses to co-sign (the
+#     recovery trustee exists for exactly this)
+#   - an omnibus wallet holding many customers' funds in one account
+#   - the exchange as a KYC issuer for its own customers
+# ---------------------------------------------------------------------------
+EXCHANGE_SLUG = "quarry-street-exchange"
+EXCHANGE_TREASURY_WALLET = "quarry-street-exchange-treasury-wallet"
+EXCHANGE_RECOVERY_TRUSTEE = "testtown-savings-loan"
+EXCHANGE_OFFICERS = [
+    ("Naomi Castellan", "Chief Executive Officer"),
+    ("Desmond Achterberg", "Chief Financial Officer"),
+    ("Ingrid Solheim", "Chief Compliance Officer"),
+]
+# customer citizen slug -> the custody wallet the exchange holds for them
+EXCHANGE_CUSTOMER_WALLETS = {"mei-lin-zhao": "zhao-exchange-custody-wallet"}
+
+MULTISIG_PLACEHOLDERS = [
+    {"field": "identityAnchor.value", "status": "PLACEHOLDER",
+     "reason": "No multi-sig account exists yet. Midnight has no native "
+               "multi-signature account or account abstraction, so this wallet "
+               "must be a Compact contract that counts approvals. That contract "
+               "has not been written or deployed.",
+     "unblockedBy": "Write and deploy a multi-party authorization contract on "
+                    "pre-prod, then record its contract address here."},
+    {"field": "holdings.balanceUsd", "status": "PLACEHOLDER",
+     "reason": "Nothing is funded. The signer keys are real pre-prod addresses "
+               "holding no tNIGHT.",
+     "unblockedBy": "Fund the signers from the faucet or a funded wallet."},
+    {"field": "custody.assetCustody", "status": "PLACEHOLDER",
+     "reason": "Not verified here that a contract on current pre-prod can hold "
+               "tNIGHT on behalf of its signers. Midnight's own contract-custody "
+               "account design (Midnight Passport, MIP-0012 and MIP-0013) was "
+               "at the Proposed stage and Stagenet-only as of 3 Oct 2026.",
+     "unblockedBy": "Confirm against the current support matrix, then test with "
+                    "a small funded contract."},
+]
+
+EXCHANGES = [
+    org(EXCHANGE_SLUG, "Quarry Street Exchange",
+        "20-4000020", "PA-C-0600020", "2021-09-14",
+        "employer", "PEER_REVIEWED", ["EMPLOYMENT", "INCOME_RANGE"], ["human"],
+        EXCHANGE_OFFICERS,
+        extra={"exchange": {
+            "kind": "centralized-exchange",
+            "story": "TestTown's first digital-asset exchange, opened on Quarry "
+                     "Street in 2021. It keeps its own funds in a treasury that "
+                     "needs two of its three officers to move, and it holds each "
+                     "customer's funds in a wallet the customer co-controls.",
+            "corporateWallets": [EXCHANGE_TREASURY_WALLET],
+            "customerWallets": sorted(EXCHANGE_CUSTOMER_WALLETS.values()),
+            "customers": sorted(EXCHANGE_CUSTOMER_WALLETS),
+            "customerWalletTemplate": {
+                "threshold": 2, "signerCount": 3,
+                "signerRoles": ["customer", "exchange-cosigner", "recovery-trustee"],
+                "recoveryTrusteeOrganizationSlug": EXCHANGE_RECOVERY_TRUSTEE,
+                "why": "Any two of the three must approve. No party can move "
+                       "funds alone. Customer plus trustee works without the "
+                       "exchange, so the customer cannot be locked out. Exchange "
+                       "plus trustee works without the customer, which is the "
+                       "recovery path if the customer loses their key, and also "
+                       "the trust a customer is placing in the two of them.",
+            },
+            "testWired": {
+                "signerKeys": "real pre-prod addresses, unfunded",
+                "multiSigAccounts": "PLACEHOLDER (see each wallet dossier)",
+            },
+        }}),
+]
 
 # ---------------------------------------------------------------------------
 # THE CITIZENS (twenty residents; jobs point at real org slugs)
@@ -399,18 +513,51 @@ def org_dossier(o):
         "officers": [{"name": n, "role": r} for n, r in o["officers"]],
         "documents": [{"file": doc, "kind": "incorporation-record", "sha256": digest,
                         "confirmableBy": "registries/state-corporations-registry.json"}],
+        **o["extra"],
         "operator": ({"walletCard": f"utils_Midnight/preProd-Wallets/wallets/wallet-{lady}.md",
                        "preprodAddress": LADIES[lady]} if lady
+                      else {"walletCard": wallet_card(o["slug"]),
+                            "preprodAddress": wallet_address(o["slug"]),
+                            "note": "headless derived key; seed in the local-only vault"}
+                      if o["slug"] in WALLETS
                       else {"walletCard": None, "preprodAddress": None,
                             "note": "bulk org — headless derived key planned"}),
     })
 
+def multisig_wallet_dossier(slug, name, owner_fields, threshold, signers, story):
+    """A crypto-wallet asset controlled by several keys. Signers are real
+    pre-prod addresses; the account itself is a placeholder (see EXCHANGE notes)."""
+    assert 1 <= threshold <= len(signers), slug
+    write_json(os.path.join(ROOT, "dossiers", "assets", slug, "dossier.json"), {
+        "schema": "testtown/dossier/v0.1", "category": "asset", "slug": slug,
+        "displayName": name,
+        "honesty": {"role": "AUTHENTIC", "fraudMechanism": None},
+        "assetKind": "crypto-wallet",
+        "identityAnchor": {"kind": "wallet-address", "value": None, "status": "PLACEHOLDER"},
+        **owner_fields,
+        "custody": {
+            "model": "multi-sig",
+            "threshold": threshold,
+            "signerCount": len(signers),
+            "signers": [{"role": role, "heldBy": held_by,
+                          "preprodAddress": wallet_address(key_slug),
+                          "walletCard": wallet_card(key_slug)}
+                         for role, held_by, key_slug in signers],
+            "assetCustody": None,
+            "story": story,
+        },
+        "holdings": {"chain": "midnight", "network": "preprod", "balanceUsd": None,
+                      "asOf": "2026-11-25", "evidence": "MOCK", "fictional": True},
+        "placeholders": MULTISIG_PLACEHOLDERS,
+        "papers": [], "documents": [],
+    })
+
 def main():
-    all_orgs = ORGS + EMPLOYERS + VILLAINS
+    all_orgs = ORGS + EMPLOYERS + EXCHANGES + VILLAINS
 
     # --- registries (the authorities of record) ---
     eins, regs = {}, {}
-    for o in ORGS + EMPLOYERS:
+    for o in ORGS + EMPLOYERS + EXCHANGES:
         eins[o["ein"]] = {"legalName": o["name"], "issued": o["founded"], "status": o["ein_status"]}
         regs[o["reg"]] = {"legalName": o["name"], "standing": o["standing"],
                            "incorporated": o["founded"],
@@ -464,6 +611,44 @@ def main():
     for a in ANIMALS: citizens_with_household[a[4]]["animals"].append(a[0])
     for a in ASSETS:  citizens_with_household[a[5]]["assets"].append(a[0])
 
+    # The exchange's multi-sig wallets (written before the household scan
+    # below so a customer's custody wallet shows up in their household).
+    multisig_wallet_dossier(
+        EXCHANGE_TREASURY_WALLET, "Quarry Street Exchange corporate treasury wallet",
+        {"ownerOrganizationSlug": EXCHANGE_SLUG}, 2,
+        [("treasury-signer", f"{name} ({role})", f"{EXCHANGE_SLUG}--treasury-signer-{i}")
+         for i, (name, role) in enumerate(EXCHANGE_OFFICERS, start=1)],
+        "The exchange's own money. Any two of the three officers must approve a "
+        "movement, so no single officer can empty the treasury.")
+    citizen_names = {c[0]: c[1] for c in CITIZENS}
+    for customer, wallet_slug in EXCHANGE_CUSTOMER_WALLETS.items():
+        multisig_wallet_dossier(
+            wallet_slug, f"{citizen_names[customer]}'s custody wallet at Quarry Street Exchange",
+            {"ownerCitizenSlug": customer, "custodianOrganizationSlug": EXCHANGE_SLUG}, 2,
+            [("customer", citizen_names[customer], customer),
+             ("exchange-cosigner", "Quarry Street Exchange (custody desk)",
+              f"{EXCHANGE_SLUG}--custody-cosigner"),
+             ("recovery-trustee", "TestTown Savings & Loan", EXCHANGE_RECOVERY_TRUSTEE)],
+            "Funds the exchange holds for a customer. Any two of the three "
+            "signers must approve, so the exchange cannot move them alone.")
+
+    # Hand-authored dossiers (not in the tables above) also belong to a
+    # household. Scan the disk so regenerating never drops them: the insured
+    # wallets from the intents layer and the lifecycle fixtures live this way.
+    table_assets = {a[0] for a in ASSETS}
+    table_animals = {a[0] for a in ANIMALS}
+    for kind, owner_key, known in (("assets", "ownerCitizenSlug", table_assets),
+                                   ("animals", "custodianCitizenSlug", table_animals)):
+        folder = os.path.join(ROOT, "dossiers", kind)
+        for slug in sorted(os.listdir(folder)):
+            path = os.path.join(folder, slug, "dossier.json")
+            if slug in known or not os.path.exists(path):
+                continue
+            with open(path) as f:
+                owner = json.load(f).get(owner_key)
+            if owner in citizens_with_household and slug not in citizens_with_household[owner][kind]:
+                citizens_with_household[owner][kind].append(slug)
+
     for slug, name, born, employer, role in CITIZENS:
         write_json(os.path.join(ROOT, "dossiers", "citizens", slug, "dossier.json"), {
             "schema": "testtown/dossier/v0.1", "category": "citizen", "slug": slug,
@@ -474,8 +659,13 @@ def main():
                              "from": f"{max(int(born[:4]) + 18, 2005)}-06-01", "to": None}],
             "householdSlugs": citizens_with_household[slug],
             "documents": [],
-            "operator": {"note": "Citizens hold their OWN keys — self-sovereign; "
-                                  "wallet assignment lands with the admission-gate build."},
+            "operator": ({"note": "Citizens hold their OWN keys — self-sovereign. "
+                                   "The seed is in the local-only vault, never here.",
+                           "walletCard": wallet_card(slug),
+                           "preprodAddress": wallet_address(slug)}
+                          if slug in WALLETS else
+                          {"note": "Citizens hold their OWN keys — self-sovereign; "
+                                   "wallet assignment lands with the admission-gate build."}),
         })
 
     for slug, name, species, chip, custodian, vet in ANIMALS:

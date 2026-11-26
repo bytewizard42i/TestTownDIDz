@@ -1,0 +1,75 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "zhao-exchange-custody-wallet",
+  "displayName": "Mei-Lin Zhao's custody wallet at Quarry Street Exchange",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": null,
+    "status": "PLACEHOLDER"
+  },
+  "ownerCitizenSlug": "mei-lin-zhao",
+  "custodianOrganizationSlug": "quarry-street-exchange",
+  "custody": {
+    "model": "multi-sig",
+    "threshold": 2,
+    "signerCount": 3,
+    "signers": [
+      {
+        "role": "customer",
+        "heldBy": "Mei-Lin Zhao",
+        "preprodAddress": "mn_addr_preprod1hnxtrxmpm5zu4dwwu07esqehttqgt7hzsqua8ardcngwm8v6uftqkcnl3k",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-mei-lin-zhao.md"
+      },
+      {
+        "role": "exchange-cosigner",
+        "heldBy": "Quarry Street Exchange (custody desk)",
+        "preprodAddress": "mn_addr_preprod1cndhquwwhr6enyxf3rxqmz3xgqhyw599fxx0c026zlj50uczp2msklhyxe",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-street-exchange--custody-cosigner.md"
+      },
+      {
+        "role": "recovery-trustee",
+        "heldBy": "TestTown Savings & Loan",
+        "preprodAddress": "mn_addr_preprod10eekedu4er58nrsnkzmj0ddm75fpm0x4z5v03kj23p79023y92kqsm82ua",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-testtown-savings-loan.md"
+      }
+    ],
+    "assetCustody": null,
+    "story": "Funds the exchange holds for a customer. Any two of the three signers must approve, so the exchange cannot move them alone."
+  },
+  "holdings": {
+    "chain": "midnight",
+    "network": "preprod",
+    "balanceUsd": null,
+    "asOf": "2026-11-25",
+    "evidence": "MOCK",
+    "fictional": true
+  },
+  "placeholders": [
+    {
+      "field": "identityAnchor.value",
+      "status": "PLACEHOLDER",
+      "reason": "No multi-sig account exists yet. Midnight has no native multi-signature account or account abstraction, so this wallet must be a Compact contract that counts approvals. That contract has not been written or deployed.",
+      "unblockedBy": "Write and deploy a multi-party authorization contract on pre-prod, then record its contract address here."
+    },
+    {
+      "field": "holdings.balanceUsd",
+      "status": "PLACEHOLDER",
+      "reason": "Nothing is funded. The signer keys are real pre-prod addresses holding no tNIGHT.",
+      "unblockedBy": "Fund the signers from the faucet or a funded wallet."
+    },
+    {
+      "field": "custody.assetCustody",
+      "status": "PLACEHOLDER",
+      "reason": "Not verified here that a contract on current pre-prod can hold tNIGHT on behalf of its signers. Midnight's own contract-custody account design (Midnight Passport, MIP-0012 and MIP-0013) was at the Proposed stage and Stagenet-only as of 3 Oct 2026.",
+      "unblockedBy": "Confirm against the current support matrix, then test with a small funded contract."
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

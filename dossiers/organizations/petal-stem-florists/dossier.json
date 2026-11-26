@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-petal-stem-florists.md",
+    "preprodAddress": "mn_addr_preprod106l7l53lmuzmkq2m3exe00g32hr3slgf9axj6yx5c9p9ckf2a6zszfwx5k",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

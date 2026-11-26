@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-harvest-moon-grocers.md",
+    "preprodAddress": "mn_addr_preprod1azgwm4ky463knvttglmgs2waa42u8j0khzxgehjt0dfjywvv7wwqh9jg6x",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

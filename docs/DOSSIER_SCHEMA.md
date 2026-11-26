@@ -163,6 +163,51 @@ separate `holdings` block (`chain`, `balanceUsd`, `asOf`, `evidence: "MOCK"`),
 in-world confirmable on-chain at the anchor. No keys exist; pretend wallets
 need none, and the no-secrets rule is kept by construction.
 
+**Operator wallets for everyone (Nov 25 2026).** Every resident citizen and
+every organization now has an `operator` block with a `walletCard` and a
+`preprodAddress`. The ten civic institutions use the named operator wallets;
+everyone else has a headless key. Addresses are listed in
+`tools/wallet-assignments.json`, which the generator reads. Convention
+fixtures have no wallet by design. All wallets start unfunded.
+
+**`custody` block on a `crypto-wallet` asset (v0.2 candidate).** A wallet
+controlled by more than one key. An organization-owned wallet uses
+`ownerOrganizationSlug`; a wallet held for a citizen uses `ownerCitizenSlug`
+plus `custodianOrganizationSlug`.
+
+```jsonc
+"custody": {
+  "model": "multi-sig",
+  "threshold": 2,                // approvals needed
+  "signerCount": 3,
+  "signers": [
+    { "role": "customer", "heldBy": "…", "preprodAddress": "mn_addr_preprod1…",
+      "walletCard": "…" }
+  ],
+  "assetCustody": null           // filled once a contract holds the funds
+}
+```
+
+**`exchange` block on an organization (v0.2 candidate).** Marks a business
+that holds crypto for itself and for customers. It lists its
+`corporateWallets`, its `customerWallets`, its `customers`, and the
+`customerWalletTemplate` every customer wallet follows. The first one is
+`quarry-street-exchange`.
+
+**`placeholders` list.** Anything that cannot yet be wired to a Midnight test
+network is left `null` and declared, never invented:
+
+```jsonc
+"placeholders": [
+  { "field": "identityAnchor.value", "status": "PLACEHOLDER",
+    "reason": "why it is not real yet",
+    "unblockedBy": "what has to happen to fill it in" }
+]
+```
+
+A consumer must treat a placeholder field as absent. When the real value
+exists, fill the field and remove that entry in the same change.
+
 ## The three iron rules
 
 1. **Every claim is confirmable or it is decoration.** Claims either cite a
@@ -173,5 +218,6 @@ need none, and the no-secrets rule is kept by construction.
    standing) — never in a different shape. The gate must work for its
    living.
 3. **No secrets.** Public keys and addresses only; operator seeds live in
-   the local-only wallet vault.
+   the local-only wallet vault. The full pattern and its reasoning:
+   `SECRETS_CONVENTION.md`.
 ```

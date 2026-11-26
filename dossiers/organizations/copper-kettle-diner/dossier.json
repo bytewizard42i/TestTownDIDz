@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-copper-kettle-diner.md",
+    "preprodAddress": "mn_addr_preprod1eetdgmqgg2xd5gsz358c3q50l3axg3wq9vjn0tv26jqdwe77dw3qzx3vez",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-summit-peak-outfitters.md",
+    "preprodAddress": "mn_addr_preprod1trrnq7whcqc5ljqdjc7jskuper6p2wuhfyvlarauz3zea96afrjsfx7lt6",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

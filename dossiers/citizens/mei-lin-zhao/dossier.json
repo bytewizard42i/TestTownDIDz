@@ -23,11 +23,14 @@
     "animals": [],
     "assets": [
       "zhao-grand-seiko-snowflake",
+      "zhao-exchange-custody-wallet",
       "zhao-savings-wallet"
     ]
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-mei-lin-zhao.md",
+    "preprodAddress": "mn_addr_preprod1hnxtrxmpm5zu4dwwu07esqehttqgt7hzsqua8ardcngwm8v6uftqkcnl3k"
   }
 }

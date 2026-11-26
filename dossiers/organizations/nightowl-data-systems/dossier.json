@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-nightowl-data-systems.md",
+    "preprodAddress": "mn_addr_preprod1ag8v80e337q02ucmthdsq8r4d5f8myedzsggg7gl6l2w8ml4wd8s4fe4cz",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-blue-heron-bakery.md",
+    "preprodAddress": "mn_addr_preprod1ww7t8vwzzjflc3hjzugx563vfr2lpvfcdlr8gfnykpfnhhnmvqds6fwhwt",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

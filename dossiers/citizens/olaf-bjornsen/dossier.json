@@ -27,6 +27,8 @@
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-olaf-bjornsen.md",
+    "preprodAddress": "mn_addr_preprod1l0jqw2m3667pykpj8z5gyrwskw6xn4qmdxp2fq8g709wac6fjdtqafpcql"
   }
 }

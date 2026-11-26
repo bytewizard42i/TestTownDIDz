@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-riverbend-construction-co.md",
+    "preprodAddress": "mn_addr_preprod18z76xf28jl4kwzs5mmjs770h7y7j5daxrmtezvh0qepwe0ew9xnqe6um50",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

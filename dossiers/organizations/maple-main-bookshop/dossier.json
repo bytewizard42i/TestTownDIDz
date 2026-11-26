@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-maple-main-bookshop.md",
+    "preprodAddress": "mn_addr_preprod1zwmq05ja2g09aws8hjupc9m2srm0hk5gp6az0ytrhmwmruj8a4cs790qx7",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

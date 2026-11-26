@@ -29,6 +29,8 @@
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-raj-patel.md",
+    "preprodAddress": "mn_addr_preprod1agqt80qvchsgtrjjqpdetse9f8kxnjh25wm7v9u7xne6awjz5mds6gdgzd"
   }
 }

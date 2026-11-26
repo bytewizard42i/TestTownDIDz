@@ -39,8 +39,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-VILLAIN--first-dmv-of-delaware--impersonates-dissolved-entity.md",
+    "preprodAddress": "mn_addr_preprod1sdlq3sk76wefkc05g7chaj0vxgv2y4g6f85ygs3geaapgtvl5prqn4yrx6",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

@@ -267,6 +267,16 @@
         "Officer 20 (Registered Agent)"
       ]
     },
+    "PA-C-0600020": {
+      "legalName": "Quarry Street Exchange",
+      "standing": "GOOD_STANDING",
+      "incorporated": "2021-09-14",
+      "officers": [
+        "Naomi Castellan (Chief Executive Officer)",
+        "Desmond Achterberg (Chief Financial Officer)",
+        "Ingrid Solheim (Chief Compliance Officer)"
+      ]
+    },
     "DE-C-0092716": {
       "legalName": "First DMV of Delaware Inc.",
       "standing": "DISSOLVED",

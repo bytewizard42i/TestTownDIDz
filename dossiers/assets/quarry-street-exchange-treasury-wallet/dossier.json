@@ -1,0 +1,74 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "asset",
+  "slug": "quarry-street-exchange-treasury-wallet",
+  "displayName": "Quarry Street Exchange corporate treasury wallet",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "assetKind": "crypto-wallet",
+  "identityAnchor": {
+    "kind": "wallet-address",
+    "value": null,
+    "status": "PLACEHOLDER"
+  },
+  "ownerOrganizationSlug": "quarry-street-exchange",
+  "custody": {
+    "model": "multi-sig",
+    "threshold": 2,
+    "signerCount": 3,
+    "signers": [
+      {
+        "role": "treasury-signer",
+        "heldBy": "Naomi Castellan (Chief Executive Officer)",
+        "preprodAddress": "mn_addr_preprod1294hc8t08ccsn9z7r8y5gkaamy0pe8pawsp5fs3crv7cth4v30csvwzvma",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-street-exchange--treasury-signer-1.md"
+      },
+      {
+        "role": "treasury-signer",
+        "heldBy": "Desmond Achterberg (Chief Financial Officer)",
+        "preprodAddress": "mn_addr_preprod1xsjgs24uupp730wrdfv0dtsc03vy4wmk9xy3wexuw3vj2m29lafsxt9k02",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-street-exchange--treasury-signer-2.md"
+      },
+      {
+        "role": "treasury-signer",
+        "heldBy": "Ingrid Solheim (Chief Compliance Officer)",
+        "preprodAddress": "mn_addr_preprod123cmzazqeewey62h83zykt0dy8h4eveu9u8gevd80jtcn4cpfdssv4mduk",
+        "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-street-exchange--treasury-signer-3.md"
+      }
+    ],
+    "assetCustody": null,
+    "story": "The exchange's own money. Any two of the three officers must approve a movement, so no single officer can empty the treasury."
+  },
+  "holdings": {
+    "chain": "midnight",
+    "network": "preprod",
+    "balanceUsd": null,
+    "asOf": "2026-11-25",
+    "evidence": "MOCK",
+    "fictional": true
+  },
+  "placeholders": [
+    {
+      "field": "identityAnchor.value",
+      "status": "PLACEHOLDER",
+      "reason": "No multi-sig account exists yet. Midnight has no native multi-signature account or account abstraction, so this wallet must be a Compact contract that counts approvals. That contract has not been written or deployed.",
+      "unblockedBy": "Write and deploy a multi-party authorization contract on pre-prod, then record its contract address here."
+    },
+    {
+      "field": "holdings.balanceUsd",
+      "status": "PLACEHOLDER",
+      "reason": "Nothing is funded. The signer keys are real pre-prod addresses holding no tNIGHT.",
+      "unblockedBy": "Fund the signers from the faucet or a funded wallet."
+    },
+    {
+      "field": "custody.assetCustody",
+      "status": "PLACEHOLDER",
+      "reason": "Not verified here that a contract on current pre-prod can hold tNIGHT on behalf of its signers. Midnight's own contract-custody account design (Midnight Passport, MIP-0012 and MIP-0013) was at the Proposed stage and Stagenet-only as of 3 Oct 2026.",
+      "unblockedBy": "Confirm against the current support matrix, then test with a small funded contract."
+    }
+  ],
+  "papers": [],
+  "documents": []
+}

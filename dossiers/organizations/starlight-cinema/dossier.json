@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-starlight-cinema.md",
+    "preprodAddress": "mn_addr_preprod1ag8apxm8xlkldak02h5ulupx4mdrvdsf3drgkk5clguhlah0vuasrqzz7j",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

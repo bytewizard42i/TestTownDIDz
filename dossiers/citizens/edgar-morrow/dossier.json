@@ -27,6 +27,8 @@
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-edgar-morrow.md",
+    "preprodAddress": "mn_addr_preprod1z9lq9s3fj5sfayeemp4nh7kn8uglpmg0ky6vx6scekfnupmpexas9778au"
   }
 }

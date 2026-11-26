@@ -21,7 +21,8 @@
   ],
   "householdSlugs": {
     "animals": [
-      "comet-the-thoroughbred"
+      "comet-the-thoroughbred",
+      "ember-the-broodmare"
     ],
     "assets": [
       "heirloom-lange-1815-wristwatch"
@@ -29,6 +30,8 @@
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-rosa-delgado.md",
+    "preprodAddress": "mn_addr_preprod1yc3s5fensxth07kc72s5phwsu925k7y28h9lcdu3c3hyghj5ydmq3wpq0v"
   }
 }

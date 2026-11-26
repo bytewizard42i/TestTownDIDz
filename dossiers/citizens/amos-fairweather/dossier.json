@@ -27,6 +27,8 @@
   },
   "documents": [],
   "operator": {
-    "note": "Citizens hold their OWN keys \u2014 self-sovereign; wallet assignment lands with the admission-gate build."
+    "note": "Citizens hold their OWN keys \u2014 self-sovereign. The seed is in the local-only vault, never here.",
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-amos-fairweather.md",
+    "preprodAddress": "mn_addr_preprod1fpj5t7ygu2kjjya9qxzra24se6fe7f6h0pv86qzsukcn8mtaxvdq8qkss2"
   }
 }

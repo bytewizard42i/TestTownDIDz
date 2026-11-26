@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-susquehanna-steelworks.md",
+    "preprodAddress": "mn_addr_preprod1uxg27w79u7pswvjqsuj8dz3ln2w3sr2r7f9jzwkaykcmsnkqsmqswm8u8r",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-green-gable-landscaping.md",
+    "preprodAddress": "mn_addr_preprod1yu6j9jn90rsq28tywcc8kqu5qfeswpys8hqxrj3dmvq4qw2kfv3sq4j54h",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

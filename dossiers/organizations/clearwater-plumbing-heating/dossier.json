@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-clearwater-plumbing-heating.md",
+    "preprodAddress": "mn_addr_preprod1lkw34u7656pw6qgkd78v68ptr0yx8m5x96szrldgvu903ndcsphs54auj0",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

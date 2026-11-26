@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-testtown-transit-authority.md",
+    "preprodAddress": "mn_addr_preprod1q4d66d9jhyq9twa4f5zunk292xmqurg3n2xzuxeu889yyxxssnnsxzm35w",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

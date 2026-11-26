@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-foxglove-pharmacy.md",
+    "preprodAddress": "mn_addr_preprod1g4x70s926qfegw4wup4qvtsyqj7ekuqmlcl96pt8k774dqpw5hsql7fjay",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

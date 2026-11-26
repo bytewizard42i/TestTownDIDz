@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-gilded-frame-art-gallery.md",
+    "preprodAddress": "mn_addr_preprod1980lavkfqjx2s0rhrm63jdsjsjpk0f8lcdmwlmdaffdf9s0krjxqfqt0d4",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

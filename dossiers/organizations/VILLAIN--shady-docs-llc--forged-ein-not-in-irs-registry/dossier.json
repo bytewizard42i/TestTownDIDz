@@ -43,8 +43,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-VILLAIN--shady-docs-llc--forged-ein-not-in-irs-registry.md",
+    "preprodAddress": "mn_addr_preprod1rkklr0fqj9nsjr2pwqqwprcqs5hxh8t2gdscsjhe9wy2v846uzdsr2c8r3",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

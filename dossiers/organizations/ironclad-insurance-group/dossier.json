@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-ironclad-insurance-group.md",
+    "preprodAddress": "mn_addr_preprod12qj3fv7twypzy4jq596ap0jfyqtc8k0c6x67zy33wy20a50xtu9s82p2ku",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

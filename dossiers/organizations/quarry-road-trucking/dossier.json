@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-road-trucking.md",
+    "preprodAddress": "mn_addr_preprod1ug8ms34e57pl9j3v5cmk7vuqjtthpfpjvp6x6lfrl7duys57p4usn72s30",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

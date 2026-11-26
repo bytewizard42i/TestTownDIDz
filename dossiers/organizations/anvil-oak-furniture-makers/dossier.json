@@ -38,8 +38,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-anvil-oak-furniture-makers.md",
+    "preprodAddress": "mn_addr_preprod1g5sjv5afn99njp83lj53sy2mutjxhe43ehj8jkm0q508d9cuanjs3wlp3z",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

@@ -39,8 +39,8 @@
     }
   ],
   "operator": {
-    "walletCard": null,
-    "preprodAddress": null,
-    "note": "bulk org \u2014 headless derived key planned"
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-VILLAIN--evergreen-diploma-mill--accreditation-cites-nonexistent-board.md",
+    "preprodAddress": "mn_addr_preprod1p30glf0lrsga2ku6k796zsre252dfpml508llrv2nqeaeycs6scq5p0lnt",
+    "note": "headless derived key; seed in the local-only vault"
   }
 }

@@ -165,8 +165,14 @@ dossiers/
                    is a LIFECYCLE test vector (creation, lien, escrow,
                    fractional shares, inheritance, re-anchoring, destruction)
                    + a VILLAIN with a cloned serial; see docs/LIFECYCLE_CATALOG.md
+                   Also crypto wallets: seven that their owners want insured
+                   (docs/INTENTS_LAYER.md) and the exchange's multi-sig wallets
 registries/        the authorities of record (mock IRS, State corporations)
-docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md
+tools/             generate_population.py (the single source of truth),
+                   wallet-assignments.json (public addresses), validate_intents.py
+examples/          worked intent examples, valid and broken on purpose
+docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md,
+                   INTENTS_LAYER.md, SECRETS_CONVENTION.md
 ```
 
 ## How the ecosystem consumes TestTown
@@ -178,8 +184,16 @@ docs/              DOSSIER_SCHEMA.md, THREAT_MODEL.md, LIFECYCLE_CATALOG.md
   test APIs.
 - **Operator keys**: featured organizations are operated ("possessed") by
   the named wallet roster in `utils_Midnight/preProd-Wallets/` (Sarah,
-  Jessica, …); bulk employers derive keys headlessly. Seeds NEVER live in
-  this repo — dossiers carry public keys/addresses only.
+  Jessica, …). Every other organization and every resident citizen has its
+  own headless pre-prod wallet (Nov 25 2026), listed in
+  `tools/wallet-assignments.json`. All start unfunded. Seeds NEVER live in
+  this repo — dossiers carry public keys/addresses only
+  (`docs/SECRETS_CONVENTION.md`).
+- **The exchange**: `quarry-street-exchange` holds a corporate treasury wallet
+  (2 of its 3 officers sign) and a customer custody wallet (2 of 3: customer,
+  exchange, independent trustee). The signer keys are real pre-prod addresses;
+  the multi-sig accounts themselves are declared placeholders, because Midnight
+  has no native multi-signature account and the contract is not built yet.
 
 ## House rules
 

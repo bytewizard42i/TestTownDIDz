@@ -1,0 +1,81 @@
+{
+  "schema": "testtown/dossier/v0.1",
+  "category": "organization",
+  "slug": "quarry-street-exchange",
+  "displayName": "Quarry Street Exchange",
+  "honesty": {
+    "role": "AUTHENTIC",
+    "fraudMechanism": null
+  },
+  "identifiers": {
+    "ein": "20-4000020",
+    "stateRegistration": "PA-C-0600020",
+    "founded": "2021-09-14"
+  },
+  "authority": {
+    "issuerType": "employer",
+    "requestedAssuranceLevel": "PEER_REVIEWED",
+    "attestationScopes": [
+      "EMPLOYMENT",
+      "INCOME_RANGE"
+    ],
+    "subjectTiers": [
+      "human"
+    ]
+  },
+  "officers": [
+    {
+      "name": "Naomi Castellan",
+      "role": "Chief Executive Officer"
+    },
+    {
+      "name": "Desmond Achterberg",
+      "role": "Chief Financial Officer"
+    },
+    {
+      "name": "Ingrid Solheim",
+      "role": "Chief Compliance Officer"
+    }
+  ],
+  "documents": [
+    {
+      "file": "charter-note.md",
+      "kind": "incorporation-record",
+      "sha256": "f714d14564f182032aa1f3934476ef12f7f956726359dc340e7dbfb539c632c8",
+      "confirmableBy": "registries/state-corporations-registry.json"
+    }
+  ],
+  "exchange": {
+    "kind": "centralized-exchange",
+    "story": "TestTown's first digital-asset exchange, opened on Quarry Street in 2021. It keeps its own funds in a treasury that needs two of its three officers to move, and it holds each customer's funds in a wallet the customer co-controls.",
+    "corporateWallets": [
+      "quarry-street-exchange-treasury-wallet"
+    ],
+    "customerWallets": [
+      "zhao-exchange-custody-wallet"
+    ],
+    "customers": [
+      "mei-lin-zhao"
+    ],
+    "customerWalletTemplate": {
+      "threshold": 2,
+      "signerCount": 3,
+      "signerRoles": [
+        "customer",
+        "exchange-cosigner",
+        "recovery-trustee"
+      ],
+      "recoveryTrusteeOrganizationSlug": "testtown-savings-loan",
+      "why": "Any two of the three must approve. No party can move funds alone. Customer plus trustee works without the exchange, so the customer cannot be locked out. Exchange plus trustee works without the customer, which is the recovery path if the customer loses their key, and also the trust a customer is placing in the two of them."
+    },
+    "testWired": {
+      "signerKeys": "real pre-prod addresses, unfunded",
+      "multiSigAccounts": "PLACEHOLDER (see each wallet dossier)"
+    }
+  },
+  "operator": {
+    "walletCard": "utils_Midnight/preProd-Wallets/wallets/wallet-quarry-street-exchange.md",
+    "preprodAddress": "mn_addr_preprod1t23hzzvt3u6ftt47yy6073ahxkj74qxz3j37pkpvkdeshnl69qms64fvlw",
+    "note": "headless derived key; seed in the local-only vault"
+  }
+}
